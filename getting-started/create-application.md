@@ -1,7 +1,7 @@
 ---
 title: Creating an Application
 description: Learn how to create an application to use with Vonage Business Cloud APIs
-navigation_weight: 2
+navigation_weight: 3
 ---
 
 # Creating an Application
