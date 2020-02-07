@@ -10,9 +10,16 @@ These APIs cover both On-Demand (ODCR) and Company Call Recording (CCR) features
 * Export call recording in bulk asynchronously
 
 # Code Snippets
-* [Get company call recordings](/code_snippets/company-call-recordings.md)
-* [Get single company call recording](/code_snippets/single-company-call-recording.md)
-* [Get call recording export jobs](/code_snippets/call-recording-export-jobs.md)
+* [Get company call recordings](code_snippets/get-company-call-recordings.md)
+* [Get single company call recording](code_snippets/get-single-company-call-recording.md)
+* [Delete company call recording](code_snippets/delete-company-call-recording.md)
+* [Create a company call recording export job](code_snippets/create-company-call–recording-export-job.md)
+* [Get on-demand call recordings](code_snippets/get-on-demand-call–recordings.md)
+* [Get single on-demand call recording](code_snippets/get–single-on-demand-call-recording.md)
+* [Delete on-demand call recording](code_snippets/delete-on-demand-call-recording.md)
+* [Create an on-demand call recording export job](code_snippets/create-on-demand-call-recording-export-job.md)
+* [Get call recording export jobs](code_snippets/get-call-recording-export-jobs.md)
+* [Get call recording export job](code_snippets/get-call-recording-export-job.md)
 
 # API Reference
 
