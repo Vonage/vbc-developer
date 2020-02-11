@@ -9,9 +9,9 @@ Vonage Business Cloud (VBC) APIs are a set of APIs that enable you programatical
 
 ## Getting Started
 
-* [Creating an Account](/getting-started/create-account) - How to request an account
-* [Logging in to the Developer Portal](/getting-started/logging-in) - How to access the Vonage Business Cloud developer portal
-* [Creating an Application](/getting-started/create-application) - Learn how to create on OAuth application
+* [Creating an account](/getting-started/create-account) - How to request an account
+* [Logging in to the developer portal](/getting-started/logging-in) - How to access the Vonage Business Cloud developer portal
+* [Creating an application](/getting-started/create-application) - Learn how to create on OAuth application
 * [Subscribe to APIs](/getting-started/subscribe-to-apis) - Learn how to subscribe your OAuth application to APIs
 * [Authenticating to APIs](/getting-started/authentication) - Learn how to authenticate to APIs
 * [Making an API Call](/getting-started/make-a-request) - Make an API call with your access token
