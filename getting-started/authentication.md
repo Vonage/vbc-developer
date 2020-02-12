@@ -1,7 +1,7 @@
 ---
 title: Authentication
-meta_title: Authentcating to the Vonage Business Cloud APIs
-navigation_weight: 2
+description: Authentcating to the Vonage Business Cloud APIs
+navigation_weight: 5
 ---
 
 #  Authenticating to the Vonage Business Cloud APIs

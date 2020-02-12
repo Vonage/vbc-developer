@@ -1,12 +1,12 @@
 ---
-title: Creating an Application
-description: Learn how to create an application to use with Vonage Business Cloud APIs
+title: Creating an API Application
+description: Learn how to create an API application to use with Vonage Business Cloud APIs
 navigation_weight: 3
 ---
 
 # Creating an Application
 
-To work with the Vonage Business Cloud APIs, you must create a Vonage Business Cloud application.
+To work with the Vonage Business Cloud APIs, you must create a API application.
 
 > Note: To avoid confusion, "application" in this context refers to a logical grouping of APIs. The application you are building to consume these APIs will be referred to as "application".
 

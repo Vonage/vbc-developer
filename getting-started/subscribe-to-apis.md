@@ -1,7 +1,7 @@
 ---
 title: Subscribe to APIs
 description: Learn how to add API capabilities to your application
-navigation_weight: 3
+navigation_weight: 4
 ---
 
 # Subscribe to the Provisioning API
