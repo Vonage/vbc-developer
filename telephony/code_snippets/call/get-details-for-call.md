@@ -1,16 +1,15 @@
-# Get list of calls for a given account 
+# Get details for a specific call
 
-This example shows you how to return a list of calls an account id
+This example shows you how to make retrieve details on a call. This will return the call legs, direction (inbound or outbound) and status.
 
-Replace the following placeholder value in the sample code:
+Replace the following placeholder values in the sample code:
 | Key        | Description                                                                                            |
 |------------|--------------------------------------------------------------------------------------------------------|
 | bearer_token | Your OAuth token. [Read more about OAuth tokens](https://developer.nexmo.com/vonage-business-cloud/vbc-apis/getting-started/authentication) |
 | account_id | The Vonage Business Cloud account ID. |
-| extension | A user's extension number | 
+| call_id | The call id for the call you would like to delete| 
 
 ``` bash
-curl --location --request GET 'https://api.vonage.com/t/vbc.prod/telephony/v3/cc/accounts/$account_id/calls?extension=$extension' \
---header 'Accept: application/json' \
+curl --location --request GET 'https://api.vonage.com/t/vbc.prod/telephony/v3/cc/accounts/$account_id/calls/$call_id' \
 --header 'Authorization: Bearer $bearer_token'
 ```
