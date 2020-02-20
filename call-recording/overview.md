@@ -9,6 +9,9 @@ These APIs cover both On-Demand (ODCR) and Company Call Recording (CCR) features
 * Download call recording audio files
 * Export call recording in bulk asynchronously
 
+Company Call Recordings are rule based recordings and configured by an administrator. Setup for Company Call Recordings are optional. 
+
+On Demand Call Recordings are when users opt in to record a call. Voicemails's are one example of On Demand Call Recordings
 # Code Snippets
 * [Get company call recordings](code_snippets/get-company-call-recordings.md)
 * [Get single company call recording](code_snippets/get-single-company-call-recording.md)
