@@ -1,0 +1,19 @@
+GIT
+  remote: https://github.com/Nexmo/nexmo-developer.git
+  revision: fc1db87487dac2c66726c9e536952bf32db14728
+  branch: gemified
+  specs:
+    nexmo-developer (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  nexmo-developer!
+
+BUNDLED WITH
+   2.1.4
