@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Nexmo/nexmo-developer.git
-  revision: fc1db87487dac2c66726c9e536952bf32db14728
+  revision: 2a0f6e44620d5fde9edbfdbc587c5168ffe1071c
   branch: gemified
   specs:
     nexmo-developer (0.0.1)
