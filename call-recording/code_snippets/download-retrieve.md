@@ -1,4 +1,4 @@
-# Download
+# Retrieve download
 This example shows you how to download audio files for company and on-demand call recordings.
 
 Replace the following placeholder value in the sample code:
