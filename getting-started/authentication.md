@@ -1,10 +1,10 @@
 ---
 title: Authentication
-description: Authentcating to the Vonage Business Cloud APIs
+description: Authentcating to the Vonage Business Communications APIs
 navigation_weight: 5
 ---
 
-#  Authenticating to the Vonage Business Cloud APIs
+#  Authenticating to the Vonage Business Communications APIs
 
 Once you have [created your application](/getting-started/create-application), you need to configure it so that it can authenticate against the [Account](/account-api/overview), [Extension](/vonage-business-cloud/vbc-apis/extension-api/overview) and [User](/vonage-business-cloud/vbc-apis/user-api/overview) APIs. The VBC APIs use  [OAuth](https://oauth.net/2/) for authentication.
 
@@ -30,7 +30,7 @@ Once you have [created your application](/getting-started/create-application), y
 
 ## Supported Grant Types
 
-Vonage Business Cloud supports the following grant types for generating access tokens.
+Vonage Business Communications supports the following grant types for generating access tokens.
 
 * [Authorization Code](https://oauth.net/2/grant-types/authorization-code/) - The Authorization Code grant type is used by confidential and public clients to exchange an authorization code for an access token. After the user returns to the client via the redirect URL, the application will get the authorization code from the URL and use it to request an access token.
 * [Password Grant](https://oauth.net/2/grant-types/password) - The Password grant type is a way to exchange a user's credentials for an access token. 
@@ -84,8 +84,8 @@ All the code snippets in the VBC API documentation use the [password grant type]
 
 Replace the following placeholders in the example with your own values:
 
-* `VBC_USERNAME` - Your Vonage Business Cloud user name
-* `VBC_PASSWORD` - Your Vonage Business Cloud password
+* `VBC_USERNAME` - Your Vonage Business Communications user name
+* `VBC_PASSWORD` - Your Vonage Business Communications password
 * `CONSUMER_KEY` - The Consumer Key that you generated in step 5 above
 * `CONSUMER_SECRET` - The Consumer Secret that you generated in step 5 above
 

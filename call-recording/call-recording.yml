@@ -4,11 +4,11 @@ info:
   version: "1.0.1"
   title: Call Recording API
   description: |
-    The Vonage Business Cloud Call Recording API enables you to manage your company recordings.
+    The Vonage Business Communications Call Recording API enables you to manage your company recordings.
 
     Your application must subscribe to the CallRecording API suite to use this API.
   contact:
-    name: "Vonage Business Cloud Support"
+    name: "Vonage Business Communications Support"
     url: "https://businesssupport.vonage.com/contactus"
   termsOfService: "https://www.vonage.com/business/legal-policy-center/business-cloud/tos"
 tags:
@@ -315,12 +315,12 @@ components:
       required: true
       schema:
         type: string
-      description: The Vonage Business Cloud account ID. You can use 'self' to refer to the authenticated user's account.
+      description: The Vonage Business Communications account ID. You can use 'self' to refer to the authenticated user's account.
       example: 549825
     UserID:
       name: user_id
       in: path
-      description: The Vonage Business Cloud user ID. You can use 'self' to refer to the authenticated user.
+      description: The Vonage Business Communications user ID. You can use 'self' to refer to the authenticated user.
       required: true
       example: 745249
       schema:

@@ -1,5 +1,5 @@
 # Call Recording API Overview
-The Vonage Business Cloud Call Recording API enables you to manage your company and on-demand call recordings.
+The Vonage Business Communications Call Recording API enables you to manage your company and on-demand call recordings.
 
 These APIs cover both On-Demand (ODCR) and Company Call Recording (CCR) features, and will enable you to build automation workflows using your call recording data and audio files.
 

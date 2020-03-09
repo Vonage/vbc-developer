@@ -1,5 +1,5 @@
 # Provisioning API Overview
-The Vonage Business Cloud Call Provisioning API enables you get details on Users, Accounts and Extensions.
+The Vonage Business Communications Call Provisioning API enables you get details on Users, Accounts and Extensions.
 
 With these API's, you will be able to:
 * Retrieve information on Account
