@@ -8,6 +8,7 @@ navigation_weight: 1
 This example shows you how to delete a call. If the call is active, this SHOULD hang up the call. #TODO
 
 Replace the following placeholder values in the sample code:
+
 | Key        | Description                                                                                            |
 |------------|--------------------------------------------------------------------------------------------------------|
 | bearer_token | Your OAuth token. [Read more about OAuth tokens](https://developer.nexmo.com/vonage-business-cloud/vbc-apis/getting-started/authentication) |

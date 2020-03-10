@@ -8,6 +8,7 @@ navigation_weight: 1
 This example shows you how to get the physical location of the account, using the account id and location id.
 
 Replace the following placeholder value in the sample code:
+
 | Key        | Description                                                                                            |
 |------------|--------------------------------------------------------------------------------------------------------|
 | bearer_token | Your OAuth token. [Read more about OAuth tokens](https://developer.nexmo.com/vonage-business-cloud/vbc-apis/getting-started/authentication) |

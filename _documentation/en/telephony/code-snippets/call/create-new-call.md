@@ -8,6 +8,7 @@ navigation_weight: 1
 This example shows you how to make a phone call. In order to make the call, you will need to have a physical phone or softphone  
 
 Replace the following placeholder values in the sample code:
+
 | Key        | Description                                                                                            |
 |------------|--------------------------------------------------------------------------------------------------------|
 | bearer_token | Your OAuth token. [Read more about OAuth tokens](https://developer.nexmo.com/vonage-business-cloud/vbc-apis/getting-started/authentication) |
