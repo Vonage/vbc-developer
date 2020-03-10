@@ -11,7 +11,7 @@ Replace the following placeholder values in the sample code:
 | Key        | Description                                                                                            |
 |------------|--------------------------------------------------------------------------------------------------------|
 | bearer_token | Your OAuth token. [Read more about OAuth tokens](https://developer.nexmo.com/vonage-business-cloud/vbc-apis/getting-started/authentication) |
-| account_id | The Vonage Business Cloud account ID. |
+| account_id | The Vonage Business Communications account ID. |
 | call_id | The call id for the call you would like to update |
 | from_destination | NEED DOCS |
 | from_device | NEED DOCS |

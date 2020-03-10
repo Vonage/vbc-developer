@@ -1,8 +1,5 @@
----
-title: Overview
----
 # Call Recording API Overview
-The Vonage Business Cloud Call Recording API enables you to manage your company and on-demand call recordings.
+The Vonage Business Communications Call Recording API enables you to manage your company and on-demand call recordings.
 
 These APIs cover both On-Demand (ODCR) and Company Call Recording (CCR) features, and will enable you to build automation workflows using your call recording data and audio files.
 
@@ -20,12 +17,27 @@ Company Call Recordings
 
 # Code Snippets
 
-Code snippets demonstrate how to use the API to perform various tasks.
+## Download
+* [Download company and on-demand recordings](code_snippets/download-retrieve.md)
+* [Download Recording](code_snippets/download-recording.md)
 
-```code_snippet_list
-product: call-recording
-```
+## Company Call Recordings
+* [Get company call recordings](code_snippets/get-company-call-recordings.md)
+* [Get single company call recording](code_snippets/get-single-company-call-recording.md)
+* [Delete company call recording](code_snippets/delete-company-call-recording.md)
+* [Create a company call recording export job](code_snippets/create-company-call–recording-export-job.md)
+
+## On Demand Call Recordings
+* [Get on-demand call recordings](code_snippets/get-on-demand-call–recordings.md)
+* [Get single on-demand call recording](code_snippets/get–single-on-demand-call-recording.md)
+* [Delete on-demand call recording](code_snippets/delete-on-demand-call-recording.md)
+* [Create an on-demand call recording export job](code_snippets/create-on-demand-call-recording-export-job.md)
+
+
+## Export Job
+* [Get call recording export jobs](code_snippets/get-call-recording-export-jobs.md)
+* [Get call recording export job](code_snippets/get-call-recording-export-job.md)
 
 # API Reference
 
-* [Call Recording API](/api/call-recording)
+* [Call Recording API](call-recording/call-recording.yml)

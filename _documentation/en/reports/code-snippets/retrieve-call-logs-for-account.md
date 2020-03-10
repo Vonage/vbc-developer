@@ -11,7 +11,7 @@ Replace the following placeholder value in the sample code:
 | Key        | Description                                                                                            |
 |------------|--------------------------------------------------------------------------------------------------------|
 | bearer_token | Your OAuth token. [Read more about OAuth tokens](https://developer.nexmo.com/vonage-business-cloud/vbc-apis/getting-started/authentication) |
-| account_id | The Vonage Business Cloud account ID. |
+| account_id | The Vonage Business Communications account ID. |
 | start_gte | Filter records by start date (greater equal or equal to). Must be in the following format YYYY-MM-DD HH:mm:ss | 
 | start_lte | Filter records by start date (less equal or equal to).  Must be in the following format YYYY-MM-DD HH:mm:ss | 
 | page_size | Number of records per page |
