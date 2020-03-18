@@ -6,6 +6,7 @@ title: Overview
 The Vonage Business Communications Reports API enables you to retrieve call logs for your account. Your application must subscribe to the Reports API suite to use this API.
 
 With this API, you will be able to 
+
 * Retrieve call logs from your account. 
 
 # Code Snippets

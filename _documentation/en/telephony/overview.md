@@ -5,6 +5,7 @@ title: Overview
 The Vonage Business Telephony API enables you to manage calls and retrieve device registration information.
 
 With the Telphony API's, you will be able to:
+
 * Make Calls
 * Delete Calls
 * List previous Calls for call reports
@@ -13,7 +14,6 @@ With the Telphony API's, you will be able to:
 * Get information on existing leg of call
 * Modify Call legs
 * Get list of registered devices.
-
 
 # Code Snippets
 
