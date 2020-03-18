@@ -3,21 +3,18 @@ title: Overview
 ---
 
 # Call Recording API Overview
-The Vonage Business Communications Call Recording API enables you to manage your company and on-demand call recordings.
+The Vonage Business Communications Call Recording API enables you to manage Company and On-Demand Call Recordings.
 
-These APIs cover both On-Demand (ODCR) and Company Call Recording (CCR) features, and will enable you to build automation workflows using your call recording data and audio files.
+* Company Call Recording is rule based and will automatically record calls that meet the configured criteria. Company Call Recording ruels are configured by an administrator. 
+* On-Demand Call Recording lets employees decide when to record calls. On-Demand Call Recording can be started or stopped on an active call by the employee.
+
+The Call Recording APIs will enable you to build automation workflows using call recording metadata and their associated audio recordings.
 
 * List call recording metadata
 * Get single call recording metadata
 * Delete call recordings
 * Download call recording audio files
 * Export call recording in bulk asynchronously
-
-Company Call Recordings are rule based recordings and configured by an administrator. Setup for Company Call Recordings are optional. 
-
-On Demand Call Recordings are when users opt in to record a call. Voicemails's are one example of On Demand Call Recordings
-
-Company Call Recordings 
 
 # Code Snippets
 
