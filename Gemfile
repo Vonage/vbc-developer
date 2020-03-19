@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'nexmo-developer', git: 'https://github.com/Nexmo/nexmo-developer.git', branch: 'gemified'
-
+source "https://rubygems.pkg.github.com/nexmo" do
+  gem "nexmo-developer", "0.0.2"
+end
