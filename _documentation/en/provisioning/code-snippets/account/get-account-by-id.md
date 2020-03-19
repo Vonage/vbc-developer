@@ -16,7 +16,7 @@ Replace the following placeholder value in the sample code:
 
 
 ``` bash
-curl --location --request POST 'https://api.vonage.com/t/vbc.prod/provisioning/v1/api/accounts/$account_id' \
+curl --location --request GET 'https://api.vonage.com/t/vbc.prod/provisioning/v1/api/accounts/$account_id' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer $bearer_token' \
 ```
