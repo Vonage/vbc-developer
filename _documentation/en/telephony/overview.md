@@ -1,7 +1,8 @@
 ---
-title: Overview
+title: Telephony API Overview
 ---
 # Telephony API Overview
+
 The Vonage Business Telephony API enables you to manage calls and retrieve device registration information.
 
 With the Telephony API's, you will be able to:
@@ -20,5 +21,5 @@ With the Telephony API's, you will be able to:
 Code snippets demonstrate how to use the API to perform various tasks.
 
 ```code_snippet_list
-product: telephony
+product: vonage-integration-platform
 ```

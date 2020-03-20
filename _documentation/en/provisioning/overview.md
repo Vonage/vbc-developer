@@ -1,9 +1,9 @@
 ---
-title: Overview
+title: Provisioning API Overview
 ---
-
 # Provisioning API Overview
-The Vonage Business Communications Call Provisioning API enables you get details on Users, Accounts and Extensions.
+
+The Vonage Business Communications Provisioning API enables you get details on Users, Accounts and Extensions.
 
 With these API's, you will be able to:
 
@@ -13,6 +13,8 @@ With these API's, you will be able to:
 * List extensions by Account
 
 # Code Snippets
+
+Code snippets demonstrate how to use the API to perform various tasks.
 
 ```code_snippet_list
 product: provisioning
