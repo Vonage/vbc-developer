@@ -21,5 +21,5 @@ With the Telephony API's, you will be able to:
 Code snippets demonstrate how to use the API to perform various tasks.
 
 ```code_snippet_list
-product: vonage-integration-platform
+product: telephony
 ```
