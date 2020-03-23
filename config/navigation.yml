@@ -1,0 +1,27 @@
+navigation_weight:
+  call-recording: 1
+  provisioning: 2
+  node-red: 7
+  reports: 4
+  smart-numbers: 5
+  telephony: 4
+  vonage-integration-platform: 6
+  zapier: 8
+
+navigation_overrides:
+  call-recording:
+    svg: 'voicemail-2'
+  provisioning:
+    svg: 'tool'
+  node-red:
+    svg: 'rocket'
+  reports:
+    svg: 'report'
+  smart-numbers:
+    svg: 'call'
+  telephony:
+    svg: 'telephone'
+  vonage-integration-platform:
+    svg: 'plug'
+  zapier:
+    svg: 'star'

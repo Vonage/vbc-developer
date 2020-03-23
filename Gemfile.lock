@@ -180,7 +180,7 @@ GEM
       hansi (~> 0.2.0)
       mustermann (= 1.1.1)
     neatjson (0.9)
-    nexmo-developer (0.0.8)
+    nexmo-developer (0.0.9)
       activeadmin (~> 2.6)
       activesupport (~> 6.0)
       bootsnap (~> 1.4.6)
@@ -361,7 +361,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  nexmo-developer (= 0.0.8)!
+  nexmo-developer (= 0.0.9)!
 
 BUNDLED WITH
    2.1.4
