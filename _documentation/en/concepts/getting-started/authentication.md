@@ -1,6 +1,6 @@
 ---
 title: Authentication
-description: Authentcating to the Vonage Business Communications APIs
+description: Authenticating to the Vonage Business Communications APIs
 navigation_weight: 5
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Making an API Request
 description: Learn how to make an API request
-navigation_weight: 3
+navigation_weight: 6
 ---
 
 # Making an API Request
