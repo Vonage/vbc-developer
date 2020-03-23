@@ -1,0 +1,18 @@
+{
+  "buildpacks": [
+    { "url": "heroku/ruby" }
+  ],
+  "env": {
+    "RACK_ENV": { "required": true },
+    "RAILS_ENV": { "required": true },
+    "OAS_PATH": "_open_api/api_specs/definitions",
+    "DOCS_BASE_PATH": "."
+  },
+  "stack": "heroku-18",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
