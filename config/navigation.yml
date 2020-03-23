@@ -12,7 +12,7 @@ navigation_overrides:
   call-recording:
     svg: 'voicemail-2'
   provisioning:
-    svg: 'tool'
+    svg: 'address-book'
   node-red:
     svg: 'flow'
   reports:
