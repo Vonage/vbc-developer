@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
   description: |
-    The Vonage Integration Suite API enables call control and webhooks for call events.
+    The Vonage Integration Platform API enables call control and webhooks for call events.
 
     Your application must subscribe to the VonageIntegrationSuite API suite to use this API.
   version: 1.0.1
-  title: Vonage Integration Suite
+  title: Vonage Integration Platform
   contact:
     email: gunifydevops@vonage.com
     name: VGIS
