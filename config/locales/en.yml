@@ -4,4 +4,9 @@ en:
     provisioning: Provisioning
     reports: Reports
     telephony: Telephony
+    vonage-integration-platform: Vonage Integration Platform
+    node-red: Node-RED
+    zapier: Zapier
+    extension: Extension
+    
 
