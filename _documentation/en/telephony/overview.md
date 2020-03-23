@@ -3,7 +3,7 @@ title: Overview
 ---
 # Telephony API Overview
 
-The Vonage Business Telephony API enables you to manage calls and retrieve device registration information.
+The Vonage Business Communications Telephony API enables you to manage calls and retrieve device registration information.
 
 With the Telephony API's, you will be able to:
 

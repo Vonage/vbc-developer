@@ -3,15 +3,15 @@ title: Overview
 ---
 # Smart Numbers Overview
 
-> **Note** Smart Numbers is for [Vonage Business Cloud Customers](https://www.vonage.com/business/) only.
+> **Note** Smart Numbers is for [Vonage Business Communications Customers](https://www.vonage.com/business/) only.
 
-Vonage Business Cloud (VBC) Smart Numbers enable you to:
+Vonage Business Communications (VBC) Smart Numbers enable you to:
 
 * Forward a VBC call to a Nexmo [Voice API](/voice/voice-api/api-reference) application
 * Connect calls to a VBC extension from a Voice API [NCCO](/voice/voice-api/guides/ncco)
 
 ## What can you do with it?
-You can use all the power and flexibility of the Nexmo Voice API together with the supporting VBC [Account](/vonage-business-cloud/vbc-apis/account-api/overview), [Extension](/vonage-business-cloud/vbc-apis/extension-api/overview) and [User](/vonage-business-cloud/vbc-apis/user-api/overview) APIs to create fully customized call experiences for your customers, including:
+You can use all the power and flexibility of the Nexmo Voice API together with the supporting VBC [Account](/vbc-apis/account-api/overview), [Extension](/vbc-apis/extension-api/overview) and [User](/vbc-apis/user-api/overview) APIs to create fully customized call experiences for your customers, including:
 
 * Interactive voice response (IVR) systems that link to your CRM system to personalize the menu options to your customers' needs
 * Voicebots that use natural language processing and/or AI to answer simple questions spoken by your customers
@@ -23,14 +23,14 @@ You can use all the power and flexibility of the Nexmo Voice API together with t
 ## Getting Started
 To use Smart Numbers, you need:
 
-* A Vonage Business Cloud account
+* A Vonage Business Communications account
 * A Nexmo account
 
 You must then:
 
-1. [Enable the Smart Number add-on](/vonage-business-cloud/smart-numbers/guides/enable-addon) - to add the capability to your VBC account
-2. [Create a Nexmo Voice API Application](/vonage-business-cloud/smart-numbers/guides/create-voice-application) - to store security and configuration information
-3. [Provision Smart Numbers](/vonage-business-cloud/smart-numbers/guides/provision-smart-numbers) - configure one or more VBC numbers as Smart Numbers and link those numbers to your Nexmo Voice API Application
+1. [Enable the Smart Number add-on](/smart-numbers/guides/enable-addon) - to add the capability to your VBC account
+2. [Create a Nexmo Voice API Application](/smart-numbers/guides/create-voice-application) - to store security and configuration information
+3. [Provision Smart Numbers](/smart-numbers/guides/provision-smart-numbers) - configure one or more VBC numbers as Smart Numbers and link those numbers to your Nexmo Voice API Application
 
 ## Using Smart Numbers
 
@@ -40,6 +40,6 @@ To forward an inbound call on one of your linked VBC numbers to your Nexmo Voice
 
 You provide these instructions in the form of a [Nexmo Call Control Object (NCCO)](/voice/voice-api/guides/ncco) that defines the list of actions that the call must perform, such as reading a message to your caller using text-to-speech, or collecting input as part of an interactive voice response (IVR) system. Another type of action (`connect`) in the NCCO can route the call to a VBC extension.
 
-You can use the [VBC APIs](/vonage-business-cloud/vbc-apis/overview) in your application to retrieve information about your VBC accounts, extensions and users.
+You can use the [VBC APIs](/vbc-apis/overview) in your application to retrieve information about your VBC accounts, extensions and users.
 
-> **Getting help**: For a comprehensive list of resources to help you build your application, see [here](/vonage-business-cloud/smart-numbers/guides/vbc-resources).
+> **Getting help**: For a comprehensive list of resources to help you build your application, see [here](/smart-numbers/guides/vbc-resources).

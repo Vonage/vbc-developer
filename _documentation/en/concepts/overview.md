@@ -9,23 +9,22 @@ Vonage Business Communications (VBC) APIs are a set of APIs that enable you prog
 
 ## Getting Started
 
-* [Creating an account](/getting-started/create-account) - How to request an account
-* [Logging in to the developer portal](/getting-started/logging-in) - How to access the Vonage Business Communications developer portal
-* [Creating an application](/getting-started/create-application) - Learn how to create on OAuth application
-* [Subscribe to APIs](/getting-started/subscribe-to-apis) - Learn how to subscribe your OAuth application to APIs
-* [Authenticating to APIs](/getting-started/authentication) - Learn how to authenticate to APIs
-* [Making an API Call](/getting-started/make-a-request) - Make an API call with your access token
+* [Creating an account](/concepts/guides/create-account) - How to request an account
+* [Logging in to the developer portal](/concepts/guides/logging-in) - How to access the Vonage Business Communications developer portal
+* [Creating an application](/concepts/guides/create-application) - Learn how to create on OAuth application
+* [Subscribe to APIs](/concepts/guides/subscribe-to-apis) - Learn how to subscribe your OAuth application to APIs
+* [Authenticating to APIs](/concepts/guides/authentication) - Learn how to authenticate to APIs
+* [Making an API Call](/concepts/guides/make-a-request) - Make an API call with your access token
 
 ## API Directory
 
 The following Vonage Business Communications APIs are available:
 
-* [Account API](/vonage-business-cloud/vbc-apis/account-api/overview) - The Account API is a read-only API that lets you retrieve information about accounts and the locations associated with them.
-* [Extension API](/vonage-business-cloud/vbc-apis/extension-api/overview) - The Extension API is a read-only API that lets you retrieve information about extensions.
-* [Call Recording API](/vonage-business-cloud/vbc-apis/call-recording-api/overview) - The Vonage Business Communications Call Recording API enables you to manage your company and on-demand call recordings.
-* [Reports API](/vonage-business-cloud/vbc-apis/reports-api/overview) - The Reports API enables you to retrieve call logs for your account.
-* [User API](/vonage-business-cloud/vbc-apis/user-api/overview) - The User API is a read-only API that lets you retrieve information about users.
-* [Telephony API](/vonage-business-cloud/vbc-apis/telephony-api/overview) - The Telephony API enables you to create and control calls, and retrieve device registration data.
+* [Call Recording API](/api/call-recording) - The Vonage Business Communications Call Recording API enables you to manage Company and On-Demand Call Recordings
+* [Provisioning API](/api/provisioning) - The Vonage Business Communications Provisioning API enables you get details on Users, Accounts and Extensions
+* [Telephony API](/api/telephony) - The Vonage Business Communications Telephony API enables you to manage calls and retrieve device registration information
+* [Reports API](/api/reports) - The Vonage Business Communications Reports API enables you to retrieve call logs for your account
+* [Vonage Integration Platform API](/api/vonage-integration-platform) - The Vonage Business Communications Reports API enables you to manage calls and receive real-time call events via HTTP webhooks
 
 ## Smart Numbers
 
