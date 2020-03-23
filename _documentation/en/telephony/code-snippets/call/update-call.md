@@ -21,7 +21,10 @@ Replace the following placeholder values in the sample code:
 | to_device | NEED DOCS |
 
 ``` bash
-curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d {
+curl -X PUT 'https://api.vonage.com/t/vbc.prod/telephony/v3/cc/accounts/$account_id/calls/$call_id'
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer $bearer_token' \
+--data-raw '{  
    "from": {
      "destination": "$from_destination",
      "type": "$from_device"
@@ -31,5 +34,5 @@ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: applicat
      "destination": "$to_destination",
      "type": "$to_device"
    } 
- } 'https://api.vonage.com/t/vbc.prod/telephony/v3/cc/accounts/$account_id/calls/$call_id'
+ } 
 ```

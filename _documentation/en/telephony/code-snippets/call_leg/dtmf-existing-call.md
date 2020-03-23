@@ -20,7 +20,10 @@ Replace the following placeholder values in the sample code:
 
 
 ``` bash
-curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d {
+curl -X PUT 'https://api.vonage.com/t/vbc.prod/telephony/v3/cc/accounts/$account/calls/$call_id/legs/$leg_id'
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer $bearer_token' \
+--data-raw '{  
    "dtmf": "$dtmf"
- } 'https://api.vonage.com/t/vbc.prod/telephony/v3/cc/accounts/$account/calls/$call_id/legs/$leg_id'
+ }'
 ```
