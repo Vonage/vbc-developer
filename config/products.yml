@@ -1,5 +1,9 @@
 products:
   - call-recording
+  - node-red
   - provisioning
   - reports
+  - smart-numbers
   - telephony
+  - vonage-integration-platform
+  - zapier
