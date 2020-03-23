@@ -14,14 +14,14 @@ navigation_overrides:
   provisioning:
     svg: 'tool'
   node-red:
-    svg: 'rocket'
+    svg: 'flow'
   reports:
     svg: 'report'
   smart-numbers:
-    svg: 'call'
+    svg: 'brain'
   telephony:
     svg: 'telephone'
   vonage-integration-platform:
     svg: 'plug'
   zapier:
-    svg: 'star'
+    svg: 'link'
