@@ -1,4 +1,4 @@
 ---
-title: Node-RED Overview
+title: Overview
 ---
 # Node-RED Overview

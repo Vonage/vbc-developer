@@ -1,5 +1,5 @@
 ---
-title: Call Recording API Overview
+title: Overview
 ---
 # Call Recording API Overview
 

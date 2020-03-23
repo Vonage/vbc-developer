@@ -1,5 +1,5 @@
 ---
-title: Vonage Integration Platform API Overview
+title: Overview
 ---
 # Vonage Integration Platform API Overview
 

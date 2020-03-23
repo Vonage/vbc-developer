@@ -1,5 +1,5 @@
 ---
-title: Telephony API Overview
+title: Overview
 ---
 # Telephony API Overview
 

@@ -1,7 +1,6 @@
 ---
-title: Smart Numbers Overview
+title: Overview
 ---
-
 # Smart Numbers Overview
 
 > **Note** Smart Numbers is for [Vonage Business Cloud Customers](https://www.vonage.com/business/) only.

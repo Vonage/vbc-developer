@@ -1,5 +1,5 @@
 ---
-title: Reports API Overview
+title: Overview
 ---
 # Reports API Overview
 
