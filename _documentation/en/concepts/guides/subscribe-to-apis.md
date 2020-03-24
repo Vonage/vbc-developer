@@ -1,6 +1,6 @@
 ---
 title: Subscribe to APIs
-description: Learn how to add API capabilities to your application
+description: Learn how to add API subscriptions to use the Vonage Business Communications APIs
 navigation_weight: 4
 ---
 

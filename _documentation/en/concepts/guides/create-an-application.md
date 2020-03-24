@@ -1,6 +1,6 @@
 ---
 title: Create an application
-description: Learn how to create an API application to use with Vonage Business Communications APIs
+description: Learn how to create an API application to use the Vonage Business Communications APIs
 navigation_weight: 3
 ---
 

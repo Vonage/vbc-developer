@@ -1,6 +1,6 @@
 ---
 title: Making an API Request
-description: Learn how to make an API request
+description: Learn how to make an API request to the Vonage Business Communications APIs
 navigation_weight: 6
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Logging In
-description: Learn how to login to the developer portal
+description: Learn how to log in to the developer portal
 navigation_weight: 2
 ---
 
