@@ -47,7 +47,7 @@ The Password grant type requires that the application collect the user's passwor
 
 The following example shows how to an obtain an authorization_code via the authorize end point.
 				
-```code_snippets
+```bash
 https://api.vonage.com/authorize?scope=openid&response_type=code&redirect_uri=$REDIRECT_URI&client_id=$CONSUMER_KEY
 ```
 
@@ -56,7 +56,7 @@ https://api.vonage.com/authorize?scope=openid&response_type=code&redirect_uri=$R
 
 The following example shows how to exchange an authorization code for a token via the token end point
 
-```code_snippets
+```bash
 curl -k -d "grant_type=authorization_code&code=$AUTHORIZATION_CODE&redirect_uri=$REDIRECT_URI" \  
 	-H "Authorization: Basic $AUTHORIZATION" \
 	https://api.vonage.com/token`
