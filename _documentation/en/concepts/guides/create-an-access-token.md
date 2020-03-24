@@ -91,8 +91,10 @@ Replace the following placeholders in the example with your own values:
 
 > Note: When using password grant, you will need to append `@vbc.prod` to your username. 
 
-```code_snippets
-source: '_examples/vonage-business-cloud/vbc-apis/general/authenticate-password'
+```bash
+curl -k -d "grant_type=password&username=$VBC_USERNAME@vbc.prod&password=$VBC_PASSWORD" \
+        -d "&client_id=$VBC_CLIENT_ID&client_secret=$VBC_CLIENT_SECRET" \
+        https://api.vonage.com/token
 ```
 
 When you run it, you will receive a JSON response with the `access_token` embedded in it. You need this token to use the Account, Extension and User APIs:
