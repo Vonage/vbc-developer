@@ -10,7 +10,7 @@ Replace the following placeholder value in the sample code:
 
 | Key        | Description                                                                                            |
 |------------|--------------------------------------------------------------------------------------------------------|
-| bearer_token | Your OAuth token. [Read more about OAuth tokens](https://developer.nexmo.com/vonage-business-cloud/vbc-apis/getting-started/authentication) |
+| bearer_token | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
 | id | Unique identifier of the call |
 
 

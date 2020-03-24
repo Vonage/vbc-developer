@@ -1,12 +1,12 @@
 ---
-title: Creating a Developer Account
+title: Create a Developer Account
 description: Learn how to request a developer account to use the Vonage Business Communications APIs
 navigation_weight: 1
 ---
 
 #  Creating a Developer Account
 
-To work with the Vonage Business Communications APIs, you must first request a developer account. You will use the developer account:
+To use the Vonage Business Communications APIs, you must first request a developer account. You will use the developer account to:
 
 * Log in to the [Developer Portal](https://developer.vonage.com)
 * Create API applications
@@ -18,4 +18,4 @@ To request an account please fill out the "request an account" form found on the
 
 ![Screenshot showing request account modal](/assets/images/vbc/create-account.png)
 
-> Now that you have requested an account learn how to [log in to the developer portal](/getting-started/logging-in)
+> Now that you have requested an account learn how to [log in to the developer portal](/concepts/guides/logging-in)

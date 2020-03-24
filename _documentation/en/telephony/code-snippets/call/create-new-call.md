@@ -11,7 +11,7 @@ Replace the following placeholder values in the sample code:
 
 | Key        | Description                                                                                            |
 |------------|--------------------------------------------------------------------------------------------------------|
-| bearer_token | Your OAuth token. [Read more about OAuth tokens](https://developer.nexmo.com/vonage-business-cloud/vbc-apis/getting-started/authentication) |
+| bearer_token | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
 | account_id | The Vonage Business Communications account ID. |
 | from_destination | NEED DOCS | 
 | from_device | NEED DOCS |
@@ -22,6 +22,7 @@ Replace the following placeholder values in the sample code:
 ``` bash
 curl --location --request POST 'https://api.vonage.com/t/vbc.prod/telephony/v3/cc/accounts/$account_id/calls' \
 --header 'Content-Type: application/json' \
+--header 'Authorization: Bearer $bearer_token' \
 --data-raw '{  
    "from": {  
      "destination": "$from_destination",  

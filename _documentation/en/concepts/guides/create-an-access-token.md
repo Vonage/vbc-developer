@@ -1,12 +1,12 @@
 ---
-title: Authentication
+title: Create an Access Token
 description: Authenticating to the Vonage Business Communications APIs
 navigation_weight: 5
 ---
 
 #  Authenticating to the Vonage Business Communications APIs
 
-Once you have [created your application](/getting-started/create-application), you need to configure it so that it can authenticate against the [Account](/account-api/overview), [Extension](/vonage-business-cloud/vbc-apis/extension-api/overview) and [User](/vonage-business-cloud/vbc-apis/user-api/overview) APIs. The VBC APIs use  [OAuth](https://oauth.net/2/) for authentication.
+Once you have [created your application](/concepts/guides/create-application), and [subscribed to the Provisioning API](/account-api/overview) you are ready to create an access token. Vonage Business Communications APIs APIs use [OAuth](https://oauth.net/2/) for authentication.
 
 ## Creating authentication keys
 
@@ -18,9 +18,9 @@ Once you have [created your application](/getting-started/create-application), y
 
 4. Select the "Production Keys" tab:
 
-    ![Screenshot showing the Production Keys tab of the My Applications page](/assets/images/vbc/production-keys.png)
+  ![Screenshot showing the Production Keys tab of the My Applications page](/assets/images/vbc/production-keys.png)
 
-    > Note: The default grant type is `Code`. The [grant type](https://oauth.net/2/grant-types/) is the method OAuth uses to generate an access token. When you create a production application you will typically want to use this method to authenticate requests. The `Refresh Token` option will create a new token when the current one expires.
+  > Note: The default grant type is `Code`. The [grant type](https://oauth.net/2/grant-types/) is the method OAuth uses to generate an access token. When you create a production application you will typically want to use this method to authenticate requests. The `Refresh Token` option will create a new token when the current one expires.
 
 5. In the "Callback URL" field, enter a valid callback URL that your application will use to receive the generated token. If you haven't created your application yet, enter `http://localhost` for now and remember to enter the correct URL when you are ready to test it.
 
@@ -114,4 +114,4 @@ When you run it, you will receive a JSON response with the `access_token` embedd
 
 ## Next Steps 
 
-Now that you have configured authentication, you must [subscribe to the Provisioning API](/vonage-business-cloud/vbc-apis/getting-started/subscribe-api) before you can use the Account, Extension, and User APIs.
+Now that you have create an access token, you are ready to [make an API request](/concepts/guides/make-an-api-request).

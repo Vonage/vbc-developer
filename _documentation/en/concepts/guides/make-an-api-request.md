@@ -6,7 +6,7 @@ navigation_weight: 6
 
 # Making an API Request
 
-Now that you've subscribed to APIs and authenticated you can use your access token to start making API calls.
+Now that you've [created an access token](/concepts/guides/create-an-access-token) you are ready to make an API request.
 
 ## Sample Request
 
@@ -16,7 +16,7 @@ Replace the following placeholder values in the sample code:
 
 | Key        | Description                                                                                            |
 |------------|--------------------------------------------------------------------------------------------------------|
-| bearer_token | Your OAuth token. [Read more about OAuth tokens](https://developer.nexmo.com/vonage-business-cloud/vbc-apis/getting-started/authentication) |
+| bearer_token | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
 | account_id | The Vonage Business Communications account ID. You can use 'self' to refer to the authenticated user's account. |
 
 ``` bash

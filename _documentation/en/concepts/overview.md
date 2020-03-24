@@ -5,16 +5,16 @@ meta_title: Introducing the Vonage Business Communications APIs
 
 #  Vonage Business Communications APIs
 
-Vonage Business Communications (VBC) APIs are a set of APIs that enable you programatically access account data and features for your Vonage Business Communications account. 
+Vonage Business Communications (VBC) APIs are a set of APIs that enable you programatically access data and manage features on your account.
 
 ## Getting Started
 
-* [Creating an account](/concepts/guides/create-account) - How to request an account
-* [Logging in to the developer portal](/concepts/guides/logging-in) - How to access the Vonage Business Communications developer portal
-* [Creating an application](/concepts/guides/create-application) - Learn how to create on OAuth application
-* [Subscribe to APIs](/concepts/guides/subscribe-to-apis) - Learn how to subscribe your OAuth application to APIs
-* [Authenticating to APIs](/concepts/guides/authentication) - Learn how to authenticate to APIs
-* [Making an API Call](/concepts/guides/make-a-request) - Make an API call with your access token
+* [Create a Developer Account](/concepts/guides/create-a-developer-account) - How to request a developer account
+* [Logging In](/concepts/guides/logging-in) - How to access the APIs for Vonage Business Communications developer portal
+* [Create an Application](/concepts/guides/create-an-application) - Learn how to create on API application
+* [Subscribe to APIs](/concepts/guides/subscribe-to-apis) - Learn how to add API subscriptions to your application
+* [Create an Access Token](/concepts/guides/create-an-access-token) - Learn how to authenticate to APIs
+* [Making an API request](/concepts/guides/make-an-api-request) - Learn how to make an API request with your access token
 
 ## API Directory
 

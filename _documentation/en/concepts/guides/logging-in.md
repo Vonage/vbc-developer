@@ -17,5 +17,5 @@ To log in to the developert portal:
 * Make sure to select "Vonage Business Communications" as the platform.
 * Click "Sign In"
 
-> Now that you're logged, learn how to [create an API application](/getting-started/create-application) to get started using the Vonage Business Communications APIs.
+> Now that you're logged in, learn how to [create an API application](/concepts/guides/create-an-application) to start using the Vonage Business Communications APIs.
 
