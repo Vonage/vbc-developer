@@ -8,9 +8,9 @@ This example shows you how to count active calls
 
 Replace the following placeholder value in the sample code:
 
-| Key        | Description                                                                                            |
-|------------|--------------------------------------------------------------------------------------------------------|
-| bearer_token | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
+| Key | Description |
+| --- | ----------- |
+| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
 
 
 ``` bash

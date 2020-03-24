@@ -8,10 +8,11 @@ This example shows you how to download a call recording audio file
 
 Replace the following placeholder value in the sample code:
 
-| Key        | Description                                                                                            |
-|------------|--------------------------------------------------------------------------------------------------------|
-| bearer_token | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
-| recording_id | The recording ID |
+| Key | Description |
+| --- | ----------- |
+| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
+| account_id        | The Vonage Business Communications account ID. You can use 'self' to refer to the authenticated user's account. |
+| recording_id 		| The recording ID |
 
 
 ``` bash

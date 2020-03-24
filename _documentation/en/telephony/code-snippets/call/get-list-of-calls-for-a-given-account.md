@@ -9,10 +9,10 @@ This example shows you how to make retrieve all calls on a account. This will re
 
 Replace the following placeholder values in the sample code:
 
-| Key        | Description                                                                                            |
-|------------|--------------------------------------------------------------------------------------------------------|
-| bearer_token | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
-| account_id | The Vonage Business Communications account ID. |
+| Key | Description |
+| --- | ----------- |
+| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
+| account_id        | The Vonage Business Communications account ID. |
 
 ``` bash
 curl --location --request GET 'https://api.vonage.com/t/vbc.prod/telephony/v3/cc/accounts/$account_id/calls' \

@@ -9,10 +9,10 @@ This example shows you how return a list of devices associated with the account 
 
 Replace the following placeholder values in the sample code:
 
-| Key        | Description                                                                                            |
-|------------|--------------------------------------------------------------------------------------------------------|
-| bearer_token | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
-| account_id | The Vonage Business Communications account ID. |
+| Key | Description |
+| --- | ----------- |
+| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
+| account_id        | The Vonage Business Communications account ID. |
 
 ``` bash
 curl --location --request GET 'https://api.vonage.com/t/vbc.prod/telephony/v3/registration/accounts/$account_id/devices' \
