@@ -13,7 +13,7 @@ Replace the following placeholder values in the sample code:
 | --- | ----------- |
 | bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
 | account_id        | The Vonage Business Communications account ID. You can use 'self' to refer to the authenticated user's account. |
-| user_id 			| The Vonage Business Communications user ID. You can use 'self' to refer to the authenticated user. |
+| user_id           | The Vonage Business Communications user ID. You can use 'self' to refer to the authenticated user. |
 | recording_id.     | The recording ID |
 
 ``` bash

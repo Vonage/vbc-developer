@@ -1,5 +1,5 @@
 ---
-title: Download Recording
+title: Download recording
 navigation_weight: 1
 ---
 
@@ -12,7 +12,7 @@ Replace the following placeholder value in the sample code:
 | --- | ----------- |
 | bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
 | account_id        | The Vonage Business Communications account ID. You can use 'self' to refer to the authenticated user's account. |
-| recording_id 		| The recording ID |
+| recording_id      | The recording ID |
 
 
 ``` bash
