@@ -1,10 +1,10 @@
 ---
-title: Get calls count
+title: List events
 ---
 
-# Get calls count
+# List events
 
-This example shows you how to count active calls
+This example shows you how to list events
 
 Replace the following placeholder value in the sample code:
 
@@ -13,7 +13,7 @@ Replace the following placeholder value in the sample code:
 | bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
 
 ``` bash
-curl --location --request GET 'https://api.vonage.com/t/vbc.prod/vis/v1/self/calls/count' \
+curl --location --request GET 'https://api.vonage.com/t/vbc.prod/vis/v1/self/events' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer $bearer_token'
 ```
