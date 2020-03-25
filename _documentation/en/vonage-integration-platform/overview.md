@@ -18,6 +18,10 @@ With the Vonage Integration Platform API's, you will be able to:
 * Receive real-time call events via HTTP webhooks
 * List historical call history
 
+# Guides
+
+* [Webhooks](/vonage-integration-platform/guides/webhooks)
+
 # Code Snippets
 
 Code snippets demonstrate how to use the API to perform various tasks.
