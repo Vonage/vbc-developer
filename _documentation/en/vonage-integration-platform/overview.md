@@ -21,6 +21,7 @@ With the Vonage Integration Platform API's, you will be able to:
 # Guides
 
 * [Webhooks](/vonage-integration-platform/guides/webhooks)
+* [Call Events](/vonage-integration-platform/guides/call-events)
 
 # Code Snippets
 
