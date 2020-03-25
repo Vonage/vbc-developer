@@ -28,8 +28,8 @@ The following finite state machine describes the allowable state transitions:
 
 The only initial state is Initializing. The only allowable ending states are Answered, Cancelled, Rejected, and Missed. Call states in one of the final ending states will always remain in the ending state.
 
-| State | Initial? | Final? | Direction | Allowable | Transitions | Description |
-| ----- | -------- | ------ | --------- | --------- | ----------- | ----------- |
+| State | Initial? | Final? | Direction | Allowable Transitions | Description |
+| ----- | -------- | ------ | --------- | --------------------- | ----------- |
 | Initializing | Y | N | Inbound           | Ringing, Answered                              | A call has been placed but the remote party has not yet been alerted | 
 | Ringing      | N | N | Inbound, Outbound | Active, Answered, Cancelled, Rejected, Missing | The remote party is being alerted (outbound) or an inbound call is occurring |
 | Active       | N | N | Inbound, Outbound | Answered, Held, Remote Held                    | A call is active and the participants are speaking |
