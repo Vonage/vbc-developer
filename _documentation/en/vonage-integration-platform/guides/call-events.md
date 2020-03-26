@@ -28,17 +28,17 @@ The following finite state machine describes the allowable state transitions:
 
 The only initial state is Initializing. The only allowable ending states are Answered, Cancelled, Rejected, and Missed. Call states in one of the final ending states will always remain in the ending state.
 
-| State | Initial? | Final? | Direction | Allowable Transitions | Description |
-| ----- | -------- | ------ | --------- | --------------------- | ----------- |
-| Initializing | Y | N | Inbound           | Ringing, Answered                              | A call has been placed but the remote party has not yet been alerted | 
-| Ringing      | N | N | Inbound, Outbound | Active, Answered, Cancelled, Rejected, Missing | The remote party is being alerted (outbound) or an inbound call is occurring |
-| Active       | N | N | Inbound, Outbound | Answered, Held, Remote Held                    | A call is active and the participants are speaking |
-| Held         | N | N | Inbound, Outbound | Active                                         | An active call is currently on hold |
-| Remote Held  | N | N | Inbound, Outbound | Active                                         | A remote party of an active call is currently on hold |
-| Answered     | N | Y | Inbound, Outbound |                                                | A call of non-zero duration has ended | 
-| Cancelled    | N | Y | Outbound          |                                                | An outbound call has been cancelled before the remote party answered | 
-| Missed       | N | Y | Inbound           |                                                | An incoming call was not answered |
-| Rejected     | N | Y | Inbound           |                                                | An incoming call was rejected or sent to voicemail without being answered |
+| State | Initial | Final | Direction | Allowable Transitions | Description |
+| ----- | ------- | ------| --------- | --------------------- | ----------- |
+| Initializing | Yes | No  | Inbound           | Ringing, Answered                              | A call has been placed but the remote party has not yet been alerted | 
+| Ringing      | No  | No  | Inbound, Outbound | Active, Answered, Cancelled, Rejected, Missing | The remote party is being alerted (outbound) or an inbound call is occurring |
+| Active       | No  | No  | Inbound, Outbound | Answered, Held, Remote Held                    | A call is active and the participants are speaking |
+| Held         | No  | No  | Inbound, Outbound | Active                                         | An active call is currently on hold |
+| Remote Held  | No  | No  | Inbound, Outbound | Active                                         | A remote party of an active call is currently on hold |
+| Answered     | No  | Yes | Inbound, Outbound |                                                | A call of non-zero duration has ended | 
+| Cancelled    | No  | Yes | Outbound          |                                                | An outbound call has been cancelled before the remote party answered | 
+| Missed       | No  | Yes | Inbound           |                                                | An incoming call was not answered |
+| Rejected     | No  | Yes | Inbound           |                                                | An incoming call was rejected or sent to voicemail without being answered |
 
 For every state, the values for startTime, answerTime, endTime, and duration will follow certain rules. All call states will have a valid startTime. Only Active, Held, Remote Held, and Answered will have a valid answerTime. The endTime property will remain null until the call reaches a final state (Answered, Cancelled, Missed, Rejected). Only calls that have reach the final Answered state will have a non-zero duration.
 
