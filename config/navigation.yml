@@ -8,6 +8,7 @@ navigation_weight:
   smart-numbers: 7
   node-red: 8
   zapier: 9
+  app-center: 10
 
 navigation_overrides:
   concepts: 
@@ -28,3 +29,5 @@ navigation_overrides:
     svg: 'plug'
   zapier:
     svg: 'link'
+  app-center:
+    svg: 'rocket'
