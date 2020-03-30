@@ -3,8 +3,8 @@
     { "url": "heroku/ruby" }
   ],
   "env": {
-    "RACK_ENV": { "required": true },
-    "RAILS_ENV": { "required": true },
+    "RACK_ENV": "production",
+    "RAILS_ENV": "production",
     "OAS_PATH": "_open_api/api_specs/definitions",
     "DOCS_BASE_PATH": "."
   },
