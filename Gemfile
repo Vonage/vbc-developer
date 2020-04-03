@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
 source "https://rubygems.pkg.github.com/nexmo" do
-  gem "nexmo-developer", "0.0.19"#, path: "~/development/nexmo/nexmo-developer"
+  gem "nexmo-developer", "0.0.23"
 end
