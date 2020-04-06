@@ -4,6 +4,8 @@ navigation_weight: 1
 products: call-recording
 ---
 
+# Save Call Recordings to Amazon S3
+
 In this tutorial, we will show how to save Vonage Business Cloud recordings to Amazon S3. There are many examples of how why this would be done:
 * Save Recordings as a backup.
 * Use Amazon Transcribe to transcribe Recordings.
@@ -14,7 +16,8 @@ For this example, we will be building our example in Python. However, you can us
 * [requests](https://requests.readthedocs.io/en/master/)
 * [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
 
-# Prerequisites
+## Prerequisites
+
 Before you can get started, you will need to have Vonage Developer account. If you do not have a Vonage Developer account, please use this [guide](_documentation/en/concepts/guides/create-a-developer-account.md) in order to setup and create your account.
 After you have an account, you will need to do the following using these guides:
 * [Create an application](_documentation/en/concepts/guides/create-an-application.md).
@@ -22,12 +25,13 @@ After you have an account, you will need to do the following using these guides:
 
 For this example, you will need to Subscribe to the [Call Recording API](_documentation/en/call-recording/overview.md).
 
-#Authentication
+## Authentication
+
 After creating an application and subscribing to the Call Recording API, you will now need to log in using your Vonage Business Cloud credentials. For our application, we will be using the Requests library to call the `/api/accounts/` API. Check out the [Making an API Request guide](_documentation/en/concepts/guides/make-an-api-request.md) for more details.
 
 Next, we'll create a function that requests the `/api/accounts` API to generate an access token.
 
-```Python
+```python
 def get_token():
   url = "https://api.vonage.com/token"
   payload = 'grant_type=password&username={}&password={}&client_id={}&client_secret={}'.format(USERNAME, PASSWORD, CLIENT_ID, SECRET)
@@ -56,7 +60,7 @@ def get_token():
 
  Next, we'll request the Call Recording API and use the `access_token` that was returned from the `get_token` function. This will return a JSON response of the call recordings.
 
- ```Python
+ ```python
  def get_company_call_recordings(token, account_id="self"):
   url = "https://api.vonage.com/t/vbc.prod/call_recording/v1/api/accounts/{}/company_call_recordings".format(account_id)
 
@@ -75,7 +79,7 @@ The Call Recording API supports many more parameters that can be used to filter 
 
 The `get_company_call_recordings` function should return a list of recordings from the account. Next, we'll create a function to retrieve the recording.
 
-```Python
+```python
 def download_recording(token, recording_url):
   headers = {
     'Accept': 'application/json',
@@ -89,7 +93,7 @@ This function takes the recording from the `download_url` parameter and returns 
 
 To upload the recording to S3, we'll need to configure Boto3.
 
-# Boto3
+## Boto3
 
 Boto3 is a package from AWS that allows you to perform most, if not all of the available tasks pragmatically. To use boto3, you will need to first have an AWS account and be able to generate an access key and secret. Navigate to your AWS instance and go to [IAM](https://console.aws.amazon.com/iam/home).
 ![](images/iam_add_user.png)
@@ -110,7 +114,7 @@ pip install boto3
 ```
 
 Next, create an S3 client in boto3 and provide the newly created keys:
-```Python
+```python
 import boto3
 client = boto3.client(
     's3',
@@ -121,7 +125,7 @@ client = boto3.client(
 Next, we'll loop thought all the recordings from the `get_company_call_recordings` function we created earlier.
 Then, for each recording, we'll use the `download_recording` function to get the raw data of the recording. We could have saved the recording to a file, but since we are uploading to s3, there's no need to save it locally, then upload it to S3.
 
-```Python
+```python
 for recording in recordings["_embedded"]["recordings"]:
   downloaded_recording = download_recording(token,recording["download_url"])
   client.put_object(Bucket="{MY_BUCKET}",
@@ -136,5 +140,6 @@ for recording in recordings["_embedded"]["recordings"]:
 After a few minutes or so, depending on how many files you will, your files will be uploaded to S3
 ![](/images/s3_uploaded_files.png)
 
-# Conclusion
+## Conclusion
+
 From this example, we've shown how you can backup all your Vonage Business Cloud company call recordings into an S3 bucket. There are other ways to improve this by only downloading calls for the current day. Also, if you want to get fancy, you can create a [Cron Job](https://www.ostechnix.com/a-beginners-guide-to-cron-jobs/) to run every day to download the recordings.
