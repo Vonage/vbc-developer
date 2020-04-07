@@ -2,6 +2,8 @@
 title: Save Call Recordings to Amazon S3
 navigation_weight: 1
 products: call-recording
+languages:
+    - Python
 ---
 
 # Save Call Recordings to Amazon S3
@@ -49,14 +51,14 @@ def get_token():
 
 To run this function, you will need to pass in the following:
 
-* USERNAME - Vonage Business cloud username. Be sure to append `@vbc.prod` to the username. `firstname.lastname@vbc.prod`.
-* PASSWORD - Vonage Business Cloud password.
-* CLIENT_ID - The client id of your Vonage Developer application.
-* SECRET - The secret to your Vonage Developer application.
+* `USERNAME` - Vonage Business cloud username. Be sure to append `@vbc.prod` to the username. `firstname.lastname@vbc.prod`.
+* `PASSWORD` - Vonage Business Cloud password.
+* `CLIENT_ID` - The client id of your Vonage Developer application.
+* `SECRET` - The secret to your Vonage Developer application.
 
 After running this function, you should see the following response:
 
-```
+```json
 {'access_token': 'abc123-xxxxx-xxxxx',
 'expires_in': 9999,
 'refresh_token': 'def456-xxxx-xxxx',
