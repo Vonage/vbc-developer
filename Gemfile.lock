@@ -156,7 +156,7 @@ GEM
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.4.0)
+    loofah (2.5.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -180,7 +180,7 @@ GEM
       hansi (~> 0.2.0)
       mustermann (= 1.1.1)
     neatjson (0.9)
-    nexmo-developer (0.0.23)
+    nexmo-developer (0.0.27)
       activeadmin (~> 2.6)
       activesupport (~> 6.0)
       bootsnap (~> 1.4.6)
@@ -221,7 +221,7 @@ GEM
       sass (~> 3.1)
       shotgun (~> 0.9)
       sinatra (~> 2.0)
-    nexmo_markdown_renderer (0.2.1)
+    nexmo_markdown_renderer (0.2.2)
       activemodel (~> 6.0)
       banzai (~> 0.1.2)
       i18n (~> 1.7)
@@ -252,7 +252,7 @@ GEM
     pg (1.2.3)
     polyamorous (2.3.2)
       activerecord (>= 5.2.1)
-    public_suffix (4.0.3)
+    public_suffix (4.0.4)
     rack (2.2.2)
     rack-protection (2.0.8.1)
       rack
@@ -361,7 +361,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  nexmo-developer (= 0.0.23)!
+  nexmo-developer (= 0.0.27)!
 
 BUNDLED WITH
    2.1.4
