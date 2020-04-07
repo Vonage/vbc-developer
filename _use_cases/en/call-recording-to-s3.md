@@ -112,21 +112,21 @@ To upload the recording to S3, we'll need to configure Boto3.
 
 Boto3 is a package from AWS that allows you to perform most, if not all of the available tasks pragmatically. To use boto3, you will need to first have an AWS account and be able to generate an access key and secret. Navigate to your AWS instance and go to [IAM](https://console.aws.amazon.com/iam/home).
 
-![](images/iam_add_user.png)
+![](/images/use_cases/call-recording-to-s3/iam_add_user.png)
 
 Under `Access Type`, select `Programmatic access`
 
-![](images/iam_create_user.png)
+![](/images/use_cases/call-recording-to-s3/iam_create_user.png)
 
 Write down (in a secure location) the newly created access key and secret.
 
 Finally, To upload files into S3, you will need to create an S3 bucket. Navigate to [AWS S3](https://s3.console.aws.amazon.com/) and click `Create Bucket`.
 
-![](call_recording_to_s3/images/s3_create_bucket.png)
+![](/images/use_cases/call-recording-to-s3/s3_create_bucket.png)
 
 In the `Bucket Name` field, enter a unique name for the bucket. At the bottom of the page, uncheck the `Block all public access` checkbox. Since we are using the boto3 client, we need to have the correct permissions on uploading objects to our bucket. Please do not do this for production. Instead, create a new IAM role and add the permissions appropriately.
 
-![](/images/s3_config.png)
+![](/images/use_cases/call-recording-to-s3/s3_config.png)
 
 To use the Boto3 library, we need to install it using `pip`.
 
@@ -165,7 +165,7 @@ for recording in recordings["_embedded"]["recordings"]:
 * Body - The raw binary data of the file
 
 After a few minutes or so, depending on how many files you will, your files will be uploaded to S3
-![](/images/s3_uploaded_files.png)
+![](/images/use_cases/call-recording-to-s3/s3_uploaded_files.png)
 
 ## Conclusion
 
