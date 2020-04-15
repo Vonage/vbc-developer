@@ -12,7 +12,7 @@ navigation_weight:
 
 navigation_overrides:
   concepts: 
-    svg: 'ai-4'
+    svg: 'mind-map'
   call-recording:
     svg: 'voicemail-2'
   provisioning:
