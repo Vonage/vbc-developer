@@ -119,6 +119,7 @@ GEM
       actionpack (>= 4.1)
       activesupport (>= 4.1)
     hash-deep-merge (0.1.1)
+    htmlentities (4.3.4)
     httmultiparty (0.3.16)
       httparty (>= 0.7.3)
       mimemagic
@@ -180,7 +181,7 @@ GEM
       hansi (~> 0.2.0)
       mustermann (= 1.1.1)
     neatjson (0.9)
-    nexmo-developer (0.0.27)
+    nexmo-developer (0.0.29)
       activeadmin (~> 2.6)
       activesupport (~> 6.0)
       bootsnap (~> 1.4.6)
@@ -206,6 +207,7 @@ GEM
       railties (~> 6.0.2)
       recaptcha (~> 5.3)
       split (~> 3.4)
+      truncato
       webpacker
     nexmo-oas-renderer (0.8.0)
       activemodel (~> 6.0)
@@ -343,6 +345,9 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    truncato (0.7.11)
+      htmlentities (~> 4.3.1)
+      nokogiri (>= 1.7.0, <= 2.0)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     warden (1.2.8)
@@ -361,7 +366,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  nexmo-developer (= 0.0.27)!
+  nexmo-developer (= 0.0.29)!
 
 BUNDLED WITH
    2.1.4

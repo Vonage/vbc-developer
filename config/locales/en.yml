@@ -20,3 +20,8 @@ en:
     on-demand-call-recording: On-Demand Call Recording
     webhook: Webhook
     app-center: App Center
+  layouts:
+    partials:
+      header:
+        team: Team
+        use-cases: Use Cases
