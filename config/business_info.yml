@@ -1,5 +1,5 @@
-name: VBC
-subtitle: Business for Developers
+name: Business Communications APIs
+subtitle: Developer Center
 assets:
   logo:
     path: '/images/logos/vbc-logo.png'
@@ -10,12 +10,12 @@ header:
       path: https://developer.vonage.com
       text:
         - 'Log In'
-        - 'Try Me'
+
 footer:
   links:
     status:
       path: https://developer.vonage.com
-      text: 'VBC Status' 
+      text: 'System Status' 
     navigation:
       documentation:
         - call-recording: 'https://vbc-developer.herokuapp.com/call-recording/overview'
