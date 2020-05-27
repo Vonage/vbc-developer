@@ -1,21 +1,28 @@
 name: Business Communications APIs
 subtitle: Developer Center
 assets:
-  logo:
+  header_logo:
     path: '/images/logos/vbc-logo.svg'
     alt: 'VBC Logo'
+  footer_logo:
+    path: '/images/logos/vbc-logo-white.svg'
+    alt: 'VBC Footer Logo'
+docs_repo: 'nexmo/nexmo-docs'
+oas_repo: 'vonage/api-specification'
 header:
   links:
     sign-up:
       path: https://developer.vonage.com
       text:
         - 'Log In'
-
+        - 'Try Me'
+  hiring:
+    display: true
 footer:
   links:
     status:
       path: https://developer.vonage.com
-      text: 'System Status' 
+      text: 'VBC Status' 
     navigation:
       documentation:
         - call-recording: 'https://vbc-developer.herokuapp.com/call-recording/overview'
@@ -37,3 +44,5 @@ footer:
     support:
       business-support: 'https://businesssupport.vonage.com/'
       developer-support: 'devsupport@vonage.com'
+
+

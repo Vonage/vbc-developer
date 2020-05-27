@@ -1,7 +1,7 @@
 navigation_weight:
   concepts: 1
-  call-recording: 2
-  provisioning: 3
+  call-recording: 3
+  provisioning: 2
   telephony: 4
   reports: 5
   vonage-integration-platform: 6
