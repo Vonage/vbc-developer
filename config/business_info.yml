@@ -2,10 +2,10 @@ name: Business Communications APIs
 subtitle: Developer Center
 assets:
   header_logo:
-    path: '/images/logos/vbc-logo.png'
+    path: '/images/logos/vbc-logo.svg'
     alt: 'VBC Logo'
   footer_logo:
-    path: '/images/logos/vbc-logo.png'
+    path: '/images/logos/vbc-logo.svg'
     alt: 'VBC Footer Logo'
 docs_repo: 'nexmo/nexmo-docs'
 oas_repo: 'vonage/api-specification'
