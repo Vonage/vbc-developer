@@ -5,7 +5,7 @@ assets:
     path: '/images/logos/vbc-logo.svg'
     alt: 'VBC Logo'
   footer_logo:
-    path: '/images/logos/vbc-logo.svg'
+    path: '/images/logos/vbc-logo-white.svg'
     alt: 'VBC Footer Logo'
 docs_repo: 'nexmo/nexmo-docs'
 oas_repo: 'vonage/api-specification'
