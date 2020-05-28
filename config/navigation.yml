@@ -6,9 +6,6 @@ navigation_weight:
   reports: 5
   vonage-integration-platform: 6
   smart-numbers: 7
-  node-red: 8
-  zapier: 9
-  app-center: 10
 
 navigation_overrides:
   concepts: 
@@ -17,8 +14,6 @@ navigation_overrides:
     svg: 'voicemail-2'
   provisioning:
     svg: 'address-book'
-  node-red:
-    svg: 'flow'
   reports:
     svg: 'report'
   smart-numbers:
@@ -27,7 +22,3 @@ navigation_overrides:
     svg: 'telephone'
   vonage-integration-platform:
     svg: 'plug'
-  zapier:
-    svg: 'link'
-  app-center:
-    svg: 'rocket'
