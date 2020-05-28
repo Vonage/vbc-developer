@@ -7,7 +7,7 @@ assets:
   footer_logo:
     path: '/images/logos/vbc-logo-white.svg'
     alt: 'VBC Footer Logo'
-docs_repo: 'nexmo/nexmo-docs'
+docs_repo: 'VonageGarage/VDP'
 oas_repo: 'vonage/api-specification'
 header:
   links:
