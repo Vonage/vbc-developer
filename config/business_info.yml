@@ -17,7 +17,7 @@ header:
         - 'Log In'
         - 'Try Me'
   hiring:
-    display: true
+    display: false
 footer:
   links:
     status:
