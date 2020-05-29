@@ -44,5 +44,6 @@ footer:
     support:
       business-support: 'https://businesssupport.vonage.com/'
       developer-support: 'devsupport@vonage.com'
-
-
+    social:
+      linkedin: 'https://www.linkedin.com/company/vonage/'
+      twitter: 'https://twitter.com/vonage'
