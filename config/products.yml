@@ -48,14 +48,8 @@ products:
     path: 'zapier'
     dropdown: true
   - 
-    name: 'Concepts'
-    icon: 'message'
+    name: 'Getting Started'
+    icon: 'mind-map'
     icon_colour: 'green'
     path: 'concepts'
-    dropdown: true
-  - 
-    name: 'App Center'
-    icon: 'file-search'
-    icon_colour: 'purple'
-    path: 'app-center'
-    dropdown: true
+    dropdown: false
