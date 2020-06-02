@@ -51,5 +51,5 @@ products:
     name: 'Getting Started'
     icon: 'mind-map'
     icon_colour: 'green'
-    path: 'concepts'
+    path: 'getting-started'
     dropdown: false
