@@ -1,28 +1,27 @@
 ---
 title: Documentation
+meta_title: Introducing the Vonage Business Communications APIs
 ---
 
-# Documentation
+#  Vonage Business Communications APIs
 
-Welcome to the Nexmo Developer Documentation. Get familiar with [concepts](#concepts) common to Nexmo APIs and [products](#products). Then start building connected applications with Nexmo.
+Vonage Business Communications (VBC) APIs are a set of APIs that enable you programatically access data and manage features on your account.
 
-## Concepts
+## Getting Started
 
-There are a number of shared concepts between the various Nexmo APIs:
+* [Create a Developer Account](/concepts/guides/create-a-developer-account) - How to request a developer account
+* [Logging In](/concepts/guides/logging-in) - How to access the APIs for Vonage Business Communications developer portal
+* [Create an Application](/concepts/guides/create-an-application) - Learn how to create on API application
+* [Subscribe to APIs](/concepts/guides/subscribe-to-apis) - Learn how to add API subscriptions to your application
+* [Create an Access Token](/concepts/guides/create-an-access-token) - Learn how to authenticate to APIs
+* [Making an API request](/concepts/guides/make-an-api-request) - Learn how to make an API request with your access token
 
-- [Applications](/concepts/guides/applications) - Security and configuration information you need to connect to Nexmo endpoints
-- [Authentication](/concepts/guides/authentication) – API keys and JSON Web Tokens (JWTs)
-- [Signing messages](/concepts/guides/signing-messages) – How to cryptographically sign messages and verify signatures
-- [Webhooks](/concepts/guides/webhooks) – Nexmo's API can send data back to your web server via a webhook
-* [OpenAPI](/concepts/guides/openapi) – All Nexmo APIs have OpenAPI descriptions that you can take advantage of in your own development process
+## API Directory
 
-You can also find definitions of commonly used terms in the [Glossary](/concepts/guides/glossary).
+The following Vonage Business Communications APIs are available:
 
-## Products
-
-Documentation within Nexmo Developer is organised by product. Within each product section you'll find the following types of documentation:
-
-- **Guides** - Key concepts highlighting core functionality and features
-- **Code Snippets** - Quick access code samples to help you construct your programmable communications apps
-- **Tutorials** - Step-by-step tutorials to help you build solutions to common communications use cases
-- **API Reference** - The resources, parameters and payload examples
+* [Call Recording API](/api/call-recording) - The Vonage Business Communications Call Recording API enables you to manage Company and On-Demand Call Recordings
+* [Provisioning API](/api/provisioning) - The Vonage Business Communications Provisioning API enables you get details on Users, Accounts and Extensions
+* [Telephony API](/api/telephony) - The Vonage Business Communications Telephony API enables you to manage calls and retrieve device registration information
+* [Reports API](/api/reports) - The Vonage Business Communications Reports API enables you to retrieve call logs for your account
+* [Vonage Integration Platform API](/api/vonage-integration-platform) - The Vonage Business Communications Reports API enables you to manage calls and receive real-time call events via HTTP webhooks
