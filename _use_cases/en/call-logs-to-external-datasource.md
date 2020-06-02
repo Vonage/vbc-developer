@@ -12,18 +12,18 @@ In this tutorial, we will go over how to save your call logs into an external da
 
 ## Prerequisites
 
-Before you can get started, you will need to have a Vonage Developer account. If you do not have a Vonage Developer account, please use this [guide](_documentation/en/concepts/guides/create-a-developer-account.md) to setup and create your account.
+Before you can get started, you will need to have a Vonage Developer account. If you do not have a Vonage Developer account, please use this [guide](/concepts/guides/create-a-developer-account) to setup and create your account.
 
 After you have an account, you will need to do the following using these guides:
 
-* [Create an application](_documentation/en/concepts/guides/create-an-application.md).
-* [Subscribe to the API's](_documentation/en/concepts/guides/create-an-application.md).
+* [Create an application](/guides/create-an-application).
+* [Subscribe to the API's](/concepts/guides/subscribe-to-apis).
 
-For this example, you will need to Subscribe to the [Reports API](_documentation/en/reports/overview.md).
+For this example, you will need to Subscribe to the [Reports API](/reports/overview).
 
 ## Authentication
 
-After creating an application and subscribing to the Reports API, you will now need to log-in using your Vonage Business Cloud credentials. Check out the [Making an API Request guide](_documentation/en/concepts/guides/make-an-api-request.md) for more details.
+After creating an application and subscribing to the Reports API, you will now need to log-in using your Vonage Business Cloud credentials. Check out the [Making an API Request guide](/concepts/guides/make-an-api-request) for more details.
 
 Next, we'll create a function that requests the `/token` API to generate an access token.
 
@@ -58,10 +58,10 @@ After running this function, you should see the following response:
 }
  ```
 
- ## Call Logs API
+## Call Logs API
  The next step is to pull the list of calls from the call logs api. We can use this function to return a list of calls by a start date and end date. If there are more results than the number of items we have requested using the page_size parameter, this function will retrieve those other pages as well.
 
- ```Python
+ ```python
 results = []
 def get_reports(token, account_id, start_date, end_date, order="asc", page_size=10, page=1):
   url = "https://api.vonage.com/t/vbc.prod/reports/v1/accounts/{}/call-logs?start:gte={}&start:lte={}&page_size={}&page={}&order={}".format(account_id, start_date, end_date, page_size, page, order)
@@ -95,8 +95,10 @@ yesterday_str = yesterday.strftime('%Y-%m-%d 23:59:59')
 access_token = get_token()["access_token"]
 reports = get_reports(access_token,account_id={YOUR_ACCOUNT_ID}, start_date=today_str, end_date=yesterday_str)
 ```
-We then call the `get_reports` function to return a list of calls between those 2 dates. Next, we'll then need to create a JSON file that contains a list of these logs.
-```Python
+
+We then call the `get_reports()` function to return a list of calls between those 2 dates. Next, we'll then need to create a JSON file that contains a list of these logs.
+
+```python
 import json
 
 def write_json(data, filename='data.json'):
@@ -122,12 +124,17 @@ The final step is to run our [script](https://gist.github.com/tbass134/86965b64e
 You can create a CRON job locally by first running `crontab -e` on a OSX/Linux based system.
 
 For a Windows machine:
+
 * Log on with a privileged account, e.g. Administrator
 * Go to Start > Control Panel > System and Security > Administrative Tools > Task Scheduler
 * In the right panel click on Create Basic Task
 
 Our CRON job will look like this:
-`* 0 * * * get_call_logs.py >/dev/null 2>&1`
+
+```bash
+* 0 * * * get_call_logs.py >/dev/null 2>&1
+```
+
 This will run everyday at midnight. To create your own CRON job, check out https://crontab-generator.org/
 
 ## Import into Tableau
@@ -147,4 +154,4 @@ Then, drag the `Count` parameter under the `Measured Names` section to the row s
 As our CRON job runs everyday, our Tableau dashboard will update itself with the new call logs. Just remember to save the JSON in the same location as where you originally added the datasource for Tableau
 
 ## Conclusion
-In this example, we have seen how to create a function that returns a list of calls logs for a given day. Pushing this data is a dashboard like Tableu will be able to help your team analyze your call traffic. Our dashboard just shows the number of calls every day, but you can customize it to shown number of inbound / outbound calls, average cost per day, average length of calls, and much more. 
+In this example, we have seen how to create a function that returns a list of calls logs for a given day. Pushing this data is a dashboard like Tableu will be able to help your team analyze your call traffic. Our dashboard just shows the number of calls every day, but you can customize it to shown number of inbound / outbound calls, average cost per day, average length of calls, and much more.
