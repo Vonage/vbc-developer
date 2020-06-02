@@ -1,5 +1,6 @@
 name: Business Communications APIs
 subtitle: Developer Center
+base_url: 'https://developer.vonage.com'
 assets:
   header_logo:
     path: '/images/logos/vbc-logo.svg'
@@ -44,5 +45,6 @@ footer:
     support:
       business-support: 'https://businesssupport.vonage.com/'
       developer-support: 'devsupport@vonage.com'
-
-
+    social:
+      linkedin: 'https://www.linkedin.com/company/vonage/'
+      twitter: 'https://twitter.com/vonage'
