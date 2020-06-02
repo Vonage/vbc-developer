@@ -1,5 +1,6 @@
 name: Business Communications APIs
 subtitle: Developer Center
+base-url: 'https://developer.vonage.com'
 assets:
   header_logo:
     path: '/images/logos/vbc-logo.svg'
