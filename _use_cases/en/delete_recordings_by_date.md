@@ -66,7 +66,8 @@ After running this function, you should see the following response:
 ## Get Call Recordings
 
 Before we call the company_call_recordings API, we'll need to pass in a date string that is in the past. For this example, we will create a date that is 7 days in the past
-```Python
+
+```python
 import datetime
 import urllib.parse
 today = datetime.datetime.now()
@@ -74,6 +75,7 @@ last_week = datetime.timedelta(days = 7)
 date_diff = today - last_week
 encoded_date = urllib.parse.quote_plus(date_diff.strftime('%Y-%m-%dT00:00:00+0000'))
 ```
+
 Here, we get the current date using `datetime.datetime.now()`, then use `datetime.timedelta()` function to create a date that is `days` in the past. Here we use `7`. Next, we'll subtract the current date from the date 7 days in the past, to get our date. Finally, we use `strftime()` to convert the date object into a string. We've set the time to `00:00:00+0000`, which means we are getting the date at midnight UTC.
 Before we can pass the date into the Call Recordings API, we need to urlencode the date using `urllib.parse.quote_plus()`.
 
@@ -137,6 +139,7 @@ for recording in recordings["_embedded"]["recordings"]:
   response = delete_call_recording(access_token, call_id)
   print(response)
 ```
+
 Here, we get the recording `id` from the `recordings` list, then pass that call_id to the `delete_call_recording` function. If successful, the response will be a empty 204 response.
 
 ## Delete On Demand Call Recordings
@@ -173,18 +176,19 @@ Here, we are calling the `call_recording` API and passing the following paramete
 * `start:gte` - Filter records by start date (greater than or equal to)
 
 Next, we'll generate a date 7 days in the past and use that for the `start_date` parameter.
-```Python
+
+```python
 import datetime
 import urllib.parse
 today = datetime.datetime.now()
 last_week = datetime.timedelta(days = 7)
 date_diff = today - last_week
 encoded_date = urllib.parse.quote_plus(date_diff.strftime('%Y-%m-%dT00:00:00+0000'))
-encoded_date
 ```
-Next, we'll write a function that calls the `company_call_recordings` API to delete the recording by call_d
 
-```Python
+Next, we'll write a function that calls the `company_call_recordings` API to delete the recording by `call_id`.
+
+```python
 def delete_on_demand_recording(token, call_id, account_id="self", user_id="self"):
   url = "https://api.vonage.com/t/vbc.prod/call_recording/v1/api/accounts/{}/users/{}/call_recordings/{}".format(account_id, call_id)
 
@@ -197,8 +201,9 @@ def delete_on_demand_recording(token, call_id, account_id="self", user_id="self"
   return response
 ```
 
-We'll then loop though the recordings and write a function to delete the on demand call recording using the `call_id`
-```Python
+We'll then loop though the recordings and write a function to delete the on demand call recording using the `call_id`.
+
+```python
 access_token = get_token()["access_token"]
 recordings = on_demand_call_recordings(access_token, start_date=encoded_date)
 
@@ -211,18 +216,21 @@ for recording in recordings["_embedded"]["recordings"]:
 ## CRON Job
 The final step is to delete the call recordings every week using a CRON job. This way, we will not have to run these functions manually. A CRON is way to run scripts periodically at fixed times, dates, or intervals.
 You can create a CRON job locally by first running `crontab -e` on a OSX/Linux based system.
+
 For a Windows machine:
+
 * Log on with a privileged account, e.g. Administrator
 * Go to Start > Control Panel > System and Security > Administrative Tools > Task Scheduler
 * In the right panel click on Create Basic Task
 
-Our CRON job will run every 7 days. An here is what the CRON job will look like
+Our CRON job will run every 7 days. An here is what the CRON job will look like:
+
 ```bash
 * * 7 * * delete_recordings.py >/dev/null 2>&1
 ```
+
 The [`delete_vbc_recordings.py`](https://gist.github.com/tbass134/03342bf8bd0c047ca54cc50906e3b828) is a script that will delete both the call recordings and on demand call recordings that are older than 7 days.
 Take a look at https://crontab-generator.org/ to create your own CRON job.
-
 
 ## Conclusion
 
