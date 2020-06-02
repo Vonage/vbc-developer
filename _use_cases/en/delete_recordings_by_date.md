@@ -83,21 +83,24 @@ Next, we'll request the Call Recording API and use the `access_token` that was r
 
 ```python
 import requests
-def company_call_recordings(token, account_id="self", order="start%3ADESC",page=1, page_size=10, start_date=None, end_date=None):
-  url = "https://api.vonage.com/t/vbc.prod/call_recording/v1/api/accounts/{}/company_call_recordings?order={}&page={}&page_size={}".format(account_id, order, page, page_size)
-  if start_date:
-    url = url + "&start:gte="+start_date
-
-  if end_date:
-    url = url + "&start:lte="+end_date
-
+comany_recordings = []
+def company_call_recordings(token, start_date, account_id="self",order="asc", page_size=10, page=1):
+  url = "https://api.vonage.com/t/vbc.prod/call_recording/v1/api/accounts/{}/company_call_recordings?order={}&page_size={}&page={}&start:gte={}".format(account_id, order, page_size, page, start_date)
   headers = {
     'Accept': 'application/json',
     'Authorization': 'Bearer {}'.format(token),
   }
 
-  response = requests.request("GET", url, headers=headers)
-  return response.json()
+  response = requests.request("GET", url, headers=headers).json()
+  if "_embedded" in response:
+    comany_recordings.extend(response["_embedded"]["recordings"])
+
+  if "total_pages" in response:
+    if page < response["total_pages"]:
+      page = page + 1
+      company_call_recordings(token, start_date, account_id, order, page_size, page)
+
+  return comany_recordings
 ```
 
 Here, we are calling the `company_call_recordings/v1/api/` and passing the following parameter:
@@ -149,6 +152,7 @@ Deleting on-demand call recordings will be almost the same as deleting call reco
 As before, we need to list all the on-demand recordings after a given date. First, we need get a list of on-demand call recordings using this function.
 
 ```python
+on_demand_recordings = []
 def on_demand_call_recordings(token, account_id="self", user_id="self", order="start%3ADESC",page=1, page_size=10, start_date=None, end_date=None):
   url = "https://api.vonage.com/t/vbc.prod/call_recording/v1/api/accounts/{}/users/{}/call_recordings?order={}&page={}&page_size={}".format(account_id, user_id, order, page, page_size)
   if start_date:
@@ -162,8 +166,16 @@ def on_demand_call_recordings(token, account_id="self", user_id="self", order="s
     'Authorization': 'Bearer {}'.format(token),
   }
 
-  response = requests.request("GET", url, headers=headers)
-  return response.json()
+  response = requests.request("GET", url, headers=headers).json()
+  if "_embedded" in response:
+    on_demand_recordings.extend(response["_embedded"]["recordings"])
+
+  if "total_pages" in response:
+    if page < response["total_pages"]:
+      page = page + 1
+      on_demand_call_recordings(token, account_id, user_id, order,page, page_size, start_date, end_date)
+
+  return on_demand_recordings
 ```
 
 Here, we are calling the `call_recording` API and passing the following parameter:
