@@ -30,7 +30,7 @@ For this example, you will need to Subscribe to the [Call Recording API](/call-r
 
 ## Authentication
 
-After creating an application and subscribing to the Call Recording API, you will now need to log-in using your Vonage Business Cloud credentials. This example application uses the Requests library to call the `/api/accounts/` API. Check out the [Making an API Request guide](concepts/guides/make-an-api-request) for more details.
+After creating an application and subscribing to the Call Recording API, you will now need to log-in using your Vonage Business Cloud credentials. This example application uses the Requests library to call the `/api/accounts/` API. Check out the [Making an API Request guide](/concepts/guides/make-an-api-request) for more details.
 
 Next, we'll create a function that requests the `/api/accounts` API to generate an access token.
 
