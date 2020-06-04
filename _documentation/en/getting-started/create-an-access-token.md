@@ -6,7 +6,7 @@ navigation_weight: 5
 
 #  Authenticating to the Vonage Business Communications APIs
 
-Once you have [created your application](/getting-started/create-an-access-token), and [subscribed to the Provisioning API](/getting-started/subscribe-to-apis) you are ready to create an access token. Vonage Business Communications APIs APIs use [OAuth](https://oauth.net/2/) for authentication.
+Once you have [created your application](/getting-started/create-an-application), and [subscribed to the Provisioning API](/getting-started/subscribe-to-apis) you are ready to create an access token. Vonage Business Communications APIs APIs use [OAuth](https://oauth.net/2/) for authentication.
 
 ## Creating authentication keys
 
