@@ -14,8 +14,8 @@ To use the Vonage Business Communications APIs, you must first request a develop
 
 > Note: Your developer portal credentials are different than your Vonage Business Communications credentials and can only be used to log in to the developer portal.
 
-To request an account please fill out the "request an account" form found on the [developer portal login](https://developer.vonage.com) page.
+To request an account, fill out the **Request an account** form found on the [developer portal login](https://developer.vonage.com) page.
 
-![Screenshot showing request account modal](/assets/images/vbc/create-account.png)
+![Screenshot showing Request Account modal](/assets/images/request_account.png)
 
 > Now that you have requested an account learn how to [log in to the developer portal](/concepts/guides/logging-in)
