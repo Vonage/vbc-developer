@@ -21,18 +21,18 @@ Python is the language used to build the following example; however, you can use
 
 ## Prerequisites
 
-Before you can get started, you will need to have a Vonage Developer account. If you do not have a Vonage Developer account, please use this [guide](_documentation/en/concepts/guides/create-a-developer-account.md) to setup and create your account.
+Before you can get started, you will need to have a Vonage Developer account. If you do not have a Vonage Developer account, please use this [guide](/concepts/guides/create-a-developer-account.md) to setup and create your account.
 
 After you have an account, you will need to do the following using these guides:
 
-* [Create an application](_documentation/en/concepts/guides/create-an-application.md).
-* [Subscribe to the API's](_documentation/en/concepts/guides/create-an-application.md).
+* [Create an application](/concepts/guides/create-an-application.md).
+* [Subscribe to the API's](/concepts/guides/subscribe-to-apis.md).
 
-For this example, you will need to Subscribe to the [Call Recording API](_documentation/en/call-recording/overview.md).
+For this example, you will need to Subscribe to the [Call Recording API](/call-recording/overview.md).
 
 ## Authentication
 
-After creating an application and subscribing to the Call Recording API, you will now need to log-in using your Vonage Business Cloud credentials. This example application uses the Requests library to call the `/api/accounts/` API. Check out the [Making an API Request guide](_documentation/en/concepts/guides/make-an-api-request.md) for more details.
+After creating an application and subscribing to the Call Recording API, you will now need to log-in using your Vonage Business Cloud credentials. This example application uses the Requests library to call the `/api/accounts/` API. Check out the [Making an API Request guide](/concepts/guides/make-an-api-request.md) for more details.
 
 Next, we'll create a function that requests the `/api/accounts` API to generate an access token.
 
@@ -84,7 +84,7 @@ def get_company_call_recordings(token, account_id="self"):
 
 Here, we are calling the `call_recording/v1/api/` and passing the following parameter:
 
-* `account_id` - The Vonage Business Communications account ID. You can use 'self' to refer to the authenticated user's account.
+* `account_id` - The Vonage Business Communications account ID. You can use `self` to refer to the authenticated user's account.
 
 The Call Recording API supports many more parameters that can be used to filter your recordings. For example, you can filter recordings by length of recording using `duration:gte` and `duration:lte`. Refer to the API documentation for all available parameters.
 
