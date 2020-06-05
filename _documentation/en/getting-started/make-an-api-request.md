@@ -6,7 +6,7 @@ navigation_weight: 6
 
 # Making an API Request
 
-Now that you've [created an access token](/concepts/guides/create-an-access-token) you are ready to make an API request.
+Now that you've [created an access token](/getting-started/create-an-access-token) you are ready to make an API request.
 
 ## Sample Request
 
