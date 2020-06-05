@@ -11,18 +11,15 @@ page:
               - title: 'Provisioning'
                 icon:
                   color: purple
-                  name: 'Vlt-icon-message'
+                  name: 'Vlt-icon-user'
                 apis:
                   - title: 'Provisioning API'
                     path: 'api/provisioning'
                     description: 'The Vonage Business Cloud Communications API enables you to retrieve information about accounts, users and extensions.'
-                    badge:
-                      name: Beta
-                      color: green
               - title: 'Call Recording'
                 icon: 
                   color: purple
-                  name: 'Vlt-icon-code'
+                  name: 'Vlt-icon-voicemail'
                 apis:
                   - title: 'Call Recording API'
                     path: 'api/call-recording'
@@ -30,7 +27,7 @@ page:
               - title: 'Telephony'
                 icon:
                   color: purple
-                  name: 'Vlt-icon-user'
+                  name: 'Vlt-icon-phone'
                 apis:
                   - title: 'Telephony API '
                     path: '/api/telephony'
@@ -39,7 +36,7 @@ page:
               - title: 'Reports'
                 icon:
                   color: purple
-                  name: 'Vlt-icon-phone'
+                  name: 'Vlt-icon-report'
                 apis:
                   - title: 'Reports API'
                     path: 'api/reports'
@@ -47,7 +44,7 @@ page:
               - title: 'Vonage Integration Platform'
                 icon:
                   color: purple
-                  name: Vlt-icon-hash
+                  name: Vlt-icon-plug
                 apis:
                   - title: 'Vonage Integration Platform API'
                     path: 'api/vonage-integration-platform'
