@@ -1,0 +1,896 @@
+openapi: 3.0.1
+info:
+  title: Telephony
+  description: The Vonage Business Telephony API enables you to manage calls and retrieve
+    device registration information.
+  version: v3
+servers:
+- url: https://api.vonage.com/t/vbc.prod/telephony/v3
+- url: http://api.vonage.com/t/vbc.prod/telephony/v3
+paths:
+  /cc/accounts/{account_id}/calls:
+    get:
+      tags:
+      - Call
+      summary: Get list of calls for a given account (paginated)
+      parameters:
+      - name: extension
+        in: query
+        schema:
+          type: string
+      - name: page_size
+        in: query
+        description: Return max this amount of calls in the response. Default is set
+          to 100.
+        schema:
+          type: string
+      - name: order
+        in: query
+        description: Either ascending or descending order.<br/>Must be one of `asc`
+          or `desc`.
+        schema:
+          type: string
+      - name: start_time
+        in: query
+        description: Return the calls that occurred after this point in time.<br/>Should
+          be of type `epoch` with seconds precision.
+        schema:
+          type: string
+      - name: end_time
+        in: query
+        description: Return the calls that occurred before this point in time.<br/>Should
+          be of type `epoch` with seconds precision.
+        schema:
+          type: integer
+      - name: account_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CallsPaginated'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/CallsPaginated'
+        401:
+          description: 401 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+        404:
+          description: 404 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundMessage'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/NotFoundMessage'
+      security:
+      - bearerAuth: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+    post:
+      tags:
+      - Call
+      summary: Create a new call
+      parameters:
+      - name: account_id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: Request body description
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CallPostRequestBody'
+        required: true
+      responses:
+        200:
+          description: 200 response
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/StatusMessage'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusMessage'
+        400:
+          description: 400 response
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorMessage'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorMessage'
+        401:
+          description: 401 response
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+      security:
+      - bearerAuth: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-codegen-request-body-name: body
+  /cc/accounts/{account_id}/calls/{call_id}:
+    get:
+      tags:
+      - Call
+      summary: Get details for a specific call
+      parameters:
+      - name: account_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: call_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Call'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Call'
+        401:
+          description: 401 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+        404:
+          description: 404 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundMessage'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/NotFoundMessage'
+      security:
+      - bearerAuth: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+    put:
+      tags:
+      - Call
+      summary: Update an existing call
+      parameters:
+      - name: account_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: call_id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: |-
+          To answer a call: 'state' should be 'active', and 'to' should include the VH id of the device answering the call. To transfer a call: 'state' should not be specified. Both 'to' and 'from' should be specified. To park a call: 'state' should be 'parked', and 'from' should be specified.
+           <br>
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CallPutRequestBody'
+        required: true
+      responses:
+        200:
+          description: 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModifyCallResponse'
+        400:
+          description: 400 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorMessage'
+        401:
+          description: 401 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+        404:
+          description: 404 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundMessage'
+      security:
+      - bearerAuth: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-codegen-request-body-name: body
+    delete:
+      tags:
+      - Call
+      summary: Delete a call resource
+      parameters:
+      - name: account_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: call_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModifyCallResponse'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ModifyCallResponse'
+        401:
+          description: 401 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+        404:
+          description: 404 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundMessage'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/NotFoundMessage'
+      security:
+      - bearerAuth: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /cc/accounts/{account_id}/calls/{call_id}/legs:
+    get:
+      tags:
+      - Call Leg
+      summary: Get list of legs for a given call
+      parameters:
+      - name: account_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: call_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CallLegList'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/CallLegList'
+        401:
+          description: 401 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+      security:
+      - bearerAuth: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /cc/accounts/{account_id}/calls/{call_id}/legs/{leg_id}:
+    get:
+      tags:
+      - Call Leg
+      summary: Get details for a specific call leg
+      parameters:
+      - name: leg_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: account_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: call_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CallLeg'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/CallLeg'
+        401:
+          description: 401 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+      security:
+      - bearerAuth: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+    put:
+      tags:
+      - Call Leg
+      summary: Modify a call leg.
+      parameters:
+      - name: account_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: call_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: leg_id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: 'Perform hold or unhold or send dtmf or transfer on the call
+          leg.<br /> Examples:<br/> **Hold**: <br/>``` {''state'': ''held''} ```<br/>
+          **Unhold** :<br/>``` {''state'': ''active''} ```<br/> **DTMF** :<br/>```
+          {''dtmf'': ''*123#''} ```<br/> **Start playing media file**: <br/>``` {''stream'':
+          true, ''stream_url'': ''http://test.com/test.wav''} ```<br/> **Start playing
+          beep for recording**: <br/>``` {''stream'': true, ''stream_url'': ''RECORDER_RECORDINGTONE''}
+          ```<br/> **Stop playing media file**: <br/>``` {''stream'': false} ```<br/>
+          **Blind XFER** :<br/> ```{''state'': ''active'', ''to'': {''destination'':
+          Contact, ''type'': ttype}}```<br/> **ATT XFER** : <br /> ```{''state'':
+          ''active'',''to'': {''destination'': leg_id,''type'': ''leg''}}```<br/>
+          **Active** (RINGING -> ACTIVE): <br /> ```{''state'': ''active''}``` '
+        content:
+          application/json:
+            schema:
+              type: object
+        required: true
+      responses:
+        200:
+          description: 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModifyLegResponse'
+        400:
+          description: 400 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorMessage'
+        401:
+          description: 401 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+        404:
+          description: 404 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundMessage'
+        409:
+          description: 409 response if conflict while changing state of a leg
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorMessage'
+      security:
+      - bearerAuth: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-codegen-request-body-name: body
+    delete:
+      tags:
+      - Call Leg
+      summary: Delete a call leg.
+      parameters:
+      - name: account_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: call_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: leg_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        204:
+          description: 204 response
+          content: {}
+        400:
+          description: 400 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorMessage'
+        401:
+          description: 401 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+        404:
+          description: 404 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundMessage'
+        409:
+          description: 409 response if conflict while changing state of a leg
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorMessage'
+      security:
+      - bearerAuth: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /registration/accounts/{account_id}/devices:
+    get:
+      tags:
+      - Device registration
+      summary: Get account device's registration info
+      parameters:
+      - name: page_size
+        in: query
+        description: Return max this number of devices in the response. Default is
+          set to 100.
+        schema:
+          type: string
+      - name: order
+        in: query
+        description: Either ascending or descending order.<br/>Must be one of `asc`
+          or `desc`.
+        schema:
+          type: string
+      - name: start_time
+        in: query
+        description: Return the devices that were registered after this point in time.<br/>Should
+          be of type `epoch` with seconds precision.
+        schema:
+          type: string
+      - name: end_time
+        in: query
+        description: Return the devices that were registered before this point in
+          time.<br/>Should be of type `epoch` with seconds precision.
+        schema:
+          type: integer
+      - name: account_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountsRegPaginated'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AccountsRegPaginated'
+        401:
+          description: 401 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+      security:
+      - bearerAuth: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /registration/accounts/{account_id}/devices/{device_id}:
+    get:
+      tags:
+      - Device registration
+      summary: Get device registration info
+      parameters:
+      - name: account_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: device_id
+        in: path
+        description: Mac address of device
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegistrationInfo'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/RegistrationInfo'
+        401:
+          description: 401 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthorizationErrorMessage'
+        404:
+          description: 404 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundMessage'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/NotFoundMessage'
+      security:
+      - bearerAuth: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+components:
+  schemas:
+    AccountsRegPaginated:
+      type: object
+      properties:
+        current_page:
+          type: string
+        devices:
+          type: array
+          items:
+            $ref: '#/components/schemas/RegistrationInfo'
+        first_page_uri:
+          type: string
+        next_page:
+          type: string
+        next_page_uri:
+          type: string
+        order:
+          type: string
+        page_size:
+          type: string
+        pages:
+          type: string
+        previous_page_uri:
+          type: string
+    AuthorizationErrorMessage:
+      type: object
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+    Call:
+      type: object
+      properties:
+        account_id:
+          type: string
+        call_id:
+          type: string
+        direction:
+          type: string
+          enum:
+          - inbound
+          - outbound
+        end_time:
+          type: string
+          format: date-time
+        from:
+          type: string
+        legs:
+          type: array
+          items:
+            $ref: '#/components/schemas/CallLeg'
+        start_time:
+          type: string
+          format: date-time
+        status:
+          type: string
+          enum:
+          - busy
+          - failed
+          - unanswered
+          - ringing
+          - active
+        to:
+          type: string
+    CallLeg:
+      type: object
+      properties:
+        account_id:
+          type: string
+          description: Account that this call leg belongs to
+        call_id:
+          type: string
+          description: Call Id this call belongs to
+          format: uuid
+        direction:
+          type: string
+          description: Leg direction - either "inbound" or "outbound"
+          enum:
+          - inbound
+          - outbound
+        end_time:
+          type: string
+          description: Call end time (if applicable)
+          format: date-time
+        from:
+          type: string
+          description: The "from" DID or extension
+        leg_id:
+          type: string
+          description: Globally unique leg Id
+          format: uuid
+        start_time:
+          type: string
+          description: Call start time
+          format: date-time
+        status:
+          type: string
+          description: current leg status
+          enum:
+          - busy
+          - failed
+          - unanswered
+          - ringing
+          - active
+        to:
+          type: string
+          description: The "to" DID or extension
+      description: Object representation of a call leg
+    CallLegList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CallLeg'
+    CallList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Call'
+    CallPostRequestBody:
+      type: object
+      properties:
+        from:
+          $ref: '#/components/schemas/CreateCallContact'
+        to:
+          $ref: '#/components/schemas/CreateCallContact'
+        type:
+          type: string
+          enum:
+          - click2dial
+          - click2dialme
+          - odr
+    CallPutRequestBody:
+      type: object
+      properties:
+        from:
+          $ref: '#/components/schemas/Contact'
+        state:
+          type: string
+          enum:
+          - active
+          - parked
+        to:
+          $ref: '#/components/schemas/Contact'
+    CallsPaginated:
+      type: object
+      properties:
+        calls:
+          $ref: '#/components/schemas/CallList'
+        current_page:
+          type: string
+        first_page_uri:
+          type: string
+        next_page:
+          type: string
+        next_page_uri:
+          type: string
+        order:
+          type: string
+        page_size:
+          type: string
+        pages:
+          type: string
+        previous_page_uri:
+          type: string
+    Contact:
+      type: object
+      properties:
+        destination:
+          type: string
+        type:
+          type: string
+          enum:
+          - device
+          - extension
+          - pstn
+    CreateCallContact:
+      type: object
+      properties:
+        destination:
+          type: string
+        type:
+          type: string
+          enum:
+          - device
+          - extension
+          - pstn
+          - feature_code
+    LegAttTransferRequestBody:
+      type: object
+      properties:
+        to:
+          type: string
+          format: uuid
+    LegBlindTransferRequestBody:
+      type: object
+      properties:
+        to:
+          $ref: '#/components/schemas/Contact'
+    LegDTMFRequestBody:
+      type: object
+      properties:
+        dtmf:
+          type: string
+    LegHoldRequestBody:
+      type: object
+      properties:
+        state:
+          type: string
+          enum:
+          - held
+    LegUnholdRequestBody:
+      type: object
+      properties:
+        state:
+          type: string
+          enum:
+          - active
+    ModifyCallResponse:
+      type: object
+      properties:
+        account_id:
+          type: string
+          format: integer
+        call_id:
+          type: string
+          format: uuid
+        call_state:
+          type: string
+        destination:
+          type: string
+    ModifyLegResponse:
+      type: object
+      properties:
+        account_id:
+          type: string
+          format: integer
+        call_id:
+          type: string
+          format: uuid
+        call_state:
+          type: string
+        destination:
+          type: string
+        leg_id:
+          type: string
+          format: uuid
+    NotFoundMessage:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+    RegistrationInfo:
+      type: object
+      properties:
+        account_id:
+          type: string
+        device_ip:
+          type: string
+        is_registered:
+          type: string
+        last_request:
+          type: string
+        last_success:
+          type: string
+        line:
+          type: string
+        mac_address:
+          type: string
+        registration:
+          $ref: '#/components/schemas/RegistrationTime'
+        provisioned:
+          $ref: '#/components/schemas/ProvisionedTime'
+    RegistrationTime:
+      type: object
+      properties:
+        last_success:
+          type: string
+    ProvisionedTime:
+      type: object
+      properties:
+        last_success:
+          type: string
+        last_request:
+          type: string
+    StatusMessage:
+      type: string
+    ValidationErrorMessage:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: OAuth
+x-components: {}
