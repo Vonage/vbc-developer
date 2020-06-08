@@ -39,6 +39,7 @@ const app = require('express')()
 
 ## Write the code
 Add the following to `receive-an-inbound-call.js`:
+
 ```bash javascript
 const onInboundCall = (request, response) => {
   const from = request.query.from
@@ -59,6 +60,7 @@ app.listen(3000)
 
 ## Run your code
 Save this file to your machine and run it:
+
 ```bash
 node receive-an-inbound-call.js
 ```
