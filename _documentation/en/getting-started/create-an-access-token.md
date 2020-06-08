@@ -15,13 +15,13 @@ Once you have [created your application](/getting-started/create-an-application)
 3. On the **My Application** page, locate your application in the table and click the **View** link in the **Actions** column.
 4. Select the **Production Keys** tab:
 
-![Screenshot showing the Production Keys tab of the My Applications page](/assets/images/vbc/production-keys.png)
+    ![Screenshot showing the Production Keys tab of the My Applications page](/assets/images/vbc/production-keys.png)
 
-> Note: The default grant type is `Code`. The [grant type](https://oauth.net/2/grant-types/) is the method OAuth uses to generate an access token. When you create a production application you will typically want to use this method to authenticate requests. The `Refresh Token` option will create a new token when the current one expires.
+    > Note: The default grant type is `Code`. The [grant type](https://oauth.net/2/grant-types/) is the method OAuth uses to generate an access token. When you create a production application you will typically want to use this method to authenticate requests. The `Refresh Token` option will create a new token when the current one expires.
 
 5. In the **Callback URL** field, enter a valid callback URL that your application will use to receive the generated token. If you haven't created your application yet, enter `http://localhost` for now and remember to enter the correct URL when you are ready to test it.
 
-> Note: If you are planning on using password grant type for your application you will not need to use a callback URL to retrieve the token like you would using the authorization code flow. In you are using password grant you can enter `http://localhost`.
+    > Note: If you are planning on using password grant type for your application you will not need to use a callback URL to retrieve the token like you would using the authorization code flow. In you are using password grant you can enter `http://localhost`.
 
 6. Click the **Generate Keys** button. This generates the **Consumer Key** and **Consumer Secret** your application will use to request a token.
 
