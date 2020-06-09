@@ -8,7 +8,7 @@ servers:
 - url: https://api.vonage.com/t/vbc.prod/telephony/v3
 - url: http://api.vonage.com/t/vbc.prod/telephony/v3
 paths:
-  /cc/accounts/{account_id}/calls:
+  "/cc/accounts/{account_id}/calls":
     get:
       tags:
       - Call
@@ -129,7 +129,7 @@ paths:
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
       x-codegen-request-body-name: body
-  /cc/accounts/{account_id}/calls/{call_id}:
+  "/cc/accounts/{account_id}/calls/{call_id}":
     get:
       tags:
       - Call
@@ -278,7 +278,7 @@ paths:
       - bearerAuth: []
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
-  /cc/accounts/{account_id}/calls/{call_id}/legs:
+  "/cc/accounts/{account_id}/calls/{call_id}/legs":
     get:
       tags:
       - Call Leg
@@ -317,7 +317,7 @@ paths:
       - bearerAuth: []
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
-  /cc/accounts/{account_id}/calls/{call_id}/legs/{leg_id}:
+  "/cc/accounts/{account_id}/calls/{call_id}/legs/{leg_id}":
     get:
       tags:
       - Call Leg
@@ -486,7 +486,7 @@ paths:
       - bearerAuth: []
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
-  /registration/accounts/{account_id}/devices:
+  "/registration/accounts/{account_id}/devices":
     get:
       tags:
       - Device registration
@@ -544,7 +544,7 @@ paths:
       - bearerAuth: []
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
-  /registration/accounts/{account_id}/devices/{device_id}:
+  "/registration/accounts/{account_id}/devices/{device_id}":
     get:
       tags:
       - Device registration
