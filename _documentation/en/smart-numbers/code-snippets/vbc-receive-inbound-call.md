@@ -40,7 +40,7 @@ const app = require('express')()
 ## Write the code
 Add the following to `receive-an-inbound-call.js`:
 
-```bash javascript
+```javascript
 const onInboundCall = (request, response) => {
   const from = request.query.from
   const fromSplitIntoCharacters = from.split('').join(' ')
