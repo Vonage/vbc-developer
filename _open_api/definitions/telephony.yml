@@ -7,7 +7,6 @@ info:
   version: v3
 servers:
   - url: https://api.vonage.com/t/vbc.prod/telephony/v3
-  - url: http://api.vonage.com/t/vbc.prod/telephony/v3
 paths:
   /cc/accounts/{account_id}/calls:
     get:
@@ -397,16 +396,7 @@ paths:
       requestBody:
         description:
           "Perform hold or unhold or send dtmf or transfer on the call
-          leg.<br /> Examples:<br/> **Hold**: <br/>``` {'state': 'held'} ```<br/>
-          **Unhold** :<br/>``` {'state': 'active'} ```<br/> **DTMF** :<br/>```
-          {'dtmf': '*123#'} ```<br/> **Start playing media file**: <br/>``` {'stream':
-          true, 'stream_url': 'http://test.com/test.wav'} ```<br/> **Start playing
-          beep for recording**: <br/>``` {'stream': true, 'stream_url': 'RECORDER_RECORDINGTONE'}
-          ```<br/> **Stop playing media file**: <br/>``` {'stream': false} ```<br/>
-          **Blind XFER** :<br/> ```{'state': 'active', 'to': {'destination':
-          Contact, 'type': ttype}}```<br/> **ATT XFER** : <br /> ```{'state':
-          'active','to': {'destination': leg_id,'type': 'leg'}}```<br/>
-          **Active** (RINGING -> ACTIVE): <br /> ```{'state': 'active'}``` "
+          leg."
         content:
           application/json:
             schema:
@@ -435,6 +425,51 @@ paths:
                     dtmf:
                       type: string
                       example: "*123#"
+                - title: Play Sound
+                  x-tab-id: Play Sound 
+                  type: object
+                  properties:
+                    stream:
+                      type: boolean
+                      example: true
+                    stream_url:
+                      type: string
+                      example: "https://nexmo-community.github.io/ncco-examples/assets/voice_api_audio_streaming.mp3"
+                - title: Stop Sound
+                  x-tab-id: Stop Sound 
+                  type: object
+                  properties:
+                    stream:
+                      type: boolean
+                      example: false
+                - title: Blind XFER
+                  x-tab-id: Blind XFER 
+                  type: object
+                  properties:
+                    state:
+                      type: string
+                      example: "active"
+                    to:
+                      type: object
+                      example: "{'destination': Contact, 'type': ttype}"
+                - title: ATT XFER
+                  x-tab-id: ATT XFER 
+                  type: object
+                  properties:
+                    state:
+                      type: string
+                      example: "active"
+                    to:
+                      type: object
+                      example: "{'destination': leg_id,'type': 'leg'}"
+                - title: Active
+                  x-tab-id: Active 
+                  type: object
+                  properties:
+                    state:
+                      type: string
+                      example: "active"
+                    
         required: true
       responses:
         "200":
