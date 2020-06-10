@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Get user data by account ID and user ID
 
-This example shows you how to get detailed information on a given user for an account.
+This example demonstrates how to get detailed information on a given user for an account.
 
 Replace the following placeholder value in the sample code:
 
