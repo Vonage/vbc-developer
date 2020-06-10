@@ -7,9 +7,15 @@ navigation_weight: 1
 
 This code snippet shows you how to receive an inbound call on your Smart Number.
 
+## Example
+
 ```code_snippets
-source: '_examples/smart-numbers/vbc-route-to-extension'
+source: '_examples/smart-numbers/receive-an-inbound-call'
 application:
   type: voice
-  name: 'Connect to VBC Extension Example'
+  name: 'Receive Inbound Call Example'
 ```
+
+## Try it out
+
+When you call your Smart Number you will hear a text-to-speech message.
