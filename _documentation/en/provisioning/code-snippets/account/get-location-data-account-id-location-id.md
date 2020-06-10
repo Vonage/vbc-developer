@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Get location data by account ID and location ID
 
-This example shows you how to get the physical location of the account, using the account id and location id.
+This example demonstrates how to get the physical location of the account using the `account_id` and `location_id`.
 
 Replace the following placeholder value in the sample code:
 

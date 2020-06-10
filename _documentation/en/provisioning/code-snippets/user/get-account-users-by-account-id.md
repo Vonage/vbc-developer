@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Get account users data by account ID
 
-This example shows you how to list all users on a given account. It will include the user's name, email, contact information and more.
+This example demonstrates how to list all users on a given account. It will include the user's name, email, contact information and more.
 
 Replace the following placeholder value in the sample code:
 

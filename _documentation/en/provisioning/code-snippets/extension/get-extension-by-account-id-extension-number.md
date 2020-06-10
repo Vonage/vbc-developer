@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Get extension data by account ID and extension number
 
-This example shows you how to get details of the extension. This will include the extension's number, the caller id and the headsets associated with this extension. 
+This example demonstrates how to get details of the extension. This will include the extension's number, the `caller_id` and the headsets associated with this extension. 
 
 Replace the following placeholder value in the sample code:
 

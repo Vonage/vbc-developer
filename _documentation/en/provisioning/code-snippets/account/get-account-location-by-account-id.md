@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Get account locations data by account ID
 
-This example shows you how to get the physical location using the account id. You can use this to retrieve details of the account, including the name of the account, the status, and its address.
+This example demonstrates how to get the physical location using the `account_id`. You can use this to retrieve details of the account, including the name of the account, the status, and its address.
 
 Replace the following placeholder value in the sample code:
 

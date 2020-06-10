@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Get account data by ID
 
-This example shows you how to get the account information by account id. You can use this to retrieve details of the account, including the name of the account, the status, and its address.
+This example demonstrates how to get the account information by `account_id`. You can use this to retrieve details on the account, including the name of the account, the status, and its address.
 
 Replace the following placeholder value in the sample code:
 
