@@ -8,8 +8,9 @@ servers:
 - url: https://api.vonage.com/t/vbc.prod/telephony/v3
 - url: http://api.vonage.com/t/vbc.prod/telephony/v3
 paths:
-  "/cc/accounts/{account_id}/calls":
+  /cc/accounts/{account_id}/calls:
     get:
+      operationId: GetCalls
       tags:
       - Call
       summary: Get list of calls for a given account (paginated)
@@ -48,7 +49,7 @@ paths:
         schema:
           type: string
       responses:
-        200:
+        "200":
           description: 200 response
           content:
             application/json:
@@ -57,7 +58,7 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/CallsPaginated'
-        401:
+        "401":
           description: 401 response
           content:
             application/json:
@@ -66,7 +67,7 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/AuthorizationErrorMessage'
-        404:
+        "404":
           description: 404 response
           content:
             application/json:
@@ -80,6 +81,7 @@ paths:
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
     post:
+      operationId: postCalls
       tags:
       - Call
       summary: Create a new call
@@ -97,7 +99,7 @@ paths:
               $ref: '#/components/schemas/CallPostRequestBody'
         required: true
       responses:
-        200:
+        "200":
           description: 200 response
           content:
             text/plain:
@@ -106,7 +108,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StatusMessage'
-        400:
+        "400":
           description: 400 response
           content:
             text/plain:
@@ -115,7 +117,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ValidationErrorMessage'
-        401:
+        "401":
           description: 401 response
           content:
             text/plain:
@@ -129,8 +131,9 @@ paths:
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
       x-codegen-request-body-name: body
-  "/cc/accounts/{account_id}/calls/{call_id}":
+  /cc/accounts/{account_id}/calls/{call_id}:
     get:
+      operationId: getCallsByCallId
       tags:
       - Call
       summary: Get details for a specific call
@@ -146,7 +149,7 @@ paths:
         schema:
           type: string
       responses:
-        200:
+        "200":
           description: 200 response
           content:
             application/json:
@@ -155,7 +158,7 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/Call'
-        401:
+        "401":
           description: 401 response
           content:
             application/json:
@@ -164,7 +167,7 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/AuthorizationErrorMessage'
-        404:
+        "404":
           description: 404 response
           content:
             application/json:
@@ -178,6 +181,7 @@ paths:
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
     put:
+      operationId: putCallsByCallId
       tags:
       - Call
       summary: Update an existing call
@@ -202,25 +206,25 @@ paths:
               $ref: '#/components/schemas/CallPutRequestBody'
         required: true
       responses:
-        200:
+        "200":
           description: 200 response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ModifyCallResponse'
-        400:
+        "400":
           description: 400 response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ValidationErrorMessage'
-        401:
+        "401":
           description: 401 response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/AuthorizationErrorMessage'
-        404:
+        "404":
           description: 404 response
           content:
             application/json:
@@ -232,6 +236,7 @@ paths:
       x-throttling-tier: Unlimited
       x-codegen-request-body-name: body
     delete:
+      operationId: deleteCallByCallId
       tags:
       - Call
       summary: Delete a call resource
@@ -247,7 +252,7 @@ paths:
         schema:
           type: string
       responses:
-        200:
+        "200":
           description: 200 response
           content:
             application/json:
@@ -256,7 +261,7 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/ModifyCallResponse'
-        401:
+        "401":
           description: 401 response
           content:
             application/json:
@@ -265,7 +270,7 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/AuthorizationErrorMessage'
-        404:
+        "404":
           description: 404 response
           content:
             application/json:
@@ -278,8 +283,9 @@ paths:
       - bearerAuth: []
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
-  "/cc/accounts/{account_id}/calls/{call_id}/legs":
+  /cc/accounts/{account_id}/calls/{call_id}/legs:
     get:
+      operationId: getCallLegs
       tags:
       - Call Leg
       summary: Get list of legs for a given call
@@ -295,7 +301,7 @@ paths:
         schema:
           type: string
       responses:
-        200:
+        "200":
           description: 200 response
           content:
             application/json:
@@ -304,7 +310,7 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/CallLegList'
-        401:
+        "401":
           description: 401 response
           content:
             application/json:
@@ -317,8 +323,9 @@ paths:
       - bearerAuth: []
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
-  "/cc/accounts/{account_id}/calls/{call_id}/legs/{leg_id}":
+  /cc/accounts/{account_id}/calls/{call_id}/legs/{leg_id}:
     get:
+      operationId: getCallLegByLegId
       tags:
       - Call Leg
       summary: Get details for a specific call leg
@@ -339,7 +346,7 @@ paths:
         schema:
           type: string
       responses:
-        200:
+        "200":
           description: 200 response
           content:
             application/json:
@@ -348,7 +355,7 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/CallLeg'
-        401:
+        "401":
           description: 401 response
           content:
             application/json:
@@ -362,6 +369,7 @@ paths:
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
     put:
+      operationId: updateCallLegByLegId
       tags:
       - Call Leg
       summary: Modify a call leg.
@@ -399,31 +407,31 @@ paths:
               type: object
         required: true
       responses:
-        200:
+        "200":
           description: 200 response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ModifyLegResponse'
-        400:
+        "400":
           description: 400 response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ValidationErrorMessage'
-        401:
+        "401":
           description: 401 response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/AuthorizationErrorMessage'
-        404:
+        "404":
           description: 404 response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/NotFoundMessage'
-        409:
+        "409":
           description: 409 response if conflict while changing state of a leg
           content:
             application/json:
@@ -435,6 +443,7 @@ paths:
       x-throttling-tier: Unlimited
       x-codegen-request-body-name: body
     delete:
+      operationId: updateCallLeg
       tags:
       - Call Leg
       summary: Delete a call leg.
@@ -455,28 +464,28 @@ paths:
         schema:
           type: string
       responses:
-        204:
+        "204":
           description: 204 response
           content: {}
-        400:
+        "400":
           description: 400 response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ValidationErrorMessage'
-        401:
+        "401":
           description: 401 response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/AuthorizationErrorMessage'
-        404:
+        "404":
           description: 404 response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/NotFoundMessage'
-        409:
+        "409":
           description: 409 response if conflict while changing state of a leg
           content:
             application/json:
@@ -486,8 +495,9 @@ paths:
       - bearerAuth: []
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
-  "/registration/accounts/{account_id}/devices":
+  /registration/accounts/{account_id}/devices:
     get:
+      operationId: getDevices
       tags:
       - Device registration
       summary: Get account device's registration info
@@ -522,7 +532,7 @@ paths:
         schema:
           type: string
       responses:
-        200:
+        "200":
           description: 200 response
           content:
             application/json:
@@ -531,7 +541,7 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/AccountsRegPaginated'
-        401:
+        "401":
           description: 401 response
           content:
             application/json:
@@ -544,8 +554,9 @@ paths:
       - bearerAuth: []
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
-  "/registration/accounts/{account_id}/devices/{device_id}":
+  /registration/accounts/{account_id}/devices/{device_id}:
     get:
+      operationId: getDeviceByDeviceId
       tags:
       - Device registration
       summary: Get device registration info
@@ -562,7 +573,7 @@ paths:
         schema:
           type: string
       responses:
-        200:
+        "200":
           description: 200 response
           content:
             application/json:
@@ -571,7 +582,7 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/RegistrationInfo'
-        401:
+        "401":
           description: 401 response
           content:
             application/json:
@@ -580,7 +591,7 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/AuthorizationErrorMessage'
-        404:
+        "404":
           description: 404 response
           content:
             application/json:
