@@ -1,0 +1,11 @@
+---
+dependencies:
+    - express
+code:
+    source: .repos/node-code-snippets/smart-numbers/connect-to-extension.js
+    from_line: 6
+    to_line: 20
+client:
+    source: .repos/node-code-snippets/smart-numbers/connect-to-extension.js
+    from_line: 4
+    to_line: 4
