@@ -21,9 +21,6 @@ header:
     display: false
 footer:
   links:
-    status:
-      path: https://developer.vonage.com
-      text: 'VBC Status' 
     navigation:
       documentation:
         - call-recording: 'https://vbc-developer.herokuapp.com/call-recording/overview'
