@@ -1,7 +1,7 @@
 title: Enabling OKTA SSO configurations for your VBC users
 description: Okta enables single sign-on access to cloud applications such as Vonage Business Communications. This tutorial demonstrates how to enable Okta SSO configurations for your Vonage Business Communications users.
 products:
-  - getting-started
+  - call-recording
 
 introduction: 
   title: Introduction to this tutorial
