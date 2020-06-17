@@ -9,7 +9,7 @@ assets:
     path: '/images/logos/vbc-logo-white.svg'
     alt: 'VBC Footer Logo'
 docs_repo: 'VonageGarage/VDP'
-oas_repo: 'vonage/api-specification'
+oas_url: 'https://www.github.com/VonageGarage/VDP/blob/master/_open_api/definitions'
 header:
   links:
     sign-up:
