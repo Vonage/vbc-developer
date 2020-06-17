@@ -13,7 +13,7 @@ introduction:
     This tutorial provides a step-by-step guide on configuring single sign-on for Vonage Business Communications using Okta as your identity provider (IDP).
 
 prerequisites:
-    An Okta account is required to configure single sign-on using Okta. If you do not have an Okta account, [sign up](https://developer.okta.com/signup/) for a developer account.
+- okta-dev-acct
 
 tasks:
 - okta-config/create-app
