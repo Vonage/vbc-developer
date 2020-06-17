@@ -14,16 +14,16 @@ When configuring a SAML integration, you will need to enter the URLs and SP issu
     c. **Requestable SSO URL**: https://login.auth.vonage.com/commonauth
     d. **Relay State**: 0
     e. **Logout URL**: https://login.auth.vonage.com/commonauth
-    ![Screenshot showing Okta SAML configuration settings on Advanced Settings dialog box](/public/images/tutorials/okta-config/Okta_5.png)
-    ![Screenshot showing Okta SAML configuration settings on Advanced Settings dialog box](/public/images/tutorials/okta-config/Okta_6.png)
+    ![Screenshot showing Okta SAML configuration settings on Advanced Settings dialog box](/images/tutorials/okta-config/Okta_5.png)
+    ![Screenshot showing Okta SAML configuration settings on Advanced Settings dialog box](/images/tutorials/okta-config/Okta_6.png)
 3. On the **Feedback** tab, select the **I'm an Okta customer adding an internal app** radio button.
-    ![Screenshot showing Feedback tab in Okta SAML configuration settings](/public/images/tutorials/okta-config/Okta_7.png)
+    ![Screenshot showing Feedback tab in Okta SAML configuration settings](/images/tutorials/okta-config/Okta_7.png)
 4. Click **Finish**.
     You will see the following propmt once you are finished creating an application. The message states **SAML 2.0 is not configured until you complete the setup instructions.**
-    ![Screenshot showing Feedback tab in Okta SAML configuration settings](/public/images/tutorials/okta-config/Okta_8.png)
+    ![Screenshot showing Feedback tab in Okta SAML configuration settings](/images/tutorials/okta-config/Okta_8.png)
 5. Click **View Setup Instructions**.
     The setup instructions window opens.
-    ![Screenshot showing Feedback tab in Okta SAML configuration settings](/public/images/tutorials/okta-config/Okta_9.png)
+    ![Screenshot showing Feedback tab in Okta SAML configuration settings](/images/tutorials/okta-config/Okta_9.png)
 6. In a separate browser window, open the Vonage Business Communications [Single Sign-on Settings](https://admin.vonage.com/management/m/ssoSettings) page.
 7. Enter the values from Okta into the appropriate fields on the Vonage Business Communications Single Sign-on Settings page:
     | Okta Setting                             | VBC Setting                                                   |

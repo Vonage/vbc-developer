@@ -3,7 +3,7 @@ description: Okta enables single sign-on access to cloud applications such as Vo
 products:
   - call-recording
 
-introduction: 
+introduction:
   title: Introduction to this tutorial
   description: This tutorial demonstrates how to enable Okta SSO configurations for your Vonage Business Communications users.
   content: |
@@ -13,12 +13,12 @@ introduction:
     This tutorial provides a step-by-step guide on configuring single sign-on for Vonage Business Communications using Okta as your identity provider (IDP).
 
 prerequisites:
-- okta-dev-acct
+- call-recording/okta-dev-acct
 
 tasks:
-- okta-config/create-app
-- okta-config/create-saml-integration
-- okta-config/config-saml
+- call-recording/create-app
+- call-recording/create-saml-integration
+- call-recording/config-saml
 
 conclusion:
   title: What's next?

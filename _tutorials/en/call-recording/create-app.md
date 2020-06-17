@@ -12,11 +12,11 @@ When you add an app to your Okta applications, one of the single sign-on options
 3. Select the **Classic UI** option from the drop-down menu above the top navigation menu.
 4. Select **Add Application**. 
     A **Search** interface opens. 
-    ![Screenshot showing Okta Search Applications interface](/public/images/tutorials/okta-config/Okta_1.png)
+    ![Screenshot showing Okta Search Applications interface](/images/tutorials/okta-config/Okta_1.png)
 5. Click **Create New App** on the **Add Application** page.
-    ![Screenshot showing Okta Add Application page](/public/images/tutorials/okta-config/Okta_2.png)
+    ![Screenshot showing Okta Add Application page](/images/tutorials/okta-config/Okta_2.png)
 6. Select **Web** in the **Platform** drop-down menu on the **Create a new Application Integration** dialog box.
 7. Select the **SAML 2.0** radio button on the **Create a new Application Integration** dialog box.
-    ![Screenshot showing Okta Create a new Application Integration dialog box](/public/images/tutorials/okta-config/Okta_3.png)
+    ![Screenshot showing Okta Create a new Application Integration dialog box](/images/tutorials/okta-config/Okta_3.png)
 8. Click the **Create** button.
     Now you are ready to create a SAML integration.
