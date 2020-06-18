@@ -21,7 +21,7 @@ Python is the language used to build the following example; however, you can use
 
 ## Prerequisites
 
-Before you can get started, you will need to have a Vonage Developer account. If you do not have a Vonage Developer account, please use this [guide](/concepts/guides/create-a-developer-account.md) to setup and create your account.
+Before you can get started, you will need to have a Vonage Developer account. If you do not have a Vonage Developer account, please use this [guide](/getting-started/create-a-developer-account) to setup and create your account.
 
 After you have an account, you will need to do the following using these guides:
 
