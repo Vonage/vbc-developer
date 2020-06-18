@@ -20,18 +20,18 @@ Python is the language used to build the following example; however, you can use
 
 ## Prerequisites
 
-Before you can get started, you will need to have a Vonage Developer account. If you do not have a Vonage Developer account, please use this [guide](/concepts/guides/create-a-developer-account) to setup and create your account.
+Before you can get started, you will need to have a Vonage Developer account. If you do not have a Vonage Developer account, please use this [guide](/getting-started/create-a-developer-account) to setup and create your account.
 
 After you have an account, you will need to do the following using these guides:
 
-* [Create an application](/concepts/guides/create-an-application).
-* [Subscribe to the API's](/concepts/guides/subscribe-to-apis).
+* [Create an application](/getting-started/create-an-application).
+* [Subscribe to the API's](/getting-started/subscribe-to-apis).
 
 For this example, you will need to Subscribe to the [Call Recording API](/call-recording/overview).
 
 ## Authentication
 
-After creating an application and subscribing to the Call Recording API, you will now need to log-in using your Vonage Business Cloud credentials. This example application uses the Requests library to call the `/api/accounts/` API. Check out the [Making an API Request guide](/concepts/guides/make-an-api-request) for more details.
+After creating an application and subscribing to the Call Recording API, you will now need to log-in using your Vonage Business Cloud credentials. This example application uses the Requests library to call the `/api/accounts/` API. Check out the [Making an API Request guide](/getting-started/make-an-api-request) for more details.
 
 Next, we'll create a function that requests the `/api/accounts` API to generate an access token.
 
@@ -114,7 +114,7 @@ Here, we are calling the `company_call_recordings/v1/api/` and passing the follo
 
 We could also pass in `start:lte` which would return records less than the given date.
 
-Once we get a list of call recordings, we will loop though each recording and get the duration of the call. If the call duration is less than or equal to 30 seconds, we will delete it. Before doing this, make sure you have a backup of the recordings. Take a look at the [delete_recordings_by_date](/use-cases/call-recording-to-s3) use case to save recordings to Amazon S3.
+Once we get a list of call recordings, we will loop though each recording and get the duration of the call. If the call duration is less than or equal to 30 seconds, we will delete it. Before doing this, make sure you have a backup of the recordings. Take a look at the [Delete Recordings by Date](/use-cases/call-recording-to-s3) use case to save recordings to Amazon S3.
 
 ## Delete Call Recordings
 
