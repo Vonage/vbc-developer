@@ -154,3 +154,4 @@ Then, drag the `Count` parameter under the `Measured Names` section to the row s
 As our CRON job runs everyday, our Tableau dashboard will update itself with the new call logs. Just remember to save the JSON in the same location as where you originally added the datasource for Tableau
 
 ## Conclusion
+In this example, we have seen how to create a function that returns a list of calls logs for a given day. Pushing this data is a dashboard like Tableu will be able to help your team analyze your call traffic. Our dashboard just shows the number of calls every day, but you can customize it to shown number of inbound / outbound calls, average cost per day, average length of calls, and much more.
