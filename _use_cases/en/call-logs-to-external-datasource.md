@@ -12,18 +12,18 @@ In this tutorial, we will go over how to save your call logs into an external da
 
 ## Prerequisites
 
-Before you can get started, you will need to have a Vonage Developer account. If you do not have a Vonage Developer account, please use this [guide](/concepts/guides/create-a-developer-account) to setup and create your account.
+Before you can get started, you will need to have a Vonage Developer account. If you do not have a Vonage Developer account, please use this [guide](/getting-started/create-a-developer-account) to setup and create your account.
 
 After you have an account, you will need to do the following using these guides:
 
-* [Create an application](/guides/create-an-application).
-* [Subscribe to the API's](/concepts/guides/subscribe-to-apis).
+* [Create an application](/getting-started/create-an-application).
+* [Subscribe to the API's](/getting-started/subscribe-to-apis).
 
 For this example, you will need to Subscribe to the [Reports API](/reports/overview).
 
 ## Authentication
 
-After creating an application and subscribing to the Reports API, you will now need to log-in using your Vonage Business Cloud credentials. Check out the [Making an API Request guide](/concepts/guides/make-an-api-request) for more details.
+After creating an application and subscribing to the Reports API, you will now need to log-in using your Vonage Business Cloud credentials. Check out the [Making an API Request guide](/getting-started/make-an-api-request) for more details.
 
 Next, we'll create a function that requests the `/token` API to generate an access token.
 
