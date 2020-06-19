@@ -1,1 +1,1 @@
-web: bundle exec nexmo-developer --docs /app
+web: bundle exec nexmo-developer --clear-cache --docs /app
