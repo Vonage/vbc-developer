@@ -4,13 +4,14 @@ navigation_weight: 1
 ---
 
 # Download export job
-This example shows you how to download audio files for company and on-demand call recordings.
+
+This example demonstrates how to download audio files for company and on-demand call recordings.
 
 Replace the following placeholder value in the sample code:
 
 | Key | Description |
 | --- | ----------- |
-| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
+| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/getting-started/create-an-access-token) |
 | job_id 			| The job ID |
 | login_name        | The login_name of the user |
 

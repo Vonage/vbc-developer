@@ -4,7 +4,8 @@ navigation_weight: 1
 ---
 
 # Get call recording export job
-Get a single call recording export job for an account user
+
+This example demonstrates how to get a single call recording export job for an account user.
 
 Replace the following placeholder values in the sample code:
 
