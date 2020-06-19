@@ -4,13 +4,14 @@ navigation_weight: 1
 ---
 
 # Get single on-demand call recording
-Get a single on-demand call recording for an account user
+
+This example demonstrates how to get a single on-demand call recording for an account user.
 
 Replace the following placeholder values in the sample code:
 
 | Key | Description |
 | --- | ----------- |
-| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
+| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/getting-started/create-an-access-token) |
 | account_id        | The Vonage Business Communications account ID. You can use 'self' to refer to the authenticated user's account. |
 | user_id           | The Vonage Business Communications user ID. You can use 'self' to refer to the authenticated user. |
 | recording_id      | The recording ID |
