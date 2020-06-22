@@ -4,7 +4,7 @@ navigation_weight: 1
 ---
 
 # Retrieve call logs for an account
-This example shows you how to return a list of all calls by account
+This example demonstrates how to return a list of all calls by account.
 
 Replace the following placeholder value in the sample code:
 
