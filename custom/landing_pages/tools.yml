@@ -9,10 +9,10 @@ page:
       - type: client_sdk_card
         client_sdk_card:
           name:
-            content: vonage-vbc-nodered
+            content: Node-Red
             color: blue-dark
           icon:
-            name: Brand-icon
+            name: Brand-icon-node-color
           text:
             content: Build low code applications using Node Red. Supports creating calls to VBC extensions, account retrieval and more. 
           documentation_url: https://flows.nodered.org/node/vonage-vbc-nodered
