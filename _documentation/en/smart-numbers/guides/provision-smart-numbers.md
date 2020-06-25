@@ -10,18 +10,18 @@ Once you have [enabled the Smart Numbers add-on](/vonage-business-cloud/smart-nu
 
 1. Sign into [the VBC Admin Portal](https://admin.vonage.com)
 
-2. In the left-hand navigation menu, select the Business Apps > Smart Numbers menu option.
+2. In the left-hand navigation menu, select the **Business Apps > Smart Numbers** menu option.
 
-    > **Note**: If you do not see the Smart Numbers menu option, you must [enable the add-on](/vonage-business-cloud/smart-numbers/guides/enable-addon).
+    > **Note**: If you do not see the **Smart Numbers** menu option, you must [enable the add-on](/vonage-business-cloud/smart-numbers/guides/enable-addon).
 
-3. Each row in the table refers to a Smart Number. Click on one of your unconfigured Smart Numbers to edit it.
+3. Each row in the table refers to a Smart Number. Click one of your unconfigured Smart Numbers to edit it.
 
-4. On the "Edit Smart Numbers Service" Page:
-  1. Enter a name for the service
-  2. Select at least one direct dial number that you will call to access the Nexmo Voice API application
-  3. Paste in your Nexmo Voice API `application_id`
-  4. Ensure that the "Smart Number Status" switch is set to "Active"
-  5. Click the "Save" button
+4. On the **Edit Smart Numbers Service** page:
+  1. Enter a name for the service.
+  2. Select at least one direct dial number that you will call to access the Nexmo Voice API application.
+  3. Paste in your Nexmo Voice API `application_id`.
+  4. Ensure that the **Smart Number Status switch** is set to **Active**.
+  5. Click the **Save** button.
 
   ![Edit your Smart Number](/assets/images/vbc/edit-smart-number.png)
 

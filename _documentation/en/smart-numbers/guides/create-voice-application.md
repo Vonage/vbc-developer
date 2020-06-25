@@ -18,7 +18,7 @@ To create a Nexmo Application for working with Smart Numbers, issue the `curl` c
 
 The two URLs you provide refer to the webhook endpoints that your application will expose to Nexmo's servers:
 
-* The first is the webhook that Nexmo's APIs will make a request to when a call is received on your Smart Number.
+* The first is the webhook to which Nexmo's APIs will make a request when a call is received on your Smart Number.
 * The second is where Nexmo's APIs will post details about events that your application might be interested in - such as a call being answered or terminated.
 
 

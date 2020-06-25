@@ -5,7 +5,7 @@ navigation_weight: 2
 
 # Route to a VBC Extension
 
-This code snippet shows you how to connect an inbound call on a Smart Number to an extension.
+This code snippet demonstrates how to connect an inbound call on a Smart Number to an extension.
 
 ## Example
 

@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Receive an inbound call
 
-This code snippet shows you how to receive an inbound call on your Smart Number.
+This code snippet demonstrates how to receive an inbound call on your Smart Number.
 
 ## Example
 
