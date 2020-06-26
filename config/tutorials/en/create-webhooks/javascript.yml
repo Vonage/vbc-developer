@@ -10,7 +10,7 @@ introduction:
     # Introduction
     In this tutorial, you will learn how to create a webhook to receive events from calls.  Using webhooks will allow you to create a unique realtime call applications to build products your users will love.
 
-    When a call is made or received, the webhooks API allows you to monitor active calls. The webhook will return the following information 
+    When a call is made or received, the webhooks API allows you to monitor active calls. The webhook will return the following information: 
 
     ```json
     {

@@ -14,5 +14,3 @@ Now that you have created your Application and configured authentication, you ca
 4. Click **Subscribe**:
 
 ![Screenshot showing how to subscribe your Application to the Provisioning API](/assets/images/vbc/subscribe-api.png)
-
-> Now that you've subscribed to the Provisioning API, you need to [create an access token](/getting-started/create-an-access-token) to make a request.

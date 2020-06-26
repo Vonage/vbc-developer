@@ -10,7 +10,8 @@ To use an ExpressJS application:
 1. Create a new application using `npm init`.
 2. Install the ExpressJS library by using `npm install express --save`
 3. Write the code:
-    ```javascript
+    
+   ```javascript
     const express = require('express')
     const app = express()
     const port = 3000
@@ -19,8 +20,9 @@ To use an ExpressJS application:
      res.send(200)
     });
     app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
-    ```
+   ```
 4. To start your application, run the following command:
+
     `node app.js`
 
 Your application will now print the events to the console when a call is made or received. 
