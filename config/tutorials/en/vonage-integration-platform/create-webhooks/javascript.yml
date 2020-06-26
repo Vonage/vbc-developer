@@ -1,0 +1,62 @@
+title: Receiving call events using webhooks
+description: Create a webhook to receive events from calls
+products:
+  - vonage-integration-platform
+
+introduction:
+  title: Introduction to this task
+  description: This tutorial demonstrates how to create a webhook to receive events from calls.
+  content: |
+    # Introduction
+    In this tutorial, you will learn how to create a webhook to receive events from calls.  Using webhooks will allow you to create a unique realtime call applications to build products your users will love.
+
+    When a call is made or received, the webhooks API allows you to monitor active calls. The webhook will return the following information 
+
+    ```json
+    {
+      "event": {
+      "accountId": "{YOUR_ACCOUNT_ID}",
+      "callerId": "{CALLER_NAME}",
+      "direction": "{DIRECTION}",
+      "duration": {LENGTH OF CALL},
+      "externalId": "{ID}",
+      "id": "{ID}",
+      "internal": {INTERNAL_FLAG},
+      "phoneNumber": "{PHONE_NUMBER",
+      "startTime": "IOS8601 TIME ",
+      "state": "{CALL STATE}",
+      "type": "{CALL_TYPE}",
+      "ucpType": "",
+      "userId": "{USER_ID"
+      }
+     }
+    ```
+
+    When the status of the call changes, a new payload will be sent to the webhook:
+
+    * When the call begins, you will receive a payload with the `state` as `RINGING`. 
+    * When the call is answered, you will receive a payload with the `state` as `ACTIVE`. 
+    * When the call ends, you will receive a payload with the `state` as `ANSWERED`. 
+    * If the call is not picked up, you will receive a payload with the `state` as `MISSED`. 
+    
+    For more information about the payload in a webhook, please refer to the [webhooks documentation](_documentation/vonage-integration-platform//concepts/webhooks).
+
+prerequisites:
+  - create-a-developer-account
+  - subscribe-to-apis
+
+tasks:
+  - vonage-integration-platform/create-create-webhooks/create-webhook
+  - vonage-integration-platform/create-create-webhooks/create-local-server
+  - vonage-integration-platform/create-create-webhooks/webhook-errors
+  - vonage-integration-platform/create-create-webhooks/cleanup
+
+conclusion:
+  title: What's next?
+  description: What else can you do with the Vonage Business Communications APIs?
+  content: |
+
+    # What's next?
+    You can do a lot more with the Vonage Business Communications APIs.
+
+    See [Vonage Integration Platform](_documentation/vonage-integration-platform/overview).
