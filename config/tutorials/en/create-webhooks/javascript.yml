@@ -46,10 +46,10 @@ prerequisites:
   - subscribe-to-apis
 
 tasks:
-  - vonage-integration-platform/create-create-webhooks/create-webhook
-  - vonage-integration-platform/create-create-webhooks/create-local-server
-  - vonage-integration-platform/create-create-webhooks/webhook-errors
-  - vonage-integration-platform/create-create-webhooks/cleanup
+  - vonage-integration-platform/create-webhooks/create-webhook
+  - vonage-integration-platform/create-webhooks/create-local-server
+  - vonage-integration-platform/create-webhooks/webhook-errors
+  - vonage-integration-platform/create-webhooks/cleanup
 
 conclusion:
   title: What's next?
