@@ -39,7 +39,7 @@ introduction:
     * When the call ends, you will receive a payload with the `state` as `ANSWERED`. 
     * If the call is not picked up, you will receive a payload with the `state` as `MISSED`. 
     
-    For more information about the payload in a webhook, please refer to the [webhooks documentation](_documentation/vonage-integration-platform//concepts/webhooks).
+    For more information about the payload in a webhook, please refer to the [webhooks documentation](/_documentation/vonage-integration-platform//concepts/webhooks).
 
 prerequisites:
   - create-a-developer-account
@@ -59,4 +59,4 @@ conclusion:
     # What's next?
     You can do a lot more with the Vonage Business Communications APIs.
 
-    See [Vonage Integration Platform](_documentation/vonage-integration-platform/overview).
+    See [Vonage Integration Platform](/_documentation/vonage-integration-platform/overview).
