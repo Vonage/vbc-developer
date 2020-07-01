@@ -1,6 +1,6 @@
 name: Business Communications APIs
 subtitle: Developer Center
-base_url: 'https://vbc-developer.herokuapp.com/'
+base_url: 'https://vbcdeveloper.vonage.com/'
 assets:
   header_logo:
     path: '/images/logos/vbc-logo.svg'
@@ -23,18 +23,18 @@ footer:
   links:
     navigation:
       documentation:
-        - call-recording: 'https://vbc-developer.herokuapp.com/call-recording/overview'
-        - provisioning: 'https://vbc-developer.herokuapp.com/provisioning/overview'
-        - telephony: 'https://vbc-developer.herokuapp.com/telephony/overview'
-        - reports: 'https://vbc-developer.herokuapp.com/reports/overview'
-        - vonage-integration-platform: 'https://vbc-developer.herokuapp.com/vonage-integration-platform/overview'
-        - smart-numbers: 'https://vbc-developer.herokuapp.com/smart-numbers/overview'
+        - call-recording: '/call-recording/overview'
+        - provisioning: '/provisioning/overview'
+        - telephony: '/telephony/overview'
+        - reports: '/reports/overview'
+        - vonage-integration-platform: '/vonage-integration-platform/overview'
+        - smart-numbers: '/smart-numbers/overview'
       api-reference:
-        - call-recording: 'https://vbc-developer.herokuapp.com/api/call-recording'
-        - provisioning: 'https://vbc-developer.herokuapp.com/api/provisioning'
-        - telephony: 'https://vbc-developer.herokuapp.com/api/telephony'
-        - reports: 'https://vbc-developer.herokuapp.com/api/reports'
-        - vonage-integration-platform: 'https://vbc-developer.herokuapp.com/api/vonage-integration-platform'
+        - call-recording: '/api/call-recording'
+        - provisioning: '/api/provisioning'
+        - telephony: '/api/telephony'
+        - reports: '/api/reports'
+        - vonage-integration-platform: '/api/vonage-integration-platform'
       get-to-know-us:
         - vonage-business-communications: 'https://www.vonage.com/unified-communications/'
         - careers: 'https://www.vonage.com/corporate/careers/'
