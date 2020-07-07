@@ -90,7 +90,7 @@ Replace the following placeholders in the example with your own values:
 
 ```bash
 curl -k -d "grant_type=password&username=$VBC_USERNAME@vbc.prod&password=$VBC_PASSWORD" \
-        -d "&client_id=$VBC_CLIENT_ID&client_secret=$VBC_CLIENT_SECRET" \
+        -d "&client_id=$VBC_CLIENT_ID&client_secret=$VBC_CLIENT_SECRET&scope=openid" \
         https://api.vonage.com/token
 ```
 
@@ -98,11 +98,12 @@ When you run it, you will receive a JSON response with the `access_token` embedd
 
 ```json
 {
-   "access_token":"1c31afac-175c-3e3a-9d4b-8ecee3980cfa",
-   "refresh_token":"dde2a67f-d99f-3f03-810b-1fcae59245de",
-   "scope":"default",
-   "token_type":"Bearer",
-   "expires_in":86400
+    "access_token": "abc123-580f-3ace-9a55-9584aaa60842",
+    "refresh_token": "abc123-5903-3513-8d27-333daf581837",
+    "scope": "openid",
+    "id_token": "abc123eyJ4NQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFemhrWmciLCJraWQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFNemhrWmciLCJhbGciOiJSUzI1NiJ9.eyJhdF9oYXNoIjoiVFV1cXBJcVNdDBvYs3VsSExJWHI5sdyIsImFjciI6InVybjptYWNlOmluY29tbW9uOmlhcDpzaWx2ZXIiLCJzdWIiOiJ0b255Lmh1bmciLCJhdWQiOlsiQTlJSDFNQ2pGSDhnWmNkNHg1WHhjX3NjeTA4YSJdLCJlQXV0aFN0YXR1cyI6InRydWUiLJlQ2xhaW1zIjpbIntcImF1dGhlbnRpY2F0ZWRcIjp0cnVlIiwiXCJhY2NvdW50TnVtmVyXCI6XCIxNwDQ5NTVcIn0iXSwiYXpwIjoiQTlJSDFNQ2pGSDhnWmNkNHg1WHhjX3NjeTA4YSIsImlzcyI6Imh0dHBzOlwvXC9zc28udm9uYWdlLNvbTo0NDNcL29hdXRoMlwvdG9rZW4iLCJleAiOjE1OTQxMjA2NTsImlhdCI6MTU5NDAzNDI1Nn0.gs7JO2RLPFIld7NXM9gnOy9CYaLs_EYXJJilxX76MFBiidoiG9sIW4RkeHLvDVLyFP1eVd_Pt7000wAr13mcXn-6x6D9oJeAH_Iz8nbzd3vmWDZ8VMHf1SueiAaChfvH0yLvwu02sp-QU-tljGYBTJ8Pr1jWQIG-o39XRrBSMis",
+    "token_type": "Bearer",
+    "expires_in": 82566
 }
 ```
 
