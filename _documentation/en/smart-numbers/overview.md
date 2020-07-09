@@ -42,6 +42,6 @@ To forward an inbound call on one of your linked Vonage Business Communications 
 
 You provide these instructions in the form of a [Nexmo Call Control Object (NCCO)](https://developer.nexmo.com/voice/voice-api/guides/ncco) that defines the list of actions that the call must perform, such as reading a message to your caller using text-to-speech, or collecting input as part of an interactive voice response (IVR) system. You can also use a `connect` action in the NCCO to route the call to a Vonage Business Communications extension.
 
-You can use the [Vonage Business Communications APIs](/concepts/overview) in your application to retrieve information about your Vonage Business Communications accounts, extensions and users.
+You can use the [Vonage Business Communications APIs](_documentation/index) in your application to retrieve information about your Vonage Business Communications accounts, extensions and users.
 
 > **Getting help**: For a comprehensive list of resources to help you build your application, see [here](guides/vbc-resources).
