@@ -10,7 +10,7 @@ Once you've received your developer portal credentials you will need to log in t
 
 > Note: Your developer portal credentials are different than your Vonage Business Communications credentials and can only be used to log in to the developer portal.
 
-To log in to the developert portal:
+To log in to the developer portal:
 
 1. Visit the [Developer Portal](https://developer.vonage.com).
 2. Enter your Vonage Developer Portal login credentials on the **Sign in to your account** form.

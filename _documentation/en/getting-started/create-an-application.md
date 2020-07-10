@@ -18,6 +18,6 @@ To use the Vonage Business Communications APIs, you must create a API applicatio
 4. On the **Add Application** dialog, enter a **Name** and an optional **Description** for your application so you can easily locate it later. You can limit the maximum number of requests each access token allows (see [authentication](/getting-started/create-an-access-token)) in the **Per Token Quota** drop-down menu. By default it is **Unlimited**.
 5. Click the **Add** button.
 
-![Screenshot showing the Add Application dialog](/assets/images/vbc/create-application.png)
+![Screenshot showing the Add Application dialog](/images/vbc/getting-started/create-application.png)
 
 > Now that you have created your application, you need to [subscribe to APIs](/getting-started/subscribe-to-apis) to use Vonage Business Communications APIs.
