@@ -34,6 +34,6 @@ product: voice/voice-api
 
 * [Voice API Documentation](https://developer.nexmo.com/voice)
 * [Voice API Reference](https://developer.nexmo.com/api/voice)
-* [VBC APIs](/vonage-business-cloud/vbc-apis/overview)
+* [VBC APIs](/documentation)
 * [NCCO Reference](https://developer.nexmo.com/voice/voice-api/ncco-reference)
 * [Webhook Reference](https://developer.nexmo.com/voice/voice-api/webhook-reference)

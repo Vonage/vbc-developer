@@ -82,4 +82,4 @@ The response is a JSON object containing the Nexmo Application `id` that you wil
 }
 ```
 
-> The next step is to [provision Smart Numbers](/vonage-business-cloud/smart-numbers/guides/provision-smart-numbers) using the Nexmo Application `id`.
+> The next step is to [provision Smart Numbers](/smart-numbers/guides/provision-smart-numbers) using the Nexmo Application `id`.

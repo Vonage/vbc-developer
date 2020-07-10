@@ -16,4 +16,4 @@ To use Smart Numbers, you need to enable the Smart Number add-on in your account
 5. Note the recurring monthly fee and click **Checkout**.
 6. On the **Order Preview** page, verify your Account payment method and click **Submit Order**.
 
-> You have now enabled Smart Numbers. The next step is to [create a Nexmo Voice Application](/vonage-business-cloud/smart-numbers/guides/create-voice-application).
+> You have now enabled Smart Numbers. The next step is to [create a Nexmo Voice Application](/smart-numbers/guides/create-voice-application).
