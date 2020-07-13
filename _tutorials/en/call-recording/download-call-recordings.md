@@ -20,6 +20,7 @@ Create a function to download the recording:
       return response.content
     ```
 
-    This function takes the recording from the `download_url` parameter and returns the raw data of the recording.
+
+This function takes the recording from the `download_url` parameter and returns the raw data of the recording.
 
 Next, you will configure Boto3 so you can upload the recording to an Amazon S3 bucket.
