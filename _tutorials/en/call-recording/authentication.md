@@ -11,7 +11,7 @@ Now that you have created an application and subscribed to the Call Recording AP
 
     > Refer to the [Making an API request guide](/getting-started/make-an-api-request) for more details.
 
-2. Create a function that requests the `/api/accounts` API to generate an access token.
+2. Create a function that requests the `/api/accounts` API to generate an access token:
 
     ```python
     def get_token():

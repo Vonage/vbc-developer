@@ -1,5 +1,5 @@
 title: Saving Call Recordings to Amazon S3
-description: Save a call recording to Amazon S3
+description: Save call recordings to an Amazon S3 bucket.
 products:
   - call-recording
 
@@ -15,7 +15,9 @@ introduction:
     * Analyzing call recordings into dashboards
 
     Python is the language used to build the example in this tutorial; however, you can use any language with which you are most comfortable. The following Python libraries are used in this example:
+    
     * [requests](https://requests.readthedocs.io/en/master/)
+
     * [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
 
 prerequisites:

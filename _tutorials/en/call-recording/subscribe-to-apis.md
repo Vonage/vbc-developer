@@ -11,4 +11,4 @@ Now that you have created your Application and configured authentication, you ca
 1. Click the **API Directory** link in the left-hand navigation menu.
 2. Locate the **Call Recording API** and click **Go**.
 3. Select your application from the **My Applications** drop-down located on the right-hand corner of the page. 
-4. Click **Subscribe**:
+4. Click **Subscribe**.

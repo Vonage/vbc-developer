@@ -30,6 +30,6 @@ In this step you will make a GET request to the Call Recording API to get a JSON
 
     > Note: A JSON response with a list of the account's call recordings is returned.
 
-3. The Call Recording API supports many more parameters that can be used to filter your recordings. For example, you can filter recordings by length of recording using `duration:gte` and `duration:lte`. Refer to the [API documentation](/api/call-recording) for all available parameters.
+2. The Call Recording API supports many more parameters that can be used to filter your recordings. For example, you can filter recordings by length of recording using `duration:gte` and `duration:lte`. Refer to the [API documentation](/api/call-recording) for all available parameters.
 
 Next, you will create a function to download the recording.

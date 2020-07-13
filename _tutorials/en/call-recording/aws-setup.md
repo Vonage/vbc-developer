@@ -13,19 +13,19 @@ Boto3 is a package from AWS that allows you to perform most, if not all of the a
 
     ![](/images/use_cases/call-recording-to-s3/iam_add_user.png)
 
-2. Under `Access Type`, select `Programmatic access`
+2. Under **Access Type**, select **Programmatic access**.
 
     ![](/images/use_cases/call-recording-to-s3/iam_create_user.png)
 
 3. Write down (in a secure location) the newly created access key and secret.
 
-4. Create an S3 bucket to which call recording files will be uploaded. Navigate to [AWS S3](https://s3.console.aws.amazon.com/) and click `Create Bucket`.
+4. Create an S3 bucket to which call recording files will be uploaded. Navigate to [AWS S3](https://s3.console.aws.amazon.com/) and click **Create Bucket**.
 
     ![](/images/use_cases/call-recording-to-s3/s3_create_bucket.png)
 
-5. In the `Bucket Name` field, enter a unique name for the bucket. 
+5. In the **Bucket Name** field, enter a unique name for the bucket. 
 
-6. At the bottom of the page, clear the selection in the `Block all public access` checkbox. Since you are using the Boto3 client, you need to have the correct permissions on uploading objects to your bucket. Do not do this for production. Instead, create a new IAM role and add the permissions appropriately.
+6. At the bottom of the page, clear the selection in the **Block all public access** checkbox. Since you are using the Boto3 client, you need to have the correct permissions on uploading objects to your bucket. Do not do this for production. Instead, create a new IAM role and add the permissions appropriately.
 
     ![](/images/use_cases/call-recording-to-s3/s3_config.png)
 
@@ -64,6 +64,7 @@ Boto3 is a package from AWS that allows you to perform most, if not all of the a
     | `Key`      | The name of the file. For this example, we will use the `file_name`, which is returned to us from the `company_call_recordings` API.
     | `Body`      | The raw binary data of the file.
 
-After a few minutes or so, depending on number and size, your files will be uploaded to your Amazon S3 bucket:
+
+After a few moments, depending on number and size, your files will be uploaded to your Amazon S3 bucket:
 
     ![](/images/use_cases/call-recording-to-s3/s3_uploaded_files.png)
