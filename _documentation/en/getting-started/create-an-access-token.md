@@ -15,7 +15,7 @@ Once you have [created your application](/getting-started/create-an-application)
 3. On the **My Application** page, locate your application in the table and click the **View** link in the **Actions** column.
 4. Select the **Production Keys** tab:
 
-    ![Screenshot showing the Production Keys tab of the My Applications page](/assets/images/vbc/production-keys.png)
+    ![Screenshot showing the Production Keys tab of the My Applications page](/images/vbc/getting-started/production-keys.png)
 
     > Note: The default grant type is `Code`. The [grant type](https://oauth.net/2/grant-types/) is the method OAuth uses to generate an access token. When you create a production application you will typically want to use this method to authenticate requests. The `Refresh Token` option will create a new token when the current one expires.
 
