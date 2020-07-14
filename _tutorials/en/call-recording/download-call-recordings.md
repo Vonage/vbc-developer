@@ -10,13 +10,13 @@ The `get_company_call_recordings` function returns a list of recordings from the
 Create a function to download the recording:
 
 ```python
-def download_recording(token, recording_url):
+def download_recording(token, download_url):
   headers = {
     'Accept': 'application/json',
     'Authorization': 'Bearer {}'.format(token),
   }
 
-  response = requests.request("GET", recording_url, headers=headers)
+  response = requests.request("GET", download_url, headers=headers)
   return response.content
 ```
 
