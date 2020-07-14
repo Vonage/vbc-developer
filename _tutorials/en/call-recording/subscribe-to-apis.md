@@ -4,8 +4,6 @@ description: Learn how to add API subscriptions to use the Vonage Business Commu
 navigation_weight: 4
 ---
 
-# Subscribe to the Provisioning API
-
 Now that you have created your Application and configured authentication, you can subscribe to the Provisioning API. This API will give you access to the account, extension and user data.
 
 1. Click the **API Directory** link in the left-hand navigation menu.
