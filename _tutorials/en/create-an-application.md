@@ -4,13 +4,10 @@ description: Learn how to create an API application to use the Vonage Business C
 navigation_weight: 3
 ---
 
-# Creating an Application
-
 To use the Vonage Business Communications APIs, you must create a API application.
 
 > Note: To avoid confusion, "application" in this context refers to a logical grouping of APIs.
 
-## Create a new Application
 
 1. Sign into [Developer Portal](https://developer.vonage.com/store/) using your Vonage Business Communications credentials and select **Vonage Business Communications** from the platform drop down list.
 2. Select **My Applications** from the left-hand navigation menu.
@@ -19,5 +16,3 @@ To use the Vonage Business Communications APIs, you must create a API applicatio
 5. Click the **Add** button.
 
 ![Screenshot showing the Add Application dialog](/images/vbc/getting-started/create-application.png)
-
-> Now that you have created your application, you need to [subscribe to APIs](/getting-started/subscribe-to-apis) to use Vonage Business Communications APIs.

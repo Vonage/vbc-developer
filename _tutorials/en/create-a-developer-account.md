@@ -4,8 +4,6 @@ description: Learn how to request a developer account to use the Vonage Business
 navigation_weight: 1
 ---
 
-#  Creating a Developer Account
-
 To use the Vonage Business Communications APIs, you must first request a developer account. 
 
 To request an account, fill out the **Request an account** form found on the [developer portal login](https://developer.vonage.com) page.
