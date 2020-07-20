@@ -4,7 +4,7 @@ title: Unhold a call
 
 # Unhold a call
 
-This example shows you how to unhold a call
+This example demonstrates how to unhold a call.
 
 Replace the following placeholder value in the sample code:
 

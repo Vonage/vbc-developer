@@ -4,7 +4,7 @@ title: Get an event
 
 # Get an event
 
-This example shows you how to get details on an event
+This example demonstrates how to get details on an event.
 
 Replace the following placeholder value in the sample code:
 

@@ -4,7 +4,7 @@ title: List webhooks
 
 # List webhooks
 
-This example shows you how to list webhooks
+This example demonstrates how to list webhooks.
 
 Replace the following placeholder value in the sample code:
 

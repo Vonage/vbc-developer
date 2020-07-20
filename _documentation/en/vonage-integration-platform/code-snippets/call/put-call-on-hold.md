@@ -4,7 +4,7 @@ title: Put call on hold
 
 # Put call on hold
 
-This example shows you how to put a call on hold
+This example demonstrates how to put a call on hold.
 
 Replace the following placeholder value in the sample code:
 

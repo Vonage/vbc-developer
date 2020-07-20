@@ -4,7 +4,7 @@ title: Get account info
 
 # Get account info
 
-This example shows you how to get detailed information about the authenticated account
+This demonstrates how to get detailed information about the authenticated account.
 
 Replace the following placeholder value in the sample code:
 

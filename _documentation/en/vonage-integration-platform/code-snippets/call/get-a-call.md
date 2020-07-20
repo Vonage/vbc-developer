@@ -4,7 +4,7 @@ title: Get a call
 
 # Get a call
 
-This example shows you how to get details on a call
+This example demonstrates how to get details on a call.
 
 Replace the following placeholder value in the sample code:
 

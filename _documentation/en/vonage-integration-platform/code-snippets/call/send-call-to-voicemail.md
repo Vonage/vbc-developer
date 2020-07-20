@@ -4,7 +4,7 @@ title: Send call to voicemail
 
 # Send call to voicemail
 
-This example shows you how to send a call to voicemail
+This example demonstrates how to send a call to voicemail.
 
 Replace the following placeholder value in the sample code:
 

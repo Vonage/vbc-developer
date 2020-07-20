@@ -4,7 +4,7 @@ title: Get calls count
 
 # Get calls count
 
-This example shows you how to count active calls
+This example demonstrates how to count active calls.
 
 Replace the following placeholder value in the sample code:
 

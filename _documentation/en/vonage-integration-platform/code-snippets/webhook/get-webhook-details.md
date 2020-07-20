@@ -4,7 +4,7 @@ title: Get webhook details
 
 # Get webhook details
 
-This example shows you how to get details on a webhook
+This example demonstrates how to get details on a webhook.
 
 Replace the following placeholder value in the sample code:
 

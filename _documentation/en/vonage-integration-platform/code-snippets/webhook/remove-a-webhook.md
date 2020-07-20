@@ -4,7 +4,7 @@ title: Remove a webhook
 
 # Remove a webhook
 
-This example shows you how to remove a webhook
+This example demonstrates how to remove a webhook.
 
 Replace the following placeholder value in the sample code:
 
