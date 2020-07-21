@@ -4,7 +4,7 @@ title: Create a new webhook
 
 # Create a new webhook
 
-This example shows you how to create a new webhook subscription
+This example demonstrates how to create a new webhook subscription.
 
 Replace the following placeholder value in the sample code:
 

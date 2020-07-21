@@ -4,7 +4,7 @@ title: List active calls
 
 # List active calls
 
-This example shows you how to list currently active calls
+This example demonstrates how to list currently active calls.
 
 Replace the following placeholder value in the sample code:
 

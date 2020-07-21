@@ -4,7 +4,7 @@ title: Answer a call
 
 # Answer a call
 
-This example shows you how to answer a call
+This example demonstrates how to answer a call.
 
 Replace the following placeholder value in the sample code:
 

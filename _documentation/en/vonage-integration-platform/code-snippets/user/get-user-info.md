@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Get user info
 
-This example shows you how to get detailed information about the authenticated user
+This example demonstrates how to get detailed information about the authenticated user.
 
 Replace the following placeholder value in the sample code:
 

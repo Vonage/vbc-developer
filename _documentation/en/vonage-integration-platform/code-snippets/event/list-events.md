@@ -4,7 +4,7 @@ title: List events
 
 # List events
 
-This example shows you how to list events
+This example demonstrates how to list events.
 
 Replace the following placeholder value in the sample code:
 

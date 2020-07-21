@@ -4,7 +4,7 @@ title: End a call
 
 # End a call
 
-This example shows you how to end a call
+This example demonstrates how to end a call.
 
 Replace the following placeholder value in the sample code:
 

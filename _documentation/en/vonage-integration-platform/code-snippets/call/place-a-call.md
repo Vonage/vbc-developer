@@ -4,7 +4,7 @@ title: Place a call
 
 # Place a call
 
-This example shows you how to place a call
+This example demonstrates how to place a call.
 
 Replace the following placeholder value in the sample code:
 

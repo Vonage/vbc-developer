@@ -4,7 +4,7 @@ title: Renew a webhook
 
 # Renew a webhook
 
-This example shows you how to renew a webhook
+This example demonstrates how to renew a webhook.
 
 Replace the following placeholder value in the sample code:
 

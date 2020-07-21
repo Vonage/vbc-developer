@@ -4,7 +4,7 @@ title: Get events count
 
 # Get events count
 
-This example shows you how to count events
+This example demonstrates how to count events.
 
 Replace the following placeholder value in the sample code:
 

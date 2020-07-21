@@ -4,7 +4,7 @@ title: Transfer a call
 
 # Transfer a call
 
-This example shows you how to transfer a call
+This example demonstrates how to transfer a call.
 
 Replace the following placeholder value in the sample code:
 
