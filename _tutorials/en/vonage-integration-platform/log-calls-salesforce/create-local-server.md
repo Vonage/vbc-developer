@@ -3,7 +3,7 @@ title: Express app for webhook
 description: In this step you learn how to create a local server using an ExpressJS application.
 ---
 
-# Create a local server using an ExpressJS application
+# Create a local server using an ExpressJS application.
 
 To use an ExpressJS application: 
 

@@ -1,24 +1,24 @@
 ---
-title: Update Express app for webhook to make API calls to Salesforce
-description: In this step you learn how to update the Express application to create Task in Salesforce
+title: Update Express app to make API calls to Salesforce
+description: In this step you learn how to update the Express application to create Task in Salesforce.
 ---
 
-# Update Express app for webhook to make API calls to Salesforce
+# Update Express app to make API calls to Salesforce
 
-In this section, you will update your Express application to create a new Task when your webhook is triggered from a call
+In this section, you will update your Express application to create a new Task on Salesforce when your webhook is triggered from a call.
 
 To update an ExpressJS application: 
 
-1. In your application, add the [JSForce library](https://jsforce.github.io/) by using `npm install jsforce --save`
+1. In your application, add the [JSForce library](https://jsforce.github.io/)  as well as [dotenv](https://www.npmjs.com/package/dotenv) by using `npm install jsforce dotenv--save`.
 
-2. Create a new file called `.env`. In this file, you will be adding your Salesforce username and password as well as the securtity code, which you should have generated from this [step](_tutorials/en/vonage-integration-platform/log-calls-salesforce/create-webhook-app.md)
-The .env will have the following
+2. Create a new file called `.env`. In this file, you will be adding your Salesforce username and password as well as the security code, which you should have generated from this [step](_tutorials/en/vonage-integration-platform/log-calls-salesforce/create-webhook-app.md)
+The .env will have the following:
 ```javascript
 SF_USERNAME=''
 SF_PASSWORD=''
 SF_TOKEN=''
 ```
-The `SF_USERNAME`  and `SF_PASSWORD` will be the username and password used to login into Salesforce.
+The `SF_USERNAME` and `SF_PASSWORD` will be the username and password used to login into Salesforce.
 The `SF_TOKEN` is the token you should have received via email from the previous step.
 
 2. Create a new Javascript file, called `Salesforce.js` and add the following
@@ -86,7 +86,9 @@ The `SF_TOKEN` is the token you should have received via email from the previous
 ```javascript
 var salesforce = require('./Salesforce.js')
 ```
-When the app loads, write the code to login using your Salesforce credentials
+
+When the app loads, write the code to login using your Salesforce credentials.
+
 ```javascript
 salesforce.login()
 .then(function(res) {
@@ -95,15 +97,14 @@ salesforce.login()
   console.log(err)
 }))
 ```
-This code will login to Salesforce using your credentails.
 
-
-3. Update the code in the `app.post('/webhook`) section of your application.
+3. Update the code in the `app.post('/webhook`) section of your application to use the new `Salesforce.js ` file.
     
     ```javascript
-     const express = require('express')
-     const app = express()
-     const port = 3000
+    require('dotenv').config()
+    const express = require('express')
+    const app = express()
+    const port = 3000
     app.post('/webhook', (req, res) => {
         var event = req.body.event
         var callerId = event.callerId;
@@ -126,19 +127,19 @@ This code will login to Salesforce using your credentails.
             var subject = `${direction.toLowerCase()} call with ${name}`
             salesforce.getContact(phone_number)
             .then(function(contact) {
-            console.log(contact)
-            if (contact["totalSize"] == 0) {
-                //Create new contact
-                return salesforce.createContact(first_name, last_name, phone_number)
-                .then(function(contact) {
-                var contactId = contact["Id"]
-                return salesforce.addTask(subject, duration, contactId)
-                })
-            } else {
-                //Grab the first contact
-                var contactId = contact["records"][0]["Id"]
-                return salesforce.addTask(subject, duration, contactId)
-            }
+                console.log(contact)
+                if (contact["totalSize"] == 0) {
+                    //Create new contact
+                    return salesforce.createContact(first_name, last_name, phone_number)
+                    .then(function(contact) {
+                    var contactId = contact["Id"]
+                    return salesforce.addTask(subject, duration, contactId)
+                    })
+                } else {
+                    //Grab the first contact
+                    var contactId = contact["records"][0]["Id"]
+                    return salesforce.addTask(subject, duration, contactId)
+                }
             }).catch(function(err) {
             console.log(err)
             })
@@ -148,8 +149,8 @@ This code will login to Salesforce using your credentails.
      app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
     ```
 
-This code will be tiggered when a call is made or received from your VBC number, When the call is completed(`if (state == "ANSWERED")`), the application will first look for a Contact with the given phone number(`event.phoneNumber`).
-This will call the `salesforce.getContact()` to search for the Contact. If the Contact exists, we create a new Task using the function `salesforce.addTask()`. This will create a new Task in Salesforce that includes the title, the assoicated Contact(using the `contactId`) and the duration of the call. 
+This code will be triggered when a call is made or received from your VBC number, When the call is completed(`if (state == "ANSWERED")`), the application will first look for a Contact with the given phone number(`event.phoneNumber`).
+This will call the `salesforce.getContact()` function to search for the Contact. If the Contact exists, we create a new Task using the function `salesforce.addTask()`. This will create a new Task in Salesforce that includes the title, the associated Contact(using the `contactId`) and the duration of the call. 
 If there are no Contacts that match the given phone number, using the `contact["totalSize"] == 0` check, the application will then create a new Contact using the `event.callerId` property from the webhook, and split the string into a first name and last name. Note, outgoing calls MAY not have this property. In this case, we will just use the phone number as the Contact's last name.
 
 4. To start your application, run the following command:
