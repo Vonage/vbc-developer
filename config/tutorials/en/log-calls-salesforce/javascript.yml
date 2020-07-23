@@ -1,0 +1,34 @@
+title: Log incoming calls to Salesforce
+description: Logging incoming calls into Salesforce
+products:
+  - vonage-integration-platform
+
+introduction:
+  title: Introduction to this task
+  description: This tutorial demonstrates how to log all incoming and outgoing calls directly into Salesforce.
+  content: |
+    # Introduction
+    In this tutorial, you will learn how to use the Vonage Integration Platform webhook API to log calls directly into Salesforce. 
+    When a call is made or received to your Vonage Business Cloud account, the webhook API is able to capture the call details(to, from, call duration) and create a new Task directly into Salesforce. Also, the application will create a new Contact in Salesforce if the contact does not exist.
+
+prerequisites:
+  - create-a-developer-account
+  - subscribe-to-apis
+  - vonage-integration-platform/log-calls-salesforce/generate-sf-security-token
+
+tasks:
+  - vonage-integration-platform/log-calls-salesforce/create-webhook
+  - vonage-integration-platform/log-calls-salesforce/create-local-server
+  - vonage-integration-platform/log-calls-salesforce/add-salesforce-code
+
+conclusion:
+  title: What's next?
+  description: What else can you do with the Vonage Business Communications APIs?
+  content: |
+
+    # What's next?
+    You can do a lot more with the Vonage Business Communications APIs.
+
+    See [Vonage Integration Platform](/vonage-integration-platform/overview).
+    
+    The full code is available [here](https://github.com/nexmo-community/vbc_calls_into_salesforce).
