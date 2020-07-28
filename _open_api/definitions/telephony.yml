@@ -195,11 +195,14 @@ paths:
           required: true
           schema:
             type: string
+            example: 12345
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: c91150a6-8cc4-4e73-9fef-17fd925c6448
+
       requestBody:
         description: |-
           To answer a call: 'state' should be 'active', and 'to' should include the VH id of the device answering the call. To transfer a call: 'state' should not be specified. Both 'to' and 'from' should be specified. To park a call: 'state' should be 'parked', and 'from' should be specified.
