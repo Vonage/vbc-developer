@@ -19,13 +19,15 @@ paths:
           in: query
           schema:
             type: string
+            example: 1234
         - name: page_size
           in: query
           description:
-            Return max this amount of calls in the response. Default is set
-            to 100.
+            Return max this amount of calls in the response.
           schema:
             type: string
+            example: 100
+            default: 100
         - name: order
           in: query
           description:
@@ -33,6 +35,7 @@ paths:
             or `desc`.
           schema:
             type: string
+            example: asc
         - name: start_time
           in: query
           description:
@@ -40,6 +43,7 @@ paths:
             be of type `epoch` with seconds precision.
           schema:
             type: string
+            example: 1595955770
         - name: end_time
           in: query
           description:
@@ -47,11 +51,13 @@ paths:
             be of type `epoch` with seconds precision.
           schema:
             type: integer
+            example: 1595955770
         - name: account_id
           in: path
           required: true
           schema:
             type: string
+            example: 1234
       responses:
         "200":
           description: 200 response
