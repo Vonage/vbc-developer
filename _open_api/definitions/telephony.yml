@@ -19,6 +19,7 @@ paths:
           in: query
           schema:
             type: string
+            example: 1234
         - name: page_size
           in: query
           description:
@@ -26,6 +27,7 @@ paths:
             to 100.
           schema:
             type: string
+            example: 100
         - name: order
           in: query
           description:
@@ -33,6 +35,7 @@ paths:
             or `desc`.
           schema:
             type: string
+            example: asc
         - name: start_time
           in: query
           description:
@@ -40,6 +43,7 @@ paths:
             be of type `epoch` with seconds precision.
           schema:
             type: string
+            example: 1595937296
         - name: end_time
           in: query
           description:
@@ -47,11 +51,13 @@ paths:
             be of type `epoch` with seconds precision.
           schema:
             type: integer
+            example: 1595937296
         - name: account_id
           in: path
           required: true
           schema:
             type: string
+            example: 123456
       responses:
         "200":
           description: 200 response
@@ -95,6 +101,7 @@ paths:
           required: true
           schema:
             type: string
+            example: 123456
       requestBody:
         description: Request body description
         content:
@@ -147,11 +154,13 @@ paths:
           required: true
           schema:
             type: string
+            example: 123456
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: abc123-4a51-4f6b-86e1-46edebcf9356
       responses:
         "200":
           description: 200 response
@@ -250,11 +259,13 @@ paths:
           required: true
           schema:
             type: string
+            example: 123456
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: abc123-4a51-4f6b-86e1-46edebcf9356
       responses:
         "200":
           description: 200 response
@@ -299,11 +310,13 @@ paths:
           required: true
           schema:
             type: string
+            example: 123456
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: abc123-4a51-4f6b-86e1-46edebcf9356
       responses:
         "200":
           description: 200 response
@@ -339,16 +352,19 @@ paths:
           required: true
           schema:
             type: string
+            example: abc123-4a51-4f6b-86e1-46edebcf9356
         - name: account_id
           in: path
           required: true
           schema:
             type: string
+            example: 123456
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: abc123-4a51-4f6b-86e1-46edebcf9356
       responses:
         "200":
           description: 200 response
@@ -383,16 +399,19 @@ paths:
           required: true
           schema:
             type: string
+            example: 123456
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: abc123-4a51-4f6b-86e1-46edebcf9356
         - name: leg_id
           in: path
           required: true
           schema:
             type: string
+            example: abc123-4a51-4f6b-86e1-46edebcf9356
       requestBody:
         description:
           "Perform hold or unhold or send dtmf or transfer on the call
@@ -518,16 +537,19 @@ paths:
           required: true
           schema:
             type: string
+            example: 123456
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: abc123-4a51-4f6b-86e1-46edebcf9356
         - name: leg_id
           in: path
           required: true
           schema:
             type: string
+            example: abc123-4a51-4f6b-86e1-46edebcf9356
       responses:
         "204":
           description: 204 response
@@ -574,6 +596,7 @@ paths:
             set to 100.
           schema:
             type: string
+            example: 100
         - name: order
           in: query
           description:
@@ -581,6 +604,7 @@ paths:
             or `desc`.
           schema:
             type: string
+            example: asc
         - name: start_time
           in: query
           description:
@@ -588,6 +612,7 @@ paths:
             be of type `epoch` with seconds precision.
           schema:
             type: string
+            example: 1595937296
         - name: end_time
           in: query
           description:
@@ -595,11 +620,13 @@ paths:
             time.<br/>Should be of type `epoch` with seconds precision.
           schema:
             type: integer
+            example: 1595937296
         - name: account_id
           in: path
           required: true
           schema:
             type: string
+            example: 123456
       responses:
         "200":
           description: 200 response
@@ -635,12 +662,14 @@ paths:
           required: true
           schema:
             type: string
+            example: 123456
         - name: device_id
           in: path
           description: Mac address of device
           required: true
           schema:
             type: string
+            example: 00:0a:95:9d:68:16
       responses:
         "200":
           description: 200 response
