@@ -13,4 +13,4 @@ Now that you have created your Application and configured authentication, you ca
 3. Select your application from the **My Applications** drop-down located on the right-hand corner of the page. 
 4. Click **Subscribe**:
 
-![Screenshot showing how to subscribe your Application to the Provisioning API](/assets/images/vbc/subscribe-api.png)
+![Screenshot showing how to subscribe your Application to the Provisioning API](/images/vbc/getting-started/subscribe-api.png)
