@@ -730,6 +730,7 @@ components:
           example: desc
         page_size:
           type: string
+          example: 10
         pages:
           type: string
           example: 2
