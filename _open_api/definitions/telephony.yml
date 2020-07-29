@@ -834,6 +834,7 @@ components:
             - unanswered
             - ringing
             - active
+          example: busy
         to:
           type: string
           description: The "to" DID or extension
@@ -995,6 +996,7 @@ components:
         leg_id:
           type: string
           format: uuid
+          example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
     NotFoundMessage:
       type: object
       properties:
@@ -1018,10 +1020,10 @@ components:
           example: True 
         last_request:
           type: string
+          example: 1595937421
         last_success:
           type: string
-        line:
-          type: string
+          example: 1595937421
         mac_address:
           type: string
           example: 79-5C-7D-28-1B-B3
