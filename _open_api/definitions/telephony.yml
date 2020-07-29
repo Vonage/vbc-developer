@@ -741,8 +741,10 @@ components:
       properties:
         code:
           type: integer
+          example: 401
         message:
           type: string
+          example: User is not permitted to make a request against this account
     Call:
       type: object
       properties:
@@ -761,6 +763,7 @@ components:
         end_time:
           type: string
           format: date-time
+          example: 1595959736
         from:
           type: string
           example: 1235551111
@@ -771,6 +774,7 @@ components:
         start_time:
           type: string
           format: date-time
+          example: 1595959736
         status:
           type: string
           enum:
@@ -779,8 +783,10 @@ components:
             - unanswered
             - ringing
             - active
+          example: busy
         to:
           type: string
+          example: 1234567890
     CallLeg:
       type: object
       properties:
@@ -799,10 +805,12 @@ components:
           enum:
             - inbound
             - outbound
+          example: inbound
         end_time:
           type: string
           description: Call end time (if applicable)
           format: date-time
+          example: 1595959736
         from:
           type: string
           description: The "from" DID or extension
@@ -816,6 +824,7 @@ components:
           type: string
           description: Call start time
           format: date-time
+          example: 1595959736
         status:
           type: string
           description: current leg status
@@ -828,6 +837,7 @@ components:
         to:
           type: string
           description: The "to" DID or extension
+          example: 1234567890
       description: Object representation of a call leg
     CallLegList:
       type: array
@@ -850,6 +860,8 @@ components:
             - click2dial
             - click2dialme
             - odr
+            - default
+          example: click2dial
     CallPutRequestBody:
       type: object
       properties:
@@ -860,6 +872,7 @@ components:
           enum:
             - active
             - parked
+          
         to:
           $ref: "#/components/schemas/Contact"
     CallsPaginated:
@@ -896,17 +909,20 @@ components:
       properties:
         destination:
           type: string
+          example: 1234567890
         type:
           type: string
           enum:
             - device
             - extension
             - pstn
+          example: pstn
     CreateCallContact:
       type: object
       properties:
         destination:
           type: string
+          example: 1234567890
         type:
           type: string
           enum:
@@ -914,12 +930,14 @@ components:
             - extension
             - pstn
             - feature_code
+          example: pstn
     LegAttTransferRequestBody:
       type: object
       properties:
         to:
           type: string
           format: uuid
+          example: 3fa85f64-5717-4562-b3fc-2c963f66afa6    
     LegBlindTransferRequestBody:
       type: object
       properties:
@@ -954,6 +972,7 @@ components:
         call_id:
           type: string
           format: uuid
+          example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
         call_state:
           type: string
         destination:
@@ -981,8 +1000,10 @@ components:
       properties:
         code:
           type: string
+          example: 401
         message:
           type: string
+          example: No matching resource found for given API Request
     RegistrationInfo:
       type: object
       properties:
@@ -1025,13 +1046,16 @@ components:
           example: 1595937421
     StatusMessage:
       type: string
+      example: e2610a31-88be-4f12-90c0-ee98dbfaf80b
     ValidationErrorMessage:
       type: object
       properties:
         code:
           type: string
+          example: 400
         message:
           type: string
+          example: Invalid request parameters
   securitySchemes:
     bearerAuth:
       type: http
