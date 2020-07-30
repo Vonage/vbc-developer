@@ -16,9 +16,8 @@ introduction:
     
 
 prerequisites:
-  - smart-numbers/guides/enable-addon
-  - smart-numbers/guides/create-voice-application
-  - smart-numbers/guides/provision-smart-numbers
+  - create-a-developer-account
+  - subscribe-to-apis
   
 tasks:
   - smart-numbers/ivr-fallback/modified-sample-code
