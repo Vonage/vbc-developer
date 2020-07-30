@@ -1,18 +1,20 @@
 ---
 title: Modifiy the sample code
 description: Download the sample code and modify
-navigation_weight: 1
 ---
 
 1. Download the application from Github in order to get started. 
     You will need to have Git installed on your machine. If you are new to git or need to install git, please visit this documentation from [Github](https://docs.github.com/en/github/getting-started-with-github/set-up-git).
 
     In terminal, insert the following:
+
     ```bash
     git clone https://github.com/nexmo-community/smart-number-smart-ivr-fallback-demo.git
     cd smart-number-smart-ivr-fallback-demo
     ``` 
+
 2. Next, install the dependencies:
+
     ```bash
     npm install
     ```
