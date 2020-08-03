@@ -10,15 +10,16 @@ introduction:
     # Introduction
     In this tutorial, you will learn how build an Nexmo application that will redirect any incoming calls to your Smart Number to another number. 
     When a call is received on your Smart Number, the Nexmo application will answer the call, then make a call out to your personal number. This application supports forwarding the call into the following:
+
     * PSTN
     * VBC
     * SIP
     
 
 prerequisites:
-  - smart-numbers/guides/enable-addon
-  - smart-numbers/guides/create-voice-application
-  - smart-numbers/guides/provision-smart-numbers
+  - ivr-fallback/enable-addon.md
+  - ivr-fallback/create-voice-application.md
+  - ivr-fallback/provision-smart-numbers.md
   
 tasks:
   - smart-numbers/ivr-fallback/modified-sample-code
