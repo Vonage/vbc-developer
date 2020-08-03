@@ -19,13 +19,15 @@ paths:
           in: query
           schema:
             type: string
+            example: 1234
         - name: page_size
           in: query
           description:
-            Return max this amount of calls in the response. Default is set
-            to 100.
+            Return max this amount of calls in the response.
           schema:
             type: string
+            example: 100
+            default: 100
         - name: order
           in: query
           description:
@@ -33,6 +35,7 @@ paths:
             or `desc`.
           schema:
             type: string
+            example: asc
         - name: start_time
           in: query
           description:
@@ -40,6 +43,7 @@ paths:
             be of type `epoch` with seconds precision.
           schema:
             type: string
+            example: 1595955770
         - name: end_time
           in: query
           description:
@@ -47,11 +51,13 @@ paths:
             be of type `epoch` with seconds precision.
           schema:
             type: integer
+            example: 1595955770
         - name: account_id
           in: path
           required: true
           schema:
             type: string
+            example: 1234
       responses:
         "200":
           description: 200 response
@@ -95,6 +101,7 @@ paths:
           required: true
           schema:
             type: string
+            example: 1234
       requestBody:
         description: Request body description
         content:
@@ -147,11 +154,13 @@ paths:
           required: true
           schema:
             type: string
+            example: 1234
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
       responses:
         "200":
           description: 200 response
@@ -195,11 +204,14 @@ paths:
           required: true
           schema:
             type: string
+            example: 12345
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: c91150a6-8cc4-4e73-9fef-17fd925c6448
+
       requestBody:
         description: |-
           To answer a call: 'state' should be 'active', and 'to' should include the VH id of the device answering the call. To transfer a call: 'state' should not be specified. Both 'to' and 'from' should be specified. To park a call: 'state' should be 'parked', and 'from' should be specified.
@@ -250,11 +262,13 @@ paths:
           required: true
           schema:
             type: string
+            example: 1234
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
       responses:
         "200":
           description: 200 response
@@ -299,11 +313,13 @@ paths:
           required: true
           schema:
             type: string
+            example: 1234
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
       responses:
         "200":
           description: 200 response
@@ -339,16 +355,19 @@ paths:
           required: true
           schema:
             type: string
+            example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
         - name: account_id
           in: path
           required: true
           schema:
             type: string
+            example: 1234
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
       responses:
         "200":
           description: 200 response
@@ -383,16 +402,19 @@ paths:
           required: true
           schema:
             type: string
+            example: 1234
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
         - name: leg_id
           in: path
           required: true
           schema:
             type: string
+            example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
       requestBody:
         description:
           "Perform hold or unhold or send dtmf or transfer on the call
@@ -518,16 +540,19 @@ paths:
           required: true
           schema:
             type: string
+            example: 1234
         - name: call_id
           in: path
           required: true
           schema:
             type: string
+            example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
         - name: leg_id
           in: path
           required: true
           schema:
             type: string
+            example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
       responses:
         "204":
           description: 204 response
@@ -570,10 +595,11 @@ paths:
         - name: page_size
           in: query
           description:
-            Return max this number of devices in the response. Default is
-            set to 100.
+            Return max this number of devices in the response.
           schema:
             type: string
+            default: 100
+            example: 10
         - name: order
           in: query
           description:
@@ -581,6 +607,7 @@ paths:
             or `desc`.
           schema:
             type: string
+            example: "asc"
         - name: start_time
           in: query
           description:
@@ -588,6 +615,7 @@ paths:
             be of type `epoch` with seconds precision.
           schema:
             type: string
+            example: 1595955770
         - name: end_time
           in: query
           description:
@@ -595,11 +623,13 @@ paths:
             time.<br/>Should be of type `epoch` with seconds precision.
           schema:
             type: integer
+            example: 1595955770
         - name: account_id
           in: path
           required: true
           schema:
             type: string
+            example: 1234
       responses:
         "200":
           description: 200 response
@@ -635,12 +665,14 @@ paths:
           required: true
           schema:
             type: string
+            example: 1234
         - name: device_id
           in: path
           description: Mac address of device
           required: true
           schema:
             type: string
+            example: 38-99-62-93-E2-A9
       responses:
         "200":
           description: 200 response
@@ -680,48 +712,62 @@ components:
       properties:
         current_page:
           type: string
+          example: 1
         devices:
           type: array
           items:
             $ref: "#/components/schemas/RegistrationInfo"
         first_page_uri:
           type: string
+          example: /registration/accounts/1234/devices?page_size=100&order=desc
         next_page:
           type: string
         next_page_uri:
           type: string
+          example: /registration/accounts/1234/devices?page_size=100&order=desc
         order:
           type: string
+          example: desc
         page_size:
           type: string
+          example: 10
         pages:
           type: string
+          example: 2
         previous_page_uri:
           type: string
+          example: /registration/accounts/1234/devices?page_size=100&order=desc
     AuthorizationErrorMessage:
       type: object
       properties:
         code:
           type: integer
+          example: 401
         message:
           type: string
+          example: User is not permitted to make a request against this account
     Call:
       type: object
       properties:
         account_id:
           type: string
+          example: 1234
         call_id:
           type: string
+          example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
         direction:
           type: string
           enum:
             - inbound
             - outbound
+          example: inbound
         end_time:
           type: string
           format: date-time
+          example: 1595959736
         from:
           type: string
+          example: 1235551111
         legs:
           type: array
           items:
@@ -729,6 +775,7 @@ components:
         start_time:
           type: string
           format: date-time
+          example: 1595959736
         status:
           type: string
           enum:
@@ -737,39 +784,48 @@ components:
             - unanswered
             - ringing
             - active
+          example: busy
         to:
           type: string
+          example: 1234567890
     CallLeg:
       type: object
       properties:
         account_id:
           type: string
           description: Account that this call leg belongs to
+          example: 1234
         call_id:
           type: string
           description: Call Id this call belongs to
           format: uuid
+          example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
         direction:
           type: string
           description: Leg direction - either "inbound" or "outbound"
           enum:
             - inbound
             - outbound
+          example: inbound
         end_time:
           type: string
           description: Call end time (if applicable)
           format: date-time
+          example: 1595959736
         from:
           type: string
           description: The "from" DID or extension
+          example: 1231112222
         leg_id:
           type: string
           description: Globally unique leg Id
           format: uuid
+          example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
         start_time:
           type: string
           description: Call start time
           format: date-time
+          example: 1595959736
         status:
           type: string
           description: current leg status
@@ -779,9 +835,11 @@ components:
             - unanswered
             - ringing
             - active
+          example: busy
         to:
           type: string
           description: The "to" DID or extension
+          example: 1234567890
       description: Object representation of a call leg
     CallLegList:
       type: array
@@ -804,6 +862,8 @@ components:
             - click2dial
             - click2dialme
             - odr
+            - default
+          example: click2dial
     CallPutRequestBody:
       type: object
       properties:
@@ -814,6 +874,7 @@ components:
           enum:
             - active
             - parked
+          
         to:
           $ref: "#/components/schemas/Contact"
     CallsPaginated:
@@ -823,36 +884,47 @@ components:
           $ref: "#/components/schemas/CallList"
         current_page:
           type: string
+          example: 0
         first_page_uri:
           type: string
+          example: /cc/accounts/1234/calls?page_size=0&order=desc
         next_page:
           type: string
+          example: 1
         next_page_uri:
           type: string
+          example: /cc/accounts/1234/calls?page_size=0&order=desc
         order:
           type: string
+          example: desc
         page_size:
           type: string
+          example: 1
         pages:
           type: string
+          example: 1
         previous_page_uri:
           type: string
+          example:  /cc/accounts/1234/calls?page_size=0&order=desc
     Contact:
       type: object
       properties:
         destination:
           type: string
+          example: 1234567890
         type:
           type: string
           enum:
             - device
             - extension
             - pstn
+          example: pstn
     CreateCallContact:
       type: object
       properties:
         destination:
           type: string
+          example: 1234567890
         type:
           type: string
           enum:
@@ -860,12 +932,14 @@ components:
             - extension
             - pstn
             - feature_code
+          example: pstn
     LegAttTransferRequestBody:
       type: object
       properties:
         to:
           type: string
           format: uuid
+          example: 3fa85f64-5717-4562-b3fc-2c963f66afa6    
     LegBlindTransferRequestBody:
       type: object
       properties:
@@ -896,9 +970,11 @@ components:
         account_id:
           type: string
           format: integer
+          example: 1234
         call_id:
           type: string
           format: uuid
+          example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
         call_state:
           type: string
         destination:
@@ -909,6 +985,8 @@ components:
         account_id:
           type: string
           format: integer
+          example: 1234
+
         call_id:
           type: string
           format: uuid
@@ -919,30 +997,37 @@ components:
         leg_id:
           type: string
           format: uuid
+          example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
     NotFoundMessage:
       type: object
       properties:
         code:
           type: string
+          example: 401
         message:
           type: string
+          example: No matching resource found for given API Request
     RegistrationInfo:
       type: object
       properties:
         account_id:
           type: string
+          example: 1234
         device_ip:
           type: string
+          example: 150.24.83.17
         is_registered:
           type: string
+          example: True 
         last_request:
           type: string
+          example: 1595937421
         last_success:
           type: string
-        line:
-          type: string
+          example: 1595937421
         mac_address:
           type: string
+          example: 79-5C-7D-28-1B-B3
         registration:
           $ref: "#/components/schemas/RegistrationTime"
         provisioned:
@@ -952,22 +1037,28 @@ components:
       properties:
         last_success:
           type: string
+          example: 1595937421
     ProvisionedTime:
       type: object
       properties:
         last_success:
           type: string
+          example: 1595937421
         last_request:
           type: string
+          example: 1595937421
     StatusMessage:
       type: string
+      example: e2610a31-88be-4f12-90c0-ee98dbfaf80b
     ValidationErrorMessage:
       type: object
       properties:
         code:
           type: string
+          example: 400
         message:
           type: string
+          example: Invalid request parameters
   securitySchemes:
     bearerAuth:
       type: http
