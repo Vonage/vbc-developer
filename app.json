@@ -5,7 +5,6 @@
   "env": {
     "RACK_ENV": "production",
     "RAILS_ENV": "production",
-    "OAS_PATH": "_open_api/api_specs/definitions",
     "DOCS_BASE_PATH": "."
   },
   "stack": "heroku-18",
