@@ -4,8 +4,6 @@ description: Add the Smart Numbers capability to your account.
 navigation_weight: 1
 ---
 
-# Enable Smart Numbers
-
 To use Smart Numbers, you need to enable the Smart Number add-on in your account:
 
 1. Visit [the VBC Admin Portal](https://admin.vonage.com) and log in.

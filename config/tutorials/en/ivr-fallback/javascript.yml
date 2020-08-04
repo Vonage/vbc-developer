@@ -5,10 +5,11 @@ products:
 
 introduction:
   title: Introduction to this task
-  description: This tutorial demonstrates how to build a application to redirect an incoming call from your Smart Number.
+  description: This tutorial demonstrates how to build an application to redirect an incoming call from your Smart Number.
   content: |
     # Introduction
-    In this tutorial, you will learn how build an Nexmo application that will redirect any incoming calls to your Smart Number to another number. 
+
+    In this tutorial, you will learn how build a Nexmo application that will redirect any incoming calls to your Smart Number to another number. 
     When a call is received on your Smart Number, the Nexmo application will answer the call, then make a call out to your personal number. This application supports forwarding the call into the following:
 
     * PSTN
@@ -31,6 +32,7 @@ conclusion:
   content: |
 
     # What's next?
-    From this tutorial, we've shown how to forward any incoming calls from your VBC Smart Number to another number using PSTN. This demo application also supports forwarding the call to another VBC number or a SIP endpoint.
+    
+    From this tutorial, you have learned how to forward any incoming calls from your VBC Smart Number to another number using PSTN. This demo application also supports forwarding the call to another VBC number or a SIP endpoint.
     
     The full code is available [here](https://github.com/nexmo-community/smart-number-smart-ivr-fallback-demo).

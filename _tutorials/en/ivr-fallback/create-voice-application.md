@@ -4,9 +4,7 @@ description: The application stores security and configuration information for y
 navigation_weight: 2
 ---
 
-# Create a Nexmo Application
-
-Every Smart Numbers application that you build must be associated with a Nexmo Voice Application.
+Every Smart Numbers application you build must be associated with a Nexmo Voice Application.
 
 > **Note**: To avoid confusion, `Application` here refers to the Nexmo Application. The application you are building will be referred to as "application".
 
