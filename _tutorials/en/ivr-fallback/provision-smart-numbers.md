@@ -1,12 +1,10 @@
 ---
-title: Provision the Service
+title: Provision the service
 description: Link your Nexmo Voice API Application and configure one or more VBC numbers.
 navigation_weight: 3
 ---
 
-# Provisioning the Smart Numbers Service
-
-Once you have [enabled the Smart Numbers add-on](/smart-numbers/guides/enable-addon) in your VBC account and [created a Nexmo Voice API Application](/smart-numbers/guides/create-voice-application), you are ready to provision the service. This involves selecting which numbers to use and associating them with your Nexmo Voice API Application.
+Once you have enabled the Smart Numbers add-on in your VBC account and created a Nexmo Voice API Application, you are ready to provision the Smart Numbers service. This involves selecting which numbers to use and associating them with your Nexmo Voice API Application.
 
 1. Sign into [the VBC Admin Portal](https://admin.vonage.com)
 
