@@ -1,10 +1,10 @@
 ---
 title: Logging In
-description: Learn how to log in to the Business Communications Developer Portal
+description: Learn how to log in to the developer portal
 navigation_weight: 2
 ---
 
-#  Logging in to the Business Communications Developer Portal
+#  Logging in to the developer portal
 
 Once you've received your developer credentials you will need to log in to the Business Communications Developer Portal.
 
