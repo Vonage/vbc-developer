@@ -4,13 +4,13 @@ info:
   version: 1.11.8
   title: Provisioning API
   description: |
-    The Vonage Business Cloud Communications API enables you to retrieve information about accounts, users and extensions.
+    The Vonage Business Communications Provisioning API enables you to retrieve information about accounts, users and extensions.
 
     Your application must subscribe to the Provisioning API suite to use this API.
   contact:
-    name: "Vonage Business Cloud Support"
+    name: "Vonage Business Communications Support"
     url: "https://businesssupport.vonage.com/contactus"
-  termsOfService: "https://www.vonage.com/business/legal-policy-center/business-cloud/tos"
+  termsOfService: "https://www.vonage.com/legal/unified-communications/tos/"
 
 servers:
   - url: "https://api.vonage.com/t/vbc.prod/provisioning"
@@ -63,7 +63,7 @@ paths:
           required: true
           schema:
             type: number
-          description: The Vonage Business Cloud location ID
+          description: The Vonage Business Communications location ID
           example: 327910
       responses:
         "200":
@@ -253,7 +253,7 @@ paths:
           required: true
           schema:
             type: number
-          description: The Vonage Business Cloud user ID
+          description: The Vonage Business Communications user ID
       responses:
         "200":
           description: Success
@@ -287,7 +287,7 @@ components:
       required: true
       schema:
         type: string
-      description: The Vonage Business Cloud account ID
+      description: The Vonage Business Communications account ID
 
   schemas:
     FirstHref:

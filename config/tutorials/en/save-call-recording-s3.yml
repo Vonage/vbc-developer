@@ -5,10 +5,10 @@ products:
 
 introduction:
   title: Introduction to this task
-  description: This tutorial demonstrates how to save Vonage Business Cloud recordings to Amazon S3.
+  description: This tutorial demonstrates how to save Vonage Business Communications recordings to Amazon S3.
   content: |
     # Introduction
-    In this tutorial, you will learn how to save Vonage Business Cloud recordings to Amazon S3. Saving call recordings is useful for a number of practical reasons, including:
+    In this tutorial, you will learn how to save Vonage Business Communications recordings to Amazon S3. Saving call recordings is useful for a number of practical reasons, including:
 
     * Saving call recordings as a backup
     * Using Amazon Transcribe to transcribe call recordings
@@ -37,6 +37,6 @@ conclusion:
   content: |
 
     # What's next?
-    From this tutorial, you've learned how to backup all your Vonage business Cloud company call recordings in an S3 bucket. You can do a lot more with the Call Recording API to build onto this, such as only download call recordings from the current day. You may also optionally create a [Cron Job](https://www.ostechnix.com/a-beginners-guide-to-cron-jobs/) that can be run every day to download the recordings.
+    From this tutorial, you've learned how to backup all your Vonage Business Communications company call recordings in an S3 bucket. You can do a lot more with the Call Recording API to build onto this, such as only download call recordings from the current day. You may also optionally create a [Cron Job](https://www.ostechnix.com/a-beginners-guide-to-cron-jobs/) that can be run every day to download the recordings.
 
     See [Vonage Integration Platform](/call-recording/overview).

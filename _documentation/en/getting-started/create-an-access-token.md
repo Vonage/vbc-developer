@@ -10,7 +10,7 @@ Once you have [created your application](/getting-started/create-an-application)
 
 ## Creating authentication keys
 
-1. Log into [developer.vonage.com](https://developer.vonage.com/store).
+1. Log in to the [Business Communications Developer Portal](https://apimanager.uc.vonage.com/) using your developer credentials and select **Vonage Business Communications** from the platform drop down list.
 2. Select **My Applications** in the left-hand navigation menu.
 3. On the **My Application** page, locate your application in the table and click the **View** link in the **Actions** column.
 4. Select the **Production Keys** tab:
@@ -38,7 +38,7 @@ The Password grant type requires that the application collect the user's passwor
 
 7. Look at the **Endpoint Examples** and **Generating Access Tokens** samples to learn how to request the authentication code and exchange it for an access token:
 
-> In production, you should use the [authorization_code](https://oauth.net/2/grant-types/authorization-code/) grant type (`Code`) and this is the only option shown in the My Applications tab at [developer.vonage.com](https://developer.vonage.com/store). The `Code` grant type requires your application to implement a valid callback URL to retrieve the authorization code from the Vonage servers and exchange it for a token. See the Endpoint examples in the My Applications tab to learn how to create the authorization and token requests.
+> In production, you should use the [authorization_code](https://oauth.net/2/grant-types/authorization-code/) grant type (`Code`) and this is the only option shown in the My Applications tab at [apimanager.uc.vonage.com](https://apimanager.uc.vonage.com). The `Code` grant type requires your application to implement a valid callback URL to retrieve the authorization code from the Vonage servers and exchange it for a token. See the Endpoint examples in the My Applications tab to learn how to create the authorization and token requests.
 
 ## Authenticating with Authorization Code Grant
 

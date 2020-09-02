@@ -6,7 +6,7 @@ navigation_weight: 4
 
 # Subscribe to An API
 
-Now that you have created your Application and configured authentication, you can subscribe to any one of the available Vonage Business Cloud API's.
+Now that you have created your Application and configured authentication, you can subscribe to any one of the available Vonage Business Communications API's.
 
 1. Click the **API Directory** link in the left-hand navigation menu.
 2. Locate the API that you need in your application and click **Go**.
