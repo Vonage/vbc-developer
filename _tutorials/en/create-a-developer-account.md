@@ -10,7 +10,7 @@ To request an account, fill out the **Request an account** form found on the [Bu
 
 You will use the developer account to:
 
-1. [Log in to the Business Communications Developer Portal](https://apimanager.uc.vonage.com/)
+1. [Log in to the Business Communications Developer Portal](/getting-started/logging-in)
 2. [Create API applications](/getting-started/create-an-application)
 3. [Subscribe to Vonage Business Communications APIs](/getting-started/subscribe-to-apis)
 
