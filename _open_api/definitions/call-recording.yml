@@ -10,7 +10,7 @@ info:
   contact:
     name: "Vonage Business Communications Support"
     url: "https://businesssupport.vonage.com/contactus"
-  termsOfService: "https://www.vonage.com/business/legal-policy-center/business-cloud/tos"
+  termsOfService: "https://www.vonage.com/legal/unified-communications/tos/"
 tags:
   - name: Company Call Recording
     description: "Company Call Recording lets administrators schedule call recording rules and recording parameters for your entire office."

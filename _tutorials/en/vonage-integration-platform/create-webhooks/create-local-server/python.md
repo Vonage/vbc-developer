@@ -37,4 +37,4 @@ To use a Flask app
      flask run -h localhost -p 3000
     ```
 
-This application will run on port 3000, which is the same port you should have configured for ngrok. Now, when you make a call to or receive a call from your Vonage Business Cloud number, the application will print the events to the console.
+This application will run on port 3000, which is the same port you should have configured for ngrok. Now, when you make a call to or receive a call from your Vonage Business Communications number, the application will print the events to the console.

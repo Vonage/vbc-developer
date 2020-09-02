@@ -7,7 +7,7 @@ description: In this step you learn how to generate an access token with the Acc
 
 Now that you have created an application and subscribed to the Call Recording API, you must generate an access token.
 
-1. Log-in using your Vonage Business Cloud credentials. This example application uses the Requests library to call the `/api/accounts/` API. 
+1. Log-in using your Vonage Business Communications credentials. This example application uses the Requests library to call the `/api/accounts/` API. 
 
     > Refer to the [Making an API request guide](/getting-started/make-an-api-request) for more details.
 
@@ -29,8 +29,8 @@ Now that you have created an application and subscribed to the Call Recording AP
 
     | Key | Description |
     | --- | ----------- |
-    | `USERNAME`      | Vonage Business cloud username. Be sure to append `@vbc.prod` to the username. `firstname.lastname@vbc.prod`. |
-    | `PASSWORD`      | Vonage Business Cloud password. |
+    | `USERNAME`      | Vonage Business Communications username. Be sure to append `@vbc.prod` to the username. `firstname.lastname@vbc.prod`. |
+    | `PASSWORD`      | Vonage Business Communications password. |
     | `CLIENT_ID`      | The client id of your Vonage Developer application. |
     | `SECRET`      | The secret to your Vonage Developer application. |
 

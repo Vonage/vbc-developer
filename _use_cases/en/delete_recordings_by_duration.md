@@ -31,7 +31,7 @@ For this example, you will need to Subscribe to the [Call Recording API](/call-r
 
 ## Authentication
 
-After creating an application and subscribing to the Call Recording API, you will now need to log-in using your Vonage Business Cloud credentials. This example application uses the Requests library to call the `/api/accounts/` API. Check out the [Making an API Request guide](/getting-started/make-an-api-request) for more details.
+After creating an application and subscribing to the Call Recording API, you will now need to log-in using your Vonage Business Communications credentials. This example application uses the Requests library to call the `/api/accounts/` API. Check out the [Making an API Request guide](/getting-started/make-an-api-request) for more details.
 
 Next, we'll create a function that requests the `/api/accounts` API to generate an access token.
 
@@ -49,8 +49,8 @@ def get_token():
 
 To run this function, you will need to pass in the following:
 
-* `USERNAME` - Vonage Business cloud username. Be sure to append `@vbc.prod` to the username. `firstname.lastname@vbc.prod`.
-* `PASSWORD` - Vonage Business Cloud password.
+* `USERNAME` - Vonage Business Communications username. Be sure to append `@vbc.prod` to the username. `firstname.lastname@vbc.prod`.
+* `PASSWORD` - Vonage Business Communications password.
 * `CLIENT_ID` - The client id of your Vonage Developer application.
 * `SECRET` - The secret to your Vonage Developer application.
 

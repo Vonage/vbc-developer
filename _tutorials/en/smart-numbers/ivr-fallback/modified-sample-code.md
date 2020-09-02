@@ -46,11 +46,11 @@ description: Download the sample code and modify
     | `CALLER_ID`      | The caller ID used for outbound connections. |
     | `DEST_TYPE`      | The type of connection to which the hotline should connect. |
     | `DEST_NUMBER`      | The PSTN number to connect. This is used when `DEST_TYPE` is set to `phone`. |
-    | `DEST_EXT`      | The Vonage Business Cloud extension number to connect. This is used when `DEST_TYPE` is set to `vbc`. |
+    | `DEST_EXT`      | The Vonage Business Communications extension number to connect. This is used when `DEST_TYPE` is set to `vbc`. |
     | `DEST_SIP`      | The SIP URI to connect. This is used when `DEST_TYPE` is set to `sip`. |
     | `FALLBACK_TYPE`      | The type of connection to which the hotline should connect. |
     | `FALLBACK_NUMBER`      | The PSTN number to connect. This is used when `FALLBACK_TYPE` is set to `phone`. |
-    | `FALLBACK_EXT`      | The Vonage Business Cloud extension number to connect. This is used when `FALLBACK_TYPE` is set to `vbc`. |
+    | `FALLBACK_EXT`      | The Vonage Business Communications extension number to connect. This is used when `FALLBACK_TYPE` is set to `vbc`. |
     | `FALLBACK_SIP`      | The SIP URI to connect. This is used when `FALLBACK_TYPE` is set to `sip`. |
     | `VOICE_NAME`      | The Nexmo voice to use for text-to-speech. |
     | `PORT`      | The port on which the application should listen. |

@@ -10,7 +10,7 @@ info:
   contact:
     name: "Vonage Business Communications Support"
     url: "https://businesssupport.vonage.com/contactus"
-  termsOfService: "https://www.vonage.com/business/legal-policy-center/business-cloud/tos"
+  termsOfService: "https://www.vonage.com/legal/unified-communications/tos/"
 
 servers:
   - url: "https://api.vonage.com/t/vbc.prod/reports"

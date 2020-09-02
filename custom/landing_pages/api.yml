@@ -15,7 +15,7 @@ page:
                 apis:
                   - title: 'Provisioning API'
                     path: 'api/provisioning'
-                    description: 'The Vonage Business Cloud Communications API enables you to retrieve information about accounts, users and extensions.'
+                    description: 'The Vonage Business Communications Provisioning API enables you to retrieve information about accounts, users and extensions.'
               - title: 'Call Recording'
                 icon: 
                   color: purple

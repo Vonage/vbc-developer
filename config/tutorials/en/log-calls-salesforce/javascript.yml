@@ -9,7 +9,7 @@ introduction:
   content: |
     # Introduction
     In this tutorial, you will learn how to use the Vonage Integration Platform webhook API to log calls directly into Salesforce. 
-    When a call is made or received to your Vonage Business Cloud account, the webhook API is able to capture the call details(to, from, call duration) and create a new Task directly into Salesforce. Also, the application will create a new Contact in Salesforce if the contact does not exist.
+    When a call is made or received to your Vonage Business Communications account, the webhook API is able to capture the call details(to, from, call duration) and create a new Task directly into Salesforce. Also, the application will create a new Contact in Salesforce if the contact does not exist.
 
 prerequisites:
   - create-a-developer-account
