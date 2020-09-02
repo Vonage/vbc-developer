@@ -14,4 +14,4 @@ You will use the developer account to:
 * Create API applications
 * Subscribe to Vonage Business Communications APIs
 
-> Note: Your developer portal credentials are different than your Vonage Business Communications credentials and can only be used to log in to the developer portal.
+> Note: Your developer credentials are different than your Vonage Business Communications credentials and can only be used to log in to the Business Communications Developer Portal.
