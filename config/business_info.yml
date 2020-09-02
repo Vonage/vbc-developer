@@ -1,6 +1,6 @@
 name: Business Communications APIs
 subtitle: Developer Center
-base_url: 'https://vbcdeveloper.vonage.com'
+base_url: 'https://developer.uc.vonage.com'
 assets:
   header_logo:
     path: '/images/logos/vbc-logo.svg'
@@ -13,7 +13,7 @@ oas_url: 'https://www.github.com/VonageGarage/VDP/blob/master/_open_api/definiti
 header:
   links:
     sign-up:
-      path: https://developer.vonage.com
+      path: https://apimanager.uc.vonage.com
       text:
         - 'Log In'
         - 'Try Me'

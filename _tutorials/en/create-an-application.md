@@ -8,8 +8,7 @@ To use the Vonage Business Communications APIs, you must create a API applicatio
 
 > Note: To avoid confusion, "application" in this context refers to a logical grouping of APIs.
 
-
-1. Sign into [Developer Portal](https://developer.vonage.com/store/) using your Vonage Business Communications credentials and select **Vonage Business Communications** from the platform drop down list.
+1. Log in to the [Business Communications Developer Center](https://apimanager.uc.vonage.com/store/) using your developer credentials and select **Vonage Business Communications** from the platform drop down list.
 2. Select **My Applications** from the left-hand navigation menu.
 3. Click **Add Application** at the top of the page.
 4. On the **Add Application** dialog, enter a **Name** and an optional **Description** for your application so you can easily locate it later. You can limit the maximum number of requests each access token allows (see [authentication](/getting-started/create-an-access-token)) in the **Per Token Quota** drop-down menu. By default it is **Unlimited**.
