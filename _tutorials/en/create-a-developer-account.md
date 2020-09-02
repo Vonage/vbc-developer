@@ -6,11 +6,11 @@ navigation_weight: 1
 
 To use the Vonage Business Communications APIs, you must first request a developer account. 
 
-To request an account, fill out the **Request an account** form found on the [Business Communications Developer Center](https://apimanager.uc.vonage.com/store/) login page.
+To request an account, fill out the **Request an account** form found on the [Business Communications Developer Portal](https://apimanager.uc.vonage.com/) login page.
 
 You will use the developer account to:
 
-* Log in to the [Business Communications Developer Center](https://apimanager.uc.vonage.com/store/).
+* Log in to the [Business Communications Developer Portal](https://apimanager.uc.vonage.com/).
 * Create API applications
 * Subscribe to Vonage Business Communications APIs
 
