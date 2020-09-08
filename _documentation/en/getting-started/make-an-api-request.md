@@ -20,7 +20,7 @@ Replace the following placeholder values in the sample code:
 | account_id | The Vonage Business Communications account ID. You can use 'self' to refer to the authenticated user's account. |
 
 ``` bash
-curl --location --request GET 'https://api.vonage.com/t/vbc.prod/provisioning/api/accounts/$account_id/account' \
+curl --location --request GET 'https://api.vonage.com/t/vbc.prod/provisioning/api/accounts/$account_id' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer $bearer_token' \
 ```
