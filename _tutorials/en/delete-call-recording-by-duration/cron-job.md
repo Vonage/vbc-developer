@@ -20,7 +20,6 @@ For the purposes of this demonstration, the CRON job will run every 30 days:
     * * 30 * * delete_recordings.py >/dev/null 2>&1
     ```
 
-    
-The [`delete_vbc_recordings_by_duration.py`](https://gist.github.com/tbass134/aace7e859ff401f611df772ad6cb4b32) is a script that will delete both the call recordings and on demand call recordings for calls that are less than 30 seconds in duration.
+    The [`delete_vbc_recordings_by_duration.py`](https://gist.github.com/tbass134/aace7e859ff401f611df772ad6cb4b32) is a script that will delete both the call recordings and on demand call recordings for calls that are less than 30 seconds in duration.
 
-To create your own CRON job, see https://crontab-generator.org/ 
+To create your own CRON job, [refer to this helpful resource](https://crontab-generator.org). 

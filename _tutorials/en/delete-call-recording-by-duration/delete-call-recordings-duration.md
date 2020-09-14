@@ -77,14 +77,16 @@ As before, you must list all the on-demand recordings after a given date.
 
     Here, you are calling the `call_recording` API and passing the following parameter:
 
-    * `account_id` - The Vonage Business Communications account ID. You can use `self` to refer to the authenticated user's account.
-    * `user_id` - The user ID. You can use `self` to refer to the authenticated user.
-    * `page` - The number of pages to request.
-    * `page_size` - The requested page size.
-    * `order` - The order of the returned call recordings
-    * `start:gte` - Filter records by start date (greater than or equal to)
+    | Key | Description |
+    | --- | ----------- |
+    | `account_id`      | The Vonage Business Communications account ID. You can use `self` to refer to the authenticated user's account. |
+    | `user_id`      | The user ID. You can use `self` to refer to the authenticated user. |
+    | `page`      | The number of pages to request. |
+    | `page_size`      | The requested page size. |
+    | `order`      | The order of the returned call recordings. |
+    | `start:gte`      | Filter records by start date (greater than or equal to). |
 
-2. For the purposes of this exercise, generate a date 30 days in the past and use that for the `start_date` parameter.
+2. For the purposes of this exercise, generate a date 30 days in the past and use that for the `start_date` parameter:
 
     ```python
     import datetime

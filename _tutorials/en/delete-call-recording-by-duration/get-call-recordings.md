@@ -50,11 +50,13 @@ In this step you will make a GET request to the Call Recording API to get a JSON
 
     In this example, you are calling the `company_call_recordings/v1/api/` and passing the following parameters:
 
-    * `account_id` - The Vonage Business Communications account ID. You can use `self` to refer to the authenticated user's account.
-    * `page` - The number of pages to request.
-    * `page_size` - The requested page size.
-    * `order` - The order of the returned call recordings
-    * `start:gte` - Filter records by start date (greater than or equal to).
+    | Key | Description |
+    | --- | ----------- |
+    | `account_id`      | The Vonage Business Communications account ID. You can use `self` to refer to the authenticated user's account. |
+    | `page`      | The number of pages to request. |
+    | `page_size`      | The requested page size. |
+    | `order`      | The order of the returned call recordings. |
+    | `start:gte`      | Filter records by start date (greater than or equal to). |
 
     You may also pass in `start:lte` which would return records less than the given date.
 
@@ -62,4 +64,4 @@ In this step you will make a GET request to the Call Recording API to get a JSON
     
     > Before doing this, make sure you have a backup of the recordings. Refer to the [Delete Recordings by Date](/tutorials/save-call-recording-s3) tutorial to save recordings to an Amazon S3 bucket.
 
-    For the purposes of this tutorial, you will create a function to delete the call recordings with durations less than or equal to 30 seconds in the next step.
+For the purposes of this tutorial, you will create a function to delete the call recordings with durations less than or equal to 30 seconds in the next step.
