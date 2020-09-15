@@ -11,7 +11,7 @@ You can [delete call recordings](#delete-call-recordings) and [delete on-demand 
 
 The `get_company_call_recordings()` function returns a list of recordings from the account. 
 
-1. Create a function to delete the recording by its recording id.
+1. Create a function to delete the recording by its recording id:
 
     ```python
     def delete_call_recording(token, call_id, account_id="self"):
@@ -26,25 +26,24 @@ The `get_company_call_recordings()` function returns a list of recordings from t
       return response
     ```
 
-    This function takes the recording from the `call_id` parameter and deletes the call recording. For this example, you are setting `account_id` to `self`.
+    This function takes the recording from the `call_id` parameter and deletes the call recording. In this example, you are setting `account_id` to `self`.
 
-2. Loop though the call recordings from the `get_company_call_recordings()` function you wrote and get the recordings `call_id` and `duration`. You will pass in `call_id` into your `delete_call_recording()` function to delete the recording.
+2. Loop though the call recordings from the `get_company_call_recordings()` function you wrote and get the recording's `call_id`. You will pass in `call_id` into your `delete_call_recording()` function to delete the recording.
 
     ```python
-    for recording in recordings:
-      duration = int(recording["duration"])
+    for recording in recordings["_embedded"]["recordings"]:
       call_id = recording["id"]
-      if duration <=30:
-        response = delete_call_recording(access_token, call_id)
+      response = delete_call_recording(access_token, call_id)
+      print(response)
     ```
 
     You get the recording `id` from the `recordings` list, then pass that `call_id` to the `delete_call_recording` function. If successful, the response will be an empty 204 response.
 
 ## Delete On Demand Call Recordings
 
-Deleting on-demand call recordings is almost the same as deleting call recordings, however, you will use the `call_recordings` API.
+Deleting on-demand call recordings is almost the same as deleting call recordings; however, you will use the `call_recordings` API.
 
-As before, you must list all the on-demand recordings after a given date. 
+As before, you must list all the on-demand recordings after a given date.
 
 1. Get a list of on-demand call recordings using this function:
 
@@ -86,13 +85,13 @@ As before, you must list all the on-demand recordings after a given date.
     | `order`      | The order of the returned call recordings. |
     | `start:gte`      | Filter records by start date (greater than or equal to). |
 
-2. For the purposes of this exercise, generate a date 30 days in the past and use that for the `start_date` parameter:
+2. For the purposes of this exercise, generate a date 7 days in the past and use that for the `start_date` parameter:
 
     ```python
     import datetime
     import urllib.parse
     today = datetime.datetime.now()
-    last_week = datetime.timedelta(days = 30)
+    last_week = datetime.timedelta(days = 7)
     date_diff = today - last_week
     encoded_date = urllib.parse.quote_plus(date_diff.strftime('%Y-%m-%dT00:00:00+0000'))
     ```
@@ -121,7 +120,6 @@ As before, you must list all the on-demand recordings after a given date.
     for recording in recordings["_embedded"]["recordings"]:
       call_id = recording["id"]
       duration = int(recording["duration"])
-      if duration <=30:
         response = delete_on_demand_recording(access_token, call_id)
         print(response)
     ```

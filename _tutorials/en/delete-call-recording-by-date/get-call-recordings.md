@@ -7,20 +7,20 @@ description: In this step you learn how to get call recordings from the Call Rec
 
 In this step you will make a GET request to the Call Recording API to get a JSON response with your call recordings.
 
-1. Before you call the company_call_recordings API, you must pass in a date string that is one month in the past.
+1. Before you call the company_call_recordings API, you must pass in a date string that is in the past. For the purposes of this demonstration, you will use a date 7 days in the past:
 
     ```python
     import datetime
     import urllib.parse
     today = datetime.datetime.now()
-    last_week = datetime.timedelta(days = 30)
+    last_week = datetime.timedelta(days = 7)
     date_diff = today - last_week
     encoded_date = urllib.parse.quote_plus(date_diff.strftime('%Y-%m-%dT00:00:00+0000'))
     ```
 
     1. In this example, you get the current date using `datetime.datetime.now()`. 
-    2. Use the `datetime.timedelta()` function to create a date that is `days` in the past. In this example, `30` is the value set. 
-    3. Subtract the current date from the date 30 days in the past, to get our date. 
+    2. Use the `datetime.timedelta()` function to create a date that is `days` in the past. In this example, `7` is the value set. 
+    3. Subtract the current date from the date 7 days in the past, to get your date. 
     4. Use `strftime()` to convert the date object into a string. In this example, the time is set to `00:00:00+0000`, which means you will get the date at midnight UTC.
     5. Before you can pass the date into the Call Recordings API, you must urlencode the date using `urllib.parse.quote_plus()`.
 
@@ -60,8 +60,8 @@ In this step you will make a GET request to the Call Recording API to get a JSON
 
     You may also pass in `start:lte` which would return records less than the given date.
 
-3. Once you get a list of call recordings, you will loop though each recording and get the duration of the call so you can determine which recordings should be deleted. 
+3. Once you get a list of call recordings, you will loop though each recording and delete them. 
     
     > Before doing this, make sure you have a backup of the recordings. Refer to the [Saving call recordings to Amazon S3](/tutorials/save-call-recording-s3) tutorial to save recordings to an Amazon S3 bucket.
 
-For the purposes of this tutorial, you will create a function to delete the call recordings with durations less than or equal to 30 seconds in the next step.
+For the purposes of this tutorial, you will create a function to delete the call recordings by their recording IDs in the next step.

@@ -1,0 +1,39 @@
+title: Delete company call recordings by date
+description: Delete call recordings and on-demand call recordings by a certain date.
+products:
+  - call-recording
+
+introduction:
+  title: Introduction to this task
+  description: This tutorial demonstrates how to delete Vonage Business Cloud recordings by a certain date.
+  content: |
+    # Introduction
+    In this tutorial, you will learn how to get a list call recordings by a certain date. This enables you to minimize storage costs for call recordings you no longer need while ensuring a higher level of security. The content covered in this tutorial can help you when generating reports in order to remove calls that have little or no significance to the report or if you wish to remove call recordings in order to save money on call archives.
+
+    The Call Recording API allows you to retrieve all call recordings and allows for filtering by call date, extension, caller_id, direction (inbound or outbound) and more. Please have a look at the api reference to view all the possible filters.
+
+    In this example, you will query for the last 7 days of recordings and delete them. You will use a python script to query for the call recordings and then you will delete each of the recordings.
+
+    Python is the language used to build the following example; however, you can use any language with which you are most comfortable. The following Python library is used in [this example](https://requests.readthedocs.io/en/master/). 
+
+prerequisites:
+  - create-a-developer-account
+  - create-an-application
+  - call-recording/subscribe-to-apis
+  - call-recording/authentication
+
+tasks:
+  - delete-call-recording-by-date/get-call-recordings
+  - delete-call-recording-by-date/delete-call-recordings-date
+  - delete-call-recording-by-date/cron-job
+
+conclusion:
+  title: What's next?
+  description: What else can you do with the Vonage Business Communications APIs?
+  content: |
+
+    # What's next?
+    In this tutorial, you learned how to create a python script that runs as a CRON job to delete VBC call recordings and on-demand call recordings every 7 days. The script can be customized to fit your needs. 
+    
+    For other related information and tutorials, see the [Call Recording](/call-recording/overview) documentation.
+    
