@@ -14,9 +14,7 @@ The Call Recording API lets you retrieve all call recordings and allows for filt
 
 In this example, we will query for the last month of recordings and delete calls that are less than 30 seconds in length. We'll be using a python script to query for the call recordings and for each recording, we'll delete the recording.
 
-Python is the language used to build the following example; however, you can use any language with which you are most comfortable. The following Python library is used in this example:
-
-* [requests](https://requests.readthedocs.io/en/master/)
+Python is the language used to build the following example; however, you can use any language with which you are most comfortable. The following Python library is used in [this example](https://requests.readthedocs.io/en/master/).
 
 ## Prerequisites
 

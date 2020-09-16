@@ -1,0 +1,39 @@
+title: Delete company call recordings by duration
+description: Delete call recordings and on-demand call recordings by their durations.
+products:
+  - call-recording
+
+introduction:
+  title: Introduction to this task
+  description: This tutorial demonstrates how to delete Vonage Business Cloud recordings by their durations.
+  content: |
+    # Introduction
+    In this tutorial, you will learn how to get a list call recordings by duration. This is useful if you have a lot of calls that are very short(< 30 seconds) and can be deleted. The content covered in this tutorial can help you when generating reports in order to remove calls that have little or no significance to the report or if you wish to remove call recordings in order to save money on call archives.
+
+    The Call Recording API allows you to retrieve all call recordings and allows for filtering by call date, extension, caller_id, direction(inbound or outbound) and more. Please have a look at the api reference to view all the possible filters.
+
+    In this example, you will query for the last month of recordings and delete calls that are less than 30 seconds in length. You will use a python script to query for the call recordings and then you will delete each of the recordings.
+
+    Python is the language used to build the following example; however, you can use any language with which you are most comfortable. The following Python library is used in [this example](https://requests.readthedocs.io/en/master/). 
+
+prerequisites:
+  - create-a-developer-account
+  - create-an-application
+  - call-recording/subscribe-to-apis
+  - call-recording/authentication
+
+tasks:
+  - delete-call-recording-by-duration/get-call-recordings
+  - delete-call-recording-by-duration/delete-call-recordings-duration
+  - delete-call-recording-by-duration/cron-job
+
+conclusion:
+  title: What's next?
+  description: What else can you do with the Vonage Business Communications APIs?
+  content: |
+
+    # What's next?
+    In this tutorial, you learned how to create a python script that runs as a CRON job to delete VBC call recordings by their durations. The script can be customized to fit your needs. If you have many calls that are 1 minute in duration, you will be able to update the script as needed.
+    
+    For other related information and tutorials, see the [Call Recording](/call-recording/overview) documentation.
+    
