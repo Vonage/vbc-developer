@@ -40,32 +40,33 @@ Webhook notification events have the following format, for example:
 
 ```json
 {
-  "event" : {
-    "id" : "5a85d86f253bcd10897f3189",
-    "externalId" : "callhalf-60227142553:0",
-    "userId" : "24785",
-    "accountId" : "376",
-    "type" : "CALL",
-    "direction" : "OUTBOUND",
-    "duration" : 2950,
-    "state" : "ANSWERED",
-    "startTime" : "2018-02-15T18:58:56.194+0000",
-    "answerTime" : "2018-02-15T18:59:03.496+0000",
-    "endTime" : "2018-02-15T18:59:06.446+0000"
-  },
-  "metdata" : {
-    "signature" : "95aafd08cb72b1f9216ccd002b8917b04e41ecb19276ae759241fdc0cbb53fb5",
-    "webhookId" : "7dc53df5-703e-49b3-8670-b1c468f47f1f",
-    "deliveryId" : "0debd31c-68e7-4d5a-be7e-52e8870ca4d6",
-    "attempt" : 1
-  }
+    "event": {
+        "accountId": "-1",
+        "direction": "OUTBOUND",
+        "duration": 0,
+        "externalId": "abc1234-288c-40d3-8ec8-3618a3ae7698_123",
+        "id": "abc1234a806d07a6ff17ba",
+        "internal": false,
+        "phoneNumber": "xxxxxxxxxx",
+        "startTime": "2020-10-01T16:10:06.000+0000",
+        "state": "RINGING",
+        "type": "CALL",
+        "ucpType": "VBS",
+        "userId": "1234"
+    },
+    "metadata": {
+        "attempt": 1,
+        "deliveryId": "abc1234-2795-446c-be6b-7cba85c6bba2",
+        "signature": "abc1234663a4d0589ec092677b4af18b4a747ac8cfa6198a57b8c6bfec9bf28a",
+        "webhookId": "abc1234-c1ad-4a14-a30b-69dd92f57af2"
+    }
 }
 ```
 
 The `metadata` property is only included if `metadataPolicy` is set to `BODY`. The `signature`, a hex-encoded string, is computed from the json value of the `event` property, where all properties are sorted alphabetically with no whitespace between property names or their values. For example, the signature on the above example `event` body would be computed on the following json:
 
 ```json
-{"accountId":"376","answerTime":"2018-02-15T18:59:03.496+0000","direction":"OUTBOUND","duration":2950,"endTime":"2018-02-15T18:59:06.446+0000","externalId":"callhalf-60227142553:0","id":"5a85d86f253bcd10897f3189","startTime":"2018-02-15T18:58:56.194+0000","state":"ANSWERED","type":"CALL","userId":"24785"}
+{"accountId": "-1","direction": "OUTBOUND","duration": 0,"externalId": "abc1234-288c-40d3-8ec8-3618a3ae7698_123","id": "abc1234a806d07a6ff17ba","internal": false,"phoneNumber": "xxxxxxxxxx","startTime": "2020-10-01T16:10:06.000+0000","state": "RINGING","type": "CALL","ucpType": "VBS","userId": "1234"}
 ```
 
 And using the secret key `mysecretkey` would have the following signature: 
