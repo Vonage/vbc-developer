@@ -42,7 +42,7 @@ The Password grant type requires that the application collect the user's passwor
 
 ## Authenticating with Authorization Code Grant
 
-The following example shows how to an obtain an authorization_code via the authorize end point.
+The following example shows how to obtain an authorization_code via the authorize end point.
 				
 ```bash
 https://api.vonage.com/authorize?scope=openid&response_type=code&redirect_uri=$REDIRECT_URI&client_id=$CONSUMER_KEY
@@ -101,16 +101,54 @@ When you run it, you will receive a JSON response with the `access_token` embedd
     "access_token": "abc123-580f-3ace-9a55-9584aaa60842",
     "refresh_token": "abc123-5903-3513-8d27-333daf581837",
     "scope": "openid",
-    "id_token": "abc123eyJ4NQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFemhrWmciLCJraWQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFNemhrWmciLCJhbGciOiJSUzI1NiJ9.eyJhdF9oYXNoIjoiVFV1cXBJcVNdDBvYs3VsSExJWHI5sdyIsImFjciI6InVybjptYWNlOmluY29tbW9uOmlhcDpzaWx2ZXIiLCJzdWIiOiJ0b255Lmh1bmciLCJhdWQiOlsiQTlJSDFNQ2pGSDhnWmNkNHg1WHhjX3NjeTA4YSJdLCJlQXV0aFN0YXR1cyI6InRydWUiLJlQ2xhaW1zIjpbIntcImF1dGhlbnRpY2F0ZWRcIjp0cnVlIiwiXCJhY2NvdW50TnVtmVyXCI6XCIxNwDQ5NTVcIn0iXSwiYXpwIjoiQTlJSDFNQ2pGSDhnWmNkNHg1WHhjX3NjeTA4YSIsImlzcyI6Imh0dHBzOlwvXC9zc28udm9uYWdlLNvbTo0NDNcL29hdXRoMlwvdG9rZW4iLCJleAiOjE1OTQxMjA2NTsImlhdCI6MTU5NDAzNDI1Nn0.gs7JO2RLPFIld7NXM9gnOy9CYaLs_EYXJJilxX76MFBiidoiG9sIW4RkeHLvDVLyFP1eVd_Pt7000wAr13mcXn-6x6D9oJeAH_Iz8nbzd3vmWDZ8VMHf1SueiAaChfvH0yLvwu02sp-QU-tljGYBTJ8Pr1jWQIG-o39XRrBSMis",
+    "id_token": "abc123eyJ4NQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFemhrWmciLCJraWQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFNemhrWmciLCJhbGciOiJSUzI1NiJ9..gs7JO2RLPFIld7NXM9gnOy9CYaLs_EYXJJilxX76MFBiidoiG9sIW4RkeHLvDVLyFP1eVd_Pt7000wAr13mcXn-6x6D9oJeAH_Iz8nbzd3vmWDZ8VMHf1SueiAaChfvH0yLvwu02sp-QU-tljGYBTJ8Pr1jWQIG-o39XRrBSMis",
     "token_type": "Bearer",
     "expires_in": 82566
 }
 ```
 
+
+
 ## Token Expiration
 
-* **Access Token** - Access tokens expire expire after 24 hours (86400 seconds). After an access token expires you will need to use the refresh token with the [Refresh grant type](https://oauth.net/2/grant-types/refresh-token/) to request a new access token.
+* **Access Token** - Access tokens expire after 24 hours (86400 seconds). After an access token expires you will need to use the refresh token with the refresh grant type to request a new access token.
 * **Refresh Token** - Refresh tokens expire after 7 days (604800 seconds). After a refresh token is exchange for an access token the refresh token is no longer usable, and a new refresh token is provided. If the refresh token is not used within the expiration window you will need to reauthenticate.
+
+## Using the Refresh Token
+When the access token expires, you will need to regenerate a new access token, using the refresh token. The refresh token will be sent when you first make a request to the `/token` endpoint.
+
+To regenerate the access token:
+
+```bash
+curl --location --request POST 'https://api.vonage.com/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=refresh_token' \
+--data-urlencode 'client_id=$VBC_CLIENT_ID' \
+--data-urlencode 'client_secret=$VBC_CLIENT_SECRET' \
+--data-urlencode 'refresh_token=$REFRESH_TOKEN'
+```
+
+Replace the following placeholders in the example with your own values:
+
+* `VBC_CLIENT_ID` - The Client ID from your developer application
+* `VBC_CLIENT_SECRET` - The Secret from your developer application
+* `REFRESH_TOKEN` - The refresh token from your initial request to retrieve an access token. 
+
+This will return a new access token and refresh token
+
+```json
+{
+   "access_token": "abc123-580f-3ace-9a55-9584aaa60842",
+    "refresh_token": "abc123-5903-3513-8d27-333daf581837",
+    "scope": "openid",
+    "id_token": "abc123eyJ4NXQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFNemhrWmciLCJraWQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFNemhrWmciLCJhbGciOiJSUzI1NiJ9..kpFXRg4qSW9sntliysg-3EGO8KwZ8Vk5jGvOwqq0gJEyPQHL5BQKKrF799VL6Z9OJfCne564N42UWnrQqUmNyU0q8l0td1E3zPA0L5iQQEbaVsbxRf5NCZUwYY9Pb7bXjINCiGF4Xy7wCw2SRpv9iQvg3G68qI5Z8f_25QmxSTY",
+    "token_type": "Bearer",
+    "expires_in": 86400
+}
+```
+
+For all API requests going further, you will need to use this access token. When this access token expires, you will need to regenerate a new access token using the latest refresh token.
+
 
 ## Next Steps
 
