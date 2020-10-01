@@ -14,9 +14,15 @@ Replace the following placeholder values in the sample code:
 | bearer_token      | Your OAuth token. [Read more about OAuth tokens](/getting-started/create-an-access-token) |
 | account_id        | The Vonage Business Communications account ID. You can use 'self' to refer to the authenticated user's account. |
 | user_id           | The Vonage Business Communications user ID. You can use 'self' to refer to the authenticated user. |
+| call_direction           | Filter recordings by call direction. Must be one of: `INBOUND`, `OUTBOUND` or `INTRA_PBX` |
+
+There are many more filters that can be applied when generating an on-demand call recording job. Please take a look at the [Create an on-demand call recording export job](/api/call-recording#createODCRExportJob) spec.
 
 ``` bash
 curl --location --request POST 'https://api.vonage.com/t/vbc.prod/call_recording/api/accounts/$account_id/users/$user_id/call_recordings/export' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer $bearer_token' \
+--data-raw '{
+    "call_direction":$call_direction
+}'
 ```
