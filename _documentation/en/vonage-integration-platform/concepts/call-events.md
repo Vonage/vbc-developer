@@ -22,11 +22,11 @@ All events representing the state of telephone calls share common fields and mea
 
 ## Event States
 
-The VIS APIs present a simple event state model for telephone calls, hiding the differences and complexities of either Vonage Business Communications and Vonage Enterprise. These event states are delivered in response to method APIs (such as place call, get calls) and included in webhook event notifications. Understanding the event state model is critical to building external integrations.
+The VIS APIs present a event state model for telephone calls, hiding the differences and complexities of either Vonage Business Communications and Vonage Enterprise. These event states are delivered in response to method APIs (such as place call, get calls) and included in webhook event notifications. Understanding the event state model is critical to building external integrations.
 
 The following finite state machine describes the allowable state transitions:
 
-The only initial state is `Initializing`. The only allowable ending states are `Answered`, `Cancelled`, `Rejected`, and `Missed`. Call states in one of the final ending states will always remain in the ending state.
+The only initial state is `Initializing`. The only allowable ending states are `Answered`, `Cancelled`, `Rejected`, and `Missed`. Call states in one of the final ending states will always stay in the ending state.
 
 | State | Initial | Final | Direction | Allowable Transitions | Description |
 | ----- | ------- | ------| --------- | --------------------- | ----------- |
@@ -40,7 +40,7 @@ The only initial state is `Initializing`. The only allowable ending states are `
 | Missed       | No  | Yes | Inbound           |                                                | An incoming call was not answered |
 | Rejected     | No  | Yes | Inbound           |                                                | An incoming call was rejected or sent to voicemail without being answered |
 
-For every state, the values for `startTime`, `answerTime`, `endTime`, and `duration` will follow certain rules. All call states will have a valid `startTime`. Only `Active`, `Held`, `Remote Held`, and `Answered` will have a valid `answerTime`. The `endTime` property will remain null until the call reaches a final state (`Answered`, `Cancelled`, `Missed`, `Rejected`). Only calls that have reach the final `Answered` state will have a non-zero duration.
+For every state, the values for `startTime`, `answerTime`, `endTime`, and `duration` will follow certain rules. All call states will have a valid `startTime`. Only `Active`, `Held`, `Remote Held`, and `Answered` will have a valid `answerTime`. The `endTime` property will stay null until the call reaches a final state (`Answered`, `Cancelled`, `Missed`, `Rejected`). Only calls that have reach the final `Answered` state will have a non-zero duration.
 
 ## Getting Call Events
 

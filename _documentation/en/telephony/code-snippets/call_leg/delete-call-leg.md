@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Delete a call leg
 
-This example shows you how to delete a call leg. If the call is active, this SHOULD hang up the call. #TODO
+This example shows you how to delete a call leg. If the call is active, this SHOULD freeze the call. #TODO
 
 Replace the following placeholder values in the sample code:
 

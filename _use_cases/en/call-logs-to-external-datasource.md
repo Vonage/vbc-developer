@@ -151,7 +151,7 @@ Next, go to `Sheet 1` and in the `Folders` section, right click on the `End` par
 Then, drag the `End` parameter to the Columns section. Next, right click on the `End` parameter and change to `Day`.
 Then, drag the `Count` parameter under the `Measured Names` section to the row section. You should then see a line chart for the number of calls by day.
 
-As our CRON job runs everyday, our Tableau dashboard will update itself with the new call logs. Just remember to save the JSON in the same location as where you originally added the datasource for Tableau
+As our CRON job runs everyday, our Tableau dashboard will update itself with the new call logs. Dont forget to save the JSON in the same location as where you originally added the datasource for Tableau
 
 ## Conclusion
-In this example, we have seen how to create a function that returns a list of calls logs for a given day. Pushing this data is a dashboard like Tableu will be able to help your team analyze your call traffic. Our dashboard just shows the number of calls every day, but you can customize it to shown number of inbound / outbound calls, average cost per day, average length of calls, and much more.
+In this example, we have seen how to create a function that returns a list of calls logs for a given day. Pushing this data is a dashboard like Tableu will be able to help your team analyze your call traffic. Our dashboard only shows the number of calls every day, but you can customize it to shown number of inbound / outbound calls, average cost per day, average length of calls, and much more.
