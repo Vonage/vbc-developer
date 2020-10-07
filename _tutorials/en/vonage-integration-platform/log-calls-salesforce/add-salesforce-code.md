@@ -159,7 +159,7 @@ To update an ExpressJS application:
 
     This will call the `salesforce.getContact()` function to search for the Contact. If the Contact exists, we create a new Task using the function `salesforce.addTask()`. This will create a new Task in Salesforce that includes the title, the associated Contact(using the `contactId`) and the duration of the call. 
 
-    If there are no Contacts that match the given phone number, using the `contact["totalSize"] == 0` check, the application will then create a new Contact using the `event.callerId` property from the webhook, and split the string into a first name and last name. Note, outgoing calls MAY not have this property. In this case, we will just use the phone number as the Contact's last name.
+    If there are no Contacts that match the given phone number, using the `contact["totalSize"] == 0` check, the application will then create a new Contact using the `event.callerId` property from the webhook, and split the string into a first name and last name. Note, outgoing calls MAY not have this property. In this case, we will use the phone number as the Contact's last name.
 
 6. To start your application, run the following command:
 
