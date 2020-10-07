@@ -22,7 +22,7 @@ All events representing the state of telephone calls share common fields and mea
 
 ## Event States
 
-The VIS APIs present a event state model for telephone calls, hiding the differences and complexities of either Vonage Business Communications and Vonage Enterprise. These event states are delivered in response to method APIs (such as place call, get calls) and included in webhook event notifications. Understanding the event state model is critical to building external integrations.
+The VIS APIs present an event state model for telephone calls, hiding the differences and complexities of either Vonage Business Communications and Vonage Enterprise. These event states are delivered in response to method APIs (such as place call, get calls) and included in webhook event notifications. Understanding the event state model is critical to building external integrations.
 
 The following finite state machine describes the allowable state transitions:
 
