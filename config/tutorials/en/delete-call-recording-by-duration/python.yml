@@ -14,8 +14,12 @@ introduction:
 
     In this example, you will query for the last month of recordings and delete calls that are less than 30 seconds in length. You will use a python script to query for the call recordings and then you will delete each of the recordings.
 
-    Python is the language used to build the following example; however, you can use any language with which you are most comfortable. The following Python library is used in [this example](https://requests.readthedocs.io/en/master/). 
+    Python is the language used to build the following example; however, you can use any language with which you are most comfortable. The following uses a external library called [Requests](https://requests.readthedocs.io/en/master/). You will need to install the Requests library using `pip`. 
+    In your terminal, type:
 
+    ```bash
+    pip install requests
+    ```
 prerequisites:
   - create-a-developer-account
   - create-an-application
