@@ -13,7 +13,7 @@ paths:
       operationId: GetCalls
       tags:
         - Call
-      summary: Get list of calls for a given account (paginated)
+      summary: Get list of `active` calls for a given account (paginated). Please use Reports API to get list of completed calls.
       parameters:
         - name: extension
           in: query
@@ -147,7 +147,7 @@ paths:
       operationId: getCallsByCallId
       tags:
         - Call
-      summary: Get details for a specific call
+      summary: Get details for a specific active call.
       parameters:
         - name: account_id
           in: path
@@ -306,7 +306,7 @@ paths:
       operationId: getCallLegs
       tags:
         - Call Leg
-      summary: Get list of legs for a given call
+      summary: Get list of legs for a given active call
       parameters:
         - name: account_id
           in: path
@@ -348,7 +348,7 @@ paths:
       operationId: getCallLegByLegId
       tags:
         - Call Leg
-      summary: Get details for a specific call leg
+      summary: Get details for a specific active call leg
       parameters:
         - name: leg_id
           in: path
