@@ -9,12 +9,14 @@ With the Telephony API's, you will be able to:
 
 * Make Calls
 * Delete Calls
-* List previous Calls for call reports
-* Get Call legs for a given call
+* List current active Calls
+* Get Call legs for a given active call
 * Delete Call legs
-* Get information on existing leg of call
+* Get information on existing legs on a active call
 * Modify Call legs
-* Get list of registered devices.
+* Get a list of registered devices.
+
+If you need to get a list of `all` calls, please use the [Reports API](/api/reports)
 
 # Code Snippets
 
