@@ -13,7 +13,7 @@ paths:
       operationId: GetCalls
       tags:
         - Call
-      summary: Get list of `active` calls for a given account (paginated). Please use Reports API to get list of completed calls.
+      summary: Get list of active calls for a given account (paginated). Please use Reports API to get list of completed calls.
       parameters:
         - name: extension
           in: query
