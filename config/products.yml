@@ -53,3 +53,9 @@ products:
     icon_colour: 'green'
     path: 'getting-started'
     dropdown: false
+  -
+    name: 'Call Logs'
+    icon: 'icon-history'
+    icon_colour: 'green'
+    path: 'call-logs'
+    dropdown: true
