@@ -1,7 +1,7 @@
 ---
 openapi: 3.0.0
 info:
-  version: 1.11.8
+  version: 1.11.9
   title: Provisioning API
   description: |
     The Vonage Business Communications Provisioning API enables you to retrieve information about accounts, users and extensions.
@@ -146,17 +146,17 @@ paths:
       tags: 
         - extension
 
-  "/api/accounts/{account_id}/extensions/{extension_number}":
+  "/api/accounts/{account_id}/extensions/{external_id}":
     get:
       operationId: ExtensionCtrl.getAccountExtensionByID
       parameters:
         - $ref: "#/components/parameters/AccountID"
         - in: path
-          name: extension_number
+          name: external_id
           required: true
           schema:
             type: number
-          description: The extension number
+          description: The unique id of the extension
           example: 789
       responses:
         "200":
@@ -164,7 +164,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/EndUserRouteHalResponse"
+                $ref: "#/components/schemas/AltEndUserRouteHalResponse"
         "404":
           description: Extension not found
           content:
@@ -173,7 +173,7 @@ paths:
                 $ref: "#/components/schemas/ErrorResponse"
       security:
         - bearerAuth: []
-      summary: Get extension data by account ID and extension number
+      summary: Get extension data by account ID and extension ID
       tags: 
         - extension
 
@@ -525,6 +525,10 @@ components:
     BasicUser:
       type: object
       properties:
+        id:
+          type: number
+          description: Unique ID of the user
+          example: 2111111
         email:
           type: string
           description: Email address of the user
@@ -591,6 +595,10 @@ components:
           type: string
           description: Caller ID of the extension
           example: "John Smith"
+        external_id:
+          type: string
+          description: The unique identifier of the extension
+          example: abc11111111111
         block_caller_id:
           type: boolean
           description: Block Caller ID status of the extension
@@ -794,3 +802,71 @@ components:
         reason:
           type: string
           description: Invalid property reason
+
+    AltEndUserRouteHalResponse:
+          type: object
+          properties:
+            _links:
+              $ref: "#/components/schemas/AltLinks"
+            _embedded:
+              $ref: "#/components/schemas/AltEndUserRouteEmbeddedObject"
+
+    AltLinks:
+          type: object
+          properties:
+            self:
+              $ref: "#/components/schemas/SelfHref"
+
+    AltEndUserRouteEmbeddedObject:
+          type: object
+          properties:
+            extension:
+              $ref: "#/components/schemas/AltEndUserRoute"
+
+    AltEndUserRoute:
+          type: object
+          properties:
+            extension_number:
+              type: string
+              description: Extension number
+              example: "789"
+            user:
+              $ref: "#/components/schemas/BasicUser"
+            location_id:
+              type: number
+              description: Unique identifier of the assigned location
+              example: 145214
+            vtt_enabled:
+              type: boolean
+              description: Voicemail transcription status of the location
+              example: true
+            dnd_enabled:
+              type: boolean
+              description: Do Not Disturb status of the extension
+              example: false
+            caller_id:
+              type: string
+              description: Caller ID of the extension
+              example: "John Smith"
+            external_id:
+              type: string
+              description: The unique identifier of the extension
+              example: abc11111111111
+            service_type_name:
+              type: string
+              description: Service type name of the extension
+              example: UX
+            block_caller_id:
+              type: boolean
+              description: Block Caller ID status of the extension
+              example: false
+            dids:
+              items:
+                $ref: "#/components/schemas/DID"
+              type: array
+              description: Collection of phone numbers assigned to the extension
+            extension_handsets:
+              items:
+                $ref: "#/components/schemas/Line"
+              type: array
+              description: Collection of handsets assigned to the extension
