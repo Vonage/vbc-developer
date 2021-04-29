@@ -803,70 +803,70 @@ components:
           type: string
           description: Invalid property reason
 
-AltEndUserRouteHalResponse:
-      type: object
-      properties:
-        _links:
-          $ref: "#/components/schemas/AltLinks"
-        _embedded:
-          $ref: "#/components/schemas/AltEndUserRouteEmbeddedObject"
+    AltEndUserRouteHalResponse:
+          type: object
+          properties:
+            _links:
+              $ref: "#/components/schemas/AltLinks"
+            _embedded:
+              $ref: "#/components/schemas/AltEndUserRouteEmbeddedObject"
 
-AltLinks:
-      type: object
-      properties:
-        self:
-          $ref: "#/components/schemas/SelfHref"
+    AltLinks:
+          type: object
+          properties:
+            self:
+              $ref: "#/components/schemas/SelfHref"
 
-AltEndUserRouteEmbeddedObject:
-      type: object
-      properties:
-        extension:
-          $ref: "#/components/schemas/AltEndUserRoute"
+    AltEndUserRouteEmbeddedObject:
+          type: object
+          properties:
+            extension:
+              $ref: "#/components/schemas/AltEndUserRoute"
 
-AltEndUserRoute:
-      type: object
-      properties:
-        extension_number:
-          type: string
-          description: Extension number
-          example: "789"
-        user:
-          $ref: "#/components/schemas/BasicUser"
-        location_id:
-          type: number
-          description: Unique identifier of the assigned location
-          example: 145214
-        vtt_enabled:
-          type: boolean
-          description: Voicemail transcription status of the location
-          example: true
-        dnd_enabled:
-          type: boolean
-          description: Do Not Disturb status of the extension
-          example: false
-        caller_id:
-          type: string
-          description: Caller ID of the extension
-          example: "John Smith"
-        external_id:
-          type: string
-          description: The unique identifier of the extension
-          example: abc11111111111
-        service_type_name:
-          type: string
-          description: Service type name of the extension
-          example: UX
-        block_caller_id:
-          type: boolean
-          description: Block Caller ID status of the extension
-          example: false
-        dids:
-          items:
-            $ref: "#/components/schemas/DID"
-          type: array
-          description: Collection of phone numbers assigned to the extension
-        extension_handsets:
-          items:
-            $ref: "#/components/schemas/Line"
-          type: array
-          description: Collection of handsets assigned to the extension
+    AltEndUserRoute:
+          type: object
+          properties:
+            extension_number:
+              type: string
+              description: Extension number
+              example: "789"
+            user:
+              $ref: "#/components/schemas/BasicUser"
+            location_id:
+              type: number
+              description: Unique identifier of the assigned location
+              example: 145214
+            vtt_enabled:
+              type: boolean
+              description: Voicemail transcription status of the location
+              example: true
+            dnd_enabled:
+              type: boolean
+              description: Do Not Disturb status of the extension
+              example: false
+            caller_id:
+              type: string
+              description: Caller ID of the extension
+              example: "John Smith"
+            external_id:
+              type: string
+              description: The unique identifier of the extension
+              example: abc11111111111
+            service_type_name:
+              type: string
+              description: Service type name of the extension
+              example: UX
+            block_caller_id:
+              type: boolean
+              description: Block Caller ID status of the extension
+              example: false
+            dids:
+              items:
+                $ref: "#/components/schemas/DID"
+              type: array
+              description: Collection of phone numbers assigned to the extension
+            extension_handsets:
+              items:
+                $ref: "#/components/schemas/Line"
+              type: array
+              description: Collection of handsets assigned to the extension
