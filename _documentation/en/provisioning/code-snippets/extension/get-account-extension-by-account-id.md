@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Get account extensions data by account ID
 
-This example demonstrates how to get a list of account extensions by the `account_id`. For each extension, you will receive information about the user that is tied to the extension, as well as the `caller_id` and any headsets that are connected to the extension.
+This example demonstrates how to get a list of account extensions by the `account_id`. For each extension, you will receive information about the user that is tied to the extension, as well as the `external_id` which represents the extension ID, `caller_id` and any headsets that are connected to the extension.
 
 Replace the following placeholder value in the sample code:
 
