@@ -1,10 +1,10 @@
-openapi: 3.0.1
+openapi: 3.0.0
 info:
   title: Telephony
   description:
     The Vonage Business Telephony API enables you to manage calls and retrieve
     device registration information.
-  version: v3
+  version: 1.0.1
 servers:
   - url: https://api.vonage.com/t/vbc.prod/telephony/v3
 paths:
