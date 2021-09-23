@@ -284,6 +284,10 @@ components:
           type: string
           description: Source user of the call
           example: "JSmith"
+        custom_tag:
+          type:  string
+          description: Custom tag added to caller id
+          example: "Sales"
         source_sip_id:
           type: string
           description: SIP ID of the source device of the call
