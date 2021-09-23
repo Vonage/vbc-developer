@@ -4,7 +4,7 @@ title: Send call to voicemail
 
 # Send call to voicemail
 
-This example demonstrates how to send a call to voicemail.
+This example demonstrates how to send a call to voicemail.  This feature is not available for Vonage Business Enterprise (VBE) customers.
 
 Replace the following placeholder value in the sample code:
 
