@@ -560,7 +560,7 @@ paths:
     put:
       tags:
         - Calls
-      summary: Send call to voicemail
+      summary: Send call to voicemail (not available for Vonage Business Enterprise (VBE) customers)
       operationId: callVMTransfer
       parameters:
         - name: id
