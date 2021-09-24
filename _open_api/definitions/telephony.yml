@@ -1,10 +1,10 @@
-openapi: 3.0.1
+openapi: 3.0.0
 info:
   title: Telephony
   description:
     The Vonage Business Telephony API enables you to manage calls and retrieve
     device registration information.
-  version: v3
+  version: 1.0.1
 servers:
   - url: https://api.vonage.com/t/vbc.prod/telephony/v3
 paths:
@@ -853,7 +853,7 @@ components:
       type: object
       properties:
         from:
-          $ref: "#/components/schemas/CreateCallContact"
+          $ref: "#/components/schemas/CreateCallContactFrom"
         to:
           $ref: "#/components/schemas/CreateCallContact"
         type:
@@ -933,6 +933,19 @@ components:
             - pstn
             - feature_code
           example: pstn
+    CreateCallContactFrom:
+      type: object
+      properties:
+        destination:
+          type: string
+          example: 1234
+        type:
+          type: string
+          enum:
+            - device
+            - extension
+            - feature_code
+          example: extension
     LegAttTransferRequestBody:
       type: object
       properties:

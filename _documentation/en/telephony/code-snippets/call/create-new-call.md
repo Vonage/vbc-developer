@@ -13,8 +13,8 @@ Replace the following placeholder values in the sample code:
 | --- | ----------- |
 | bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
 | account_id        | The Vonage Business Communications account ID. |
-| from_type         | The type of destination. Can be one of three values `extension` , `device`, or `pstn` |
-| from_destination  | The destination. If  `from_type` is `extension`, then the `from_destination` must be an extension. If `from_type` is `device`, then the `from_destination` must be a valid device ID. If `from_type` is `pstn`, then the `from_destination` must be a valid phone number. | 
+| from_type         | The type of destination. Can be one of two values `extension` , or `device` |
+| from_destination  | The destination. If  `from_type` is `extension`, then the `from_destination` must be an extension. If `from_type` is `device`, then the `from_destination` must be a valid device ID. | 
 | to_type           | The type of destination. Can be one of three values `extension` , `device`, or `pstn` |
 | to_destination    | The destination. If  `from_type` is `extension`, then the `to_destination` must be an extension. If `from_type` is `device`, then the `to_destination` must be a valid device ID. If `from_type` is `pstn`, then the `to_destination` must be a valid phone number. |
 | to_type           | Should be one of `click2dial`, `click2dialme`, `odr` or `default` |
