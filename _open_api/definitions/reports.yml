@@ -1,7 +1,7 @@
 ---
 openapi: 3.0.0
 info:
-  version: 1.0.0
+  version: 1.0.1
   title: Reports API
   description: |
     The Vonage Business Communications Reports API enables you to retrieve call logs for your account.
@@ -284,6 +284,10 @@ components:
           type: string
           description: Source user of the call
           example: "JSmith"
+        custom_tag:
+          type:  string
+          description: Custom tag added to caller id
+          example: "Sales"
         source_sip_id:
           type: string
           description: SIP ID of the source device of the call
