@@ -11,7 +11,7 @@ Replace the following placeholder values in the sample code:
 
 | Key | Description |
 | --- | ----------- |
-| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
+| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/getting-started/create-a-developer-account) |
 | account_id        | The Vonage Business Communications account ID. |
 | device_id         | MAC address of device | 
 

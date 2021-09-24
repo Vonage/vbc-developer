@@ -10,7 +10,7 @@ Replace the following placeholder value in the sample code:
 
 | Key | Description |
 | --- | ----------- |
-| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
+| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/getting-started/create-a-developer-account) |
 | url               | Destination URL for events |
 | events            | Array of events to subscribe to |
 | signingAlgo       | Signing algorithm for the webhook |
