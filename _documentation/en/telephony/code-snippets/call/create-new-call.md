@@ -11,7 +11,7 @@ Replace the following placeholder values in the sample code:
 
 | Key | Description |
 | --- | ----------- |
-| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/concepts/guides/create-an-access-token) |
+| bearer_token      | Your OAuth token. [Read more about OAuth tokens](/getting-started/create-a-developer-account) |
 | account_id        | The Vonage Business Communications account ID. |
 | from_type         | The type of destination. Can be one of two values `extension` , or `device` |
 | from_destination  | The destination. If  `from_type` is `extension`, then the `from_destination` must be an extension. If `from_type` is `device`, then the `from_destination` must be a valid device ID. | 
