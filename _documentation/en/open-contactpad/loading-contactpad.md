@@ -40,4 +40,4 @@ VonageDialer.init({ provider: '[cc|uc]' /* other config options */ }, (dialer) =
 
 [LIVE SAMPLE](https://plnkr.co/edit/CxOH2DS4RJFwGxLH?preview)
 
-> Continue to [Building with Open ContactPad](open-contactpad/building-contactpad).
+> Continue to [Building with Open ContactPad](building-contactpad).

@@ -113,7 +113,7 @@ const searchContactables = (query, callback) => {
 ### Set interaction contact (active call screen)
 
 The SDK allows attaching an external contact object to the interaction events for visualization and logging purposes.
-Once the ongoing call identifier is known (see [Subscribing for interaction events](/open-contactpad/building-contactpad#subscribing-for-interaction-events)), the integration could assign an external contact to the interaction. 
+Once the ongoing call identifier is known (see [Subscribing for interaction events](building-contactpad#subscribing-for-interaction-events)), the integration could assign an external contact to the interaction. 
 
 The attached contactable is visualized during the active call screen (UC only) and also is carried by the system through the whole interaction lifecycle.
 

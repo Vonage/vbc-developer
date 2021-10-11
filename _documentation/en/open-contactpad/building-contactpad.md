@@ -85,4 +85,4 @@ By default the parser is annotating all international formatted numbers (having 
 
 [LIVE SAMPLE](https://plnkr.co/edit/1WGqaqmvtRM15HBI?preview)
 
-> Continue to [Customizations](open-contactpad/customizations).
+> Continue to [Customizations](customizations).
