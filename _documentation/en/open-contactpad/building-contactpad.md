@@ -58,6 +58,7 @@ VonageDialer.init({ /* dialer config options */ }, (dialer) => {
 [LIVE SAMPLE](https://plnkr.co/edit/CCke8DxuWX6v0OnD?preview)
 
 * The SDK architecture uses events for interaction events and other operations that do not require response from the custom integration code and callbacks for controlled request-response operations.
+* For more information about Vonage events, look at the [SDK Data Model](sdk-reference#dialerevent).
 
 ##  Click To Dial 
 
