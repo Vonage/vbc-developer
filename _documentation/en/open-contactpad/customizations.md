@@ -148,5 +148,5 @@ dialer.setOnDialerEvent((event) => {
 
 Coming soon!
 
-> Continue to [SDK Reference Material](/open-contactpad/sdk-reference).
+> Continue to [SDK Reference Material](sdk-reference).
 

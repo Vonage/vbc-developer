@@ -46,7 +46,7 @@ Allows switching the provider (CC/UC) after the dialer interface is
 loaded. 
 
 * The SDK provides other methods to set the provider during initial 
-load (see [Loading Open ContactPad SDK](open-contactpad/loading-contactpad))
+load (see [Loading Open ContactPad SDK](loading-contactpad))
 
 | Parameters | Type | Description |
 | --- | ----- | ----------- |
@@ -70,7 +70,7 @@ Allows switching the provider (CC/UC) after the dialer interface is
 loaded. 
 
 * The SDK provides other methods to set the provider during initial 
-load (see [Loading Open ContactPad SDK](open-contactpad/loading-contactpad))
+load (see [Loading Open ContactPad SDK](loading-contactpad))
 
 | Parameters | Type | Description |
 | --- | ----- | ----------- |
