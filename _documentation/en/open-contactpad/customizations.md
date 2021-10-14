@@ -21,7 +21,7 @@ Choose a unique name for your integration provider. It will be used to associate
 
 Tell the UC dialer which extra features to enable in the user interface during the initialization. 
 
-> Note: You still have to implement the corresponding handlers for the enabled features!
+> Note: You still have to implement the corresponding handlers for the enabled features.
 
 ``` javascript
  VonageDialer.init({
