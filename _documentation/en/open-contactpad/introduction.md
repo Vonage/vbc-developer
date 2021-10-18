@@ -19,6 +19,6 @@ Optionally:
 * You can customize the dialer interface.
 * You can bring your own contacts programmatically.
 
-> Read more about [VBC Open ContactPad Concepts](/open-contactpad/concepts)
+> Read more about [VBC Open ContactPad Concepts](concepts)
 
 ![](/images/open-contactpad/vonage-button.png "Vonage Button") ![](/images/open-contactpad/open-contactpad-vbc.png "VBC Open ContactPad")
