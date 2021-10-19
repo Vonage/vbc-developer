@@ -21,7 +21,7 @@ navigation_weight: 3
 ```
 [LIVE SAMPLE](https://plnkr.co/edit/0I3NDs1soJYNxkZU?preview)
 
-##  Using SDK as an NPM packag added to the webpage source code
+##  Using SDK as an NPM package added to the webpage source code
 
 [NPM Package](https://www.npmjs.com/package/@vgip/vonage-dialer-sdk)
 
