@@ -6,7 +6,7 @@ navigation_weight: 1
 
 #  Getting Started with the VBC Open ContactPad
 
-The Open ContactPad SDK is a Javascript software development toolkit that allows developers to embed a [Vonage Unified Communications (UC)](https://www.vonage.com/unified-communications/) dialer interface into an application.  You will need a Vonage account to access the telephony APIs used by this SDK.  You can [sign up for a Vonage Businss Communications account online](https://www.vonage.com/unified-communications/pricing/?icmp=mainnav_buynow_novalue).  Once the account is activated, learn how to set it up with this [Getting Started Guide](https://businesssupport.vonage.com/articles/answer/Getting-Started-with-Vonage-Business-21753).
+The Open ContactPad SDK is a Javascript software development toolkit that allows developers to embed a [Vonage Unified Communications (UC)](https://www.vonage.com/unified-communications/) dialer interface into a web based application.  You will need a Vonage account to access the telephony APIs used by this SDK.  You can [sign up for a Vonage Businss Communications account online](https://www.vonage.com/unified-communications/pricing/?icmp=mainnav_buynow_novalue).  Once the account is activated, learn how to set it up with this [Getting Started Guide](https://businesssupport.vonage.com/articles/answer/Getting-Started-with-Vonage-Business-21753).
 
 To use standalone communications APIs, see [Vonage APIs](/).
 
@@ -20,6 +20,8 @@ Optionally:
 
 * You can customize the dialer interface.
 * You can bring your own contacts programmatically.
+
+> NOTE: The Open ContactPad SDK is designed for embedding Vonage apps within web applications only.  It is not meant to create integrations with natively installed PC or Mac applications.
 
 > Read more about [VBC Open ContactPad Concepts](concepts)
 
