@@ -10,6 +10,8 @@ The Open ContactPad SDK is a Javascript software development toolkit that allows
 
 To use standalone communications APIs, see [Vonage APIs](/).
 
+If you are interested in becoming a Vonage Partner to share your integration with all Unified Communications customers, please send an email to [bdpartner@vonage.com](mailto:bdpartner@vonage.com) including a description of your application.
+
 With the Open ContactPad SDK, you can access the following functionality:
 
 * You can embed a Vonage Unified Communications dialer interface into your own website or web application.
