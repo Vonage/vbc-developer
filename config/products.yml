@@ -59,3 +59,9 @@ products:
     icon_colour: 'green'
     path: 'call-logs'
     dropdown: true
+  -
+    name: 'Open ContactPad'
+    icon: 'chat'
+    icon_colour: 'blue'
+    path: 'open-contactpad'
+    dropdown: true

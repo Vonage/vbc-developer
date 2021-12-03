@@ -19,6 +19,7 @@ en:
     on-demand-call-recording: On-Demand Call Recording
     webhook: Webhook
     app-center: App Center
+    open-contactpad: Open ContactPad
   layouts:
     partials:
       header:

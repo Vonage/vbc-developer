@@ -9,6 +9,18 @@ page:
       - type: client_sdk_card
         client_sdk_card:
           name:
+            content: Open ContactPad SDK
+            color: blue-dark
+          icon:
+            name: Brand-icon-javascript-color
+          text:
+            content: Build your own VBC dialer to control your Vonage devices from anywhere on the Internet. No developer account required to get started!
+          documentation_url:  /open-contactpad/introduction
+  - row:
+    - column:
+      - type: client_sdk_card
+        client_sdk_card:
+          name:
             content: Node-Red
             color: blue-dark
           icon:

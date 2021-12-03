@@ -6,6 +6,7 @@ navigation_weight:
   reports: 5
   vonage-integration-platform: 6
   smart-numbers: 7
+  open-contactpad: 8
 
 navigation_overrides:
   getting-started: 
@@ -22,3 +23,5 @@ navigation_overrides:
     svg: 'telephone'
   vonage-integration-platform:
     svg: 'plug'
+  open-contactpad:
+    svg: 'app-plus'
