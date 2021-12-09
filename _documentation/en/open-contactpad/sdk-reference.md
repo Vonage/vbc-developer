@@ -50,7 +50,7 @@ load (see [Loading Open ContactPad SDK](loading-contactpad))
 
 | Parameters | Type | Description |
 | --- | ----- | ----------- |
-| provider | “cc” / “uc” | <ul><li>CC loads Vonage Call Center ContactPad as a dialer interface /VCC/.</li><li>UC loads Vonage Business Communicatons ContactPad as a dialer interface /VBC, VBE/.</li></ul> |
+| provider | "cc" / "uc" | <ul><li>CC loads Vonage Call Center ContactPad as a dialer interface /VCC/.</li><li>UC loads Vonage Business Communicatons ContactPad as a dialer interface /VBC, VBE/.</li></ul> |
 | ccDomain (optional) | \[string\] | Use a custom VCC region domain. Well known options are: <ul><li>nam.newvoicemedia.com (default)</li><li>emea.newvoicemedia.com</li><li>apac.newvoicemedia.com</li></ul> |
 
 ### placeCall
@@ -74,7 +74,7 @@ load (see [Loading Open ContactPad SDK](loading-contactpad))
 
 | Parameters | Type | Description |
 | --- | ----- | ----------- |
-| provider | “cc” / “uc” | <ul><li>CC loads Vonage Call Center ContactPad as a dialer interface /VCC/.</li><li>UC loads Vonage Business Communicatons ContactPad as a dialer interface /VBC, VBE/.</li></ul> |
+| provider | “cc" / “uc" | <ul><li>CC loads Vonage Call Center ContactPad as a dialer interface /VCC/.</li><li>UC loads Vonage Business Communicatons ContactPad as a dialer interface /VBC, VBE/.</li></ul> |
 | ccDomain (optional) | \[string\] | Use a custom VCC region domain. Well known options are: <ul><li>nam.newvoicemedia.com (default)</li><li>emea.newvoicemedia.com</li><li>apac.newvoicemedia.com</li></ul> |
 
 ### enableClickToDial
@@ -120,7 +120,7 @@ Register a callback function to be executed when a dialer event occurs.
 
 | Parameters | Type | Description |
 | --- | ----- | ----------- |
-| callback | \[function\] | Event processing callback function. The parameter sent to the callback function is a polymorphic model object having a property named “type”. Each event type has its own properties structure. |
+| callback | \[function\] | Event processing callback function. The parameter sent to the callback function is a polymorphic model object having a property named "type". Each event type has its own properties structure. |
 
 ### registerSvgIcon
 (UC dialer only) Set custom integration icon for settings and contacts visualization. 
@@ -159,7 +159,7 @@ when there is an active call after the dialer is reloaded.
 | --- | ----- | ----------- |
 | id | \[string\] | Telephony provider interaction identifier. This identifier is not unique for the system. In order to keep association to the Vonage interaction in 3rd party storage use uid instead. |
 | uid | \[string\] | A composite interaction identifier (guarantees true uniqueness for the whole system). |
-| direction | “INBOUND” / “OUTBOUND” | Interaction direction |
+| direction | "INBOUND" / "OUTBOUND" | Interaction direction |
 | phoneNumber | \[string\] | Interaction remote party phone number |
 | state | \[string\] | Interaction fine lifecycle state (INITIALIZING -> RINGING -> ACTIVE -> final disposition). |
 | internal | [boolean / undefined] |TRUE when this is a Vonage account internal communication. |
@@ -199,7 +199,7 @@ Configuration options for SDK init method.
 | Properties | Type | Description |
 | --- | ----- | ----------- |
 | debug | \[boolean\] <br> default: false | Print extra debug information in the browser JS console. |
-| provider “cc” / “uc” <br> default: “uc” | <ul><li>CC loads Vonage Call Center ContactPad as a dialer interface /VCC/.</li><li>UC loads Vonage Integration Platform (VGIP) as a dialer interface /VBC, VBE/.</li> |
+| provider "cc" / "uc" <br> default: "uc" | <ul><li>CC loads Vonage Call Center ContactPad as a dialer interface /VCC/.</li><li>UC loads Vonage Integration Platform (VGIP) as a dialer interface /VBC, VBE/.</li> |
 | ccDomain (CC only) | \[string\] | Use a custom VCC region domain. Well known options are: <ul><li>nam.newvoicemedia.com (default)</li><li>emea.newvoicemedia.com</li><li>apac.newvoicemedia.com</li> |
 | features (UC only) | \[dialerFeatures\] | Customize UC dialer interface (show/hide extra UI controls). |
 
@@ -209,9 +209,9 @@ Show/Hide extra controls in the UC dialer interface.
 | Properties | Type | Description |
 | --- | ----- | ----------- |
 | contactsProvider | \[boolean\] <br> default: false | When enabled, the dialer will execute the configured searchContactables callback when the user types in the dialpad phone number input and show the results as contacts suggestions. |
-| openContact | \[boolean\] <br> default: false | When enabled, the dialer will visualize an extra “open external link” icon near the contacts within the interface. Click on the icon executes the implemented openContact callback.|
-| openActivity | \[string\] | The value must be the providerCode chosen for the custom integration. Vonage Integrations attaches activities from different integration sources to the interaction events. The value is used as a scope to filter only the activities generated by your custom integration provider. When enabled, the UC dialer will visualize an extra “new/open note” icon in the interaction history and during an active call. Click on the icon executes the implemented openActivity callback. |
-| eventsHistory | \[boolean\] <br> default: true | When enabled the dialer will generate an extra event of type “CALL_HISTORY” when the user clicks on a completed call from the interaction history dialog. |
+| openContact | \[boolean\] <br> default: false | When enabled, the dialer will visualize an extra "open external link" icon near the contacts within the interface. Click on the icon executes the implemented openContact callback.|
+| openActivity | \[string\] | The value must be the providerCode chosen for the custom integration. Vonage Integrations attaches activities from different integration sources to the interaction events. The value is used as a scope to filter only the activities generated by your custom integration provider. When enabled, the UC dialer will visualize an extra "new/open note" icon in the interaction history and during an active call. Click on the icon executes the implemented openActivity callback. |
+| eventsHistory | \[boolean\] <br> default: true | When enabled the dialer will generate an extra event of type "CALL_HISTORY" when the user clicks on a completed call from the interaction history dialog. |
 
 ### contactable
 Unified object which represent any 3rd party entity having names and phone number and can represent an interaction party.

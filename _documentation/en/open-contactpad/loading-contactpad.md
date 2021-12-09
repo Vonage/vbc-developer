@@ -30,11 +30,11 @@ const VonageDialer = require('@vgip/vonage-dialer-sdk');
  
 VonageDialer.enableClickToDial(true); // Annotate phone numbers for click-to-dial
 VonageDialer.init({ provider: '[cc|uc]' /* other config options */ }, (dialer) => { 
-  // see “building with Open ContactPad”
+  // see "building with Open ContactPad"
 });
 ```
 
-* When loaded, the SDK is searching the current HTML page for a dedicated container element having class='vonage-dialer-container' and renders the dialer interface within it. If such a container element does not exist on the page, the interface starts in “DOT” mode by providing a clickable circle icon that can be dragged around the page.
+* When loaded, the SDK is searching the current HTML page for a dedicated container element having class='vonage-dialer-container' and renders the dialer interface within it. If such a container element does not exist on the page, the interface starts in "DOT" mode by providing a clickable circle icon that can be dragged around the page.
 
 * The Vonage Contact Center  interface requires 200px by 400px container size. The Unified Communications interface is responsive and fits well any container size (recommended 280px by 420px).
 
