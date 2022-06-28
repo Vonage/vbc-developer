@@ -156,18 +156,6 @@ paths:
       operationId: listCalls
       parameters:
         - in: query
-          name: fromDate
-          description: Return calls that occurred after this point in time
-          schema:
-            type: integer
-            #format: date
-        - in: query
-          name: toDate
-          description: Return calls that occurred before this point in time
-          schema:
-            type: integer
-            #format: date
-        - in: query
           name: direction
           description: Filter by call direction. For multiple criteria, seperate values by a comma.
           schema:
@@ -176,19 +164,6 @@ paths:
             enum:
               - INBOUND
               - OUTBOUND
-        - in: query
-          name: states
-          description: Filter calls by state. For multiple criteria, seperate values by a comma.
-          schema:
-            type: string
-            default: ACTIVE
-            example: ACTIVE,RINGING
-            enum:
-              - INITIALIZING
-              - RINGING
-              - ACTIVE
-              - HELD
-              - REMOTE_HELD
         - in: query
           name: offset
           description: "Page number of calls to return"
@@ -210,11 +185,6 @@ paths:
             enum:
               - DESC
               - ASC
-        - in: query
-          name: sort
-          description: "Sort calls by property"
-          schema:
-            type: string
       responses:
         "200":
           description: Successful
