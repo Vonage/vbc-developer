@@ -181,7 +181,7 @@ paths:
           description: Sort in either ascending or descending order
           schema:
             type: string
-            default: DESC
+            default: ASC
             enum:
               - DESC
               - ASC
