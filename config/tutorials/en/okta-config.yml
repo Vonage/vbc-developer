@@ -1,0 +1,31 @@
+title: Enabling OKTA SSO configurations for your VBC users
+description: Okta enables single sign-on access to cloud applications such as Vonage Business Communications. This tutorial demonstrates how to enable Okta SSO configurations for your Vonage Business Communications users.
+products:
+  - call-recording
+
+introduction:
+  title: Introduction to this tutorial
+  description: This tutorial demonstrates how to enable Okta SSO configurations for your Vonage Business Communications users.
+  content: |
+    # Introduction
+    Okta is a cloud-based identity and access management service, which helps your employees sign in and access resources. Okta enables single sign-on access to cloud applications such as Vonage Business Communications. Once a user signs into Okta, they can then launch any of their enabled web apps without having to re-enter their login credentials for each app. Okta establishes a secure connection with the user’s browser and then authenticates the user to log in to Okta managed apps via SAML, a pre-integrated, federated authentication protocol.
+
+    This tutorial provides a step-by-step guide on configuring single sign-on for Vonage Business Communications using Okta as your identity provider (IDP).
+
+prerequisites:
+- call-recording/okta-dev-acct
+
+tasks:
+- call-recording/create-app
+- call-recording/create-saml-integration
+- call-recording/config-saml
+
+conclusion:
+  title: What's next?
+  description: What else can you do to configure Okta single sign-on for your Vonage Business Communication users?
+  content: |
+
+    # What's next?
+    If usernames in Vonage Business Communications (VBC) and Okta don’t quite line-up, you can modify Okta usernames with profile mappings. 
+
+    See [Modify Okta usernames with profile mappings](/messages/overview).
