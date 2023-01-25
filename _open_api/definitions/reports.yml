@@ -1,7 +1,7 @@
 ---
 openapi: 3.0.0
 info:
-  version: 1.0.1
+  version: 1.0.2
   title: Reports API
   description: |
     The Vonage Business Communications Reports API enables you to retrieve call logs for your account.
@@ -50,7 +50,6 @@ paths:
           example: "2019-01-01 00:00:00"
         - in: query
           name: page_size
-          required: true
           description: "Number of records per page"
           schema:
             type: number
@@ -58,11 +57,10 @@ paths:
           example: 10
         - in: query
           name: page
-          required: true
           description: "Current page number"
           schema:
             type: number
-            default: 0
+            default: 1
           example: 10
         - in: query
           name: to
