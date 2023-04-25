@@ -1029,9 +1029,6 @@ components:
         device_ip:
           type: string
           example: 150.24.83.17
-        is_registered:
-          type: string
-          example: True 
         last_request:
           type: string
           example: 1595937421
