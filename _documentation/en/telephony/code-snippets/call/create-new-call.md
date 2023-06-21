@@ -17,7 +17,7 @@ Replace the following placeholder values in the sample code:
 | from_destination  | The destination. If  `from_type` is `extension`, then the `from_destination` must be an extension. If `from_type` is `device`, then the `from_destination` must be a valid device ID. | 
 | to_type           | The type of destination. Can be one of three values `extension` , `device`, or `pstn` |
 | to_destination    | The destination. If  `from_type` is `extension`, then the `to_destination` must be an extension. If `from_type` is `device`, then the `to_destination` must be a valid device ID. If `from_type` is `pstn`, then the `to_destination` must be a valid phone number. |
-| to_type           | Should be one of `click2dial`, `click2dialme`, `odr` or `default` |
+| type           | Should be one of `click2dial`, `click2dialme`, `odr` or `default` |
 
 ``` bash
 curl --location --request POST 'https://api.vonage.com/t/vbc.prod/telephony/v3/cc/accounts/$account_id/calls' \
