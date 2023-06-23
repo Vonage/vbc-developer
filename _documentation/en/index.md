@@ -27,3 +27,10 @@ The following Vonage Business Communications APIs are available:
 * [Telephony API](/api/telephony) - The Vonage Business Communications Telephony API enables you to manage calls and retrieve device registration information
 * [Reports API](/api/reports) - The Vonage Business Communications Reports API enables you to retrieve call logs for your account
 * [Vonage Integration Platform API](/api/vonage-integration-platform) - The Vonage Business Communications Reports API enables you to manage calls and receive real-time call events via HTTP webhooks
+
+## Postman Collection
+
+The following Postman Collection is available:
+* [Postman](https://www.postman.com) - The Postman Application
+* [Postman Collection](https://cdn.ece.vonage.com/vbcdeveloper/postman/VonageVBCAPIs.postman_collection.json) - The Postman Collection
+* [Postman Environment](https://cdn.ece.vonage.com/vbcdeveloper/postman/UCExtend-Template.postman_environment.json) - The Postman Environment
