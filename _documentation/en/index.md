@@ -31,6 +31,7 @@ The following Vonage Business Communications APIs are available:
 ## Postman Collection
 
 The following Postman Collection is available:
+
 * [Postman](https://www.postman.com) - The Postman Application
 * [Postman Collection](https://cdn.ece.vonage.com/vbcdeveloper/postman/VonageVBCAPIs.postman_collection.json) - The Postman Collection
 * [Postman Environment](https://cdn.ece.vonage.com/vbcdeveloper/postman/UCExtend-Template.postman_environment.json) - The Postman Environment
