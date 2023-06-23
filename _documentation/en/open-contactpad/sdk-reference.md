@@ -52,6 +52,7 @@ load (see [Loading Open ContactPad SDK](loading-contactpad))
 | --- | ----- | ----------- |
 | provider | "cc" / "uc" | <ul><li>CC loads Vonage Call Center ContactPad as a dialer interface /VCC/.</li><li>UC loads Vonage Business Communicatons ContactPad as a dialer interface /VBC, VBE/.</li></ul> |
 | ccDomain (optional) | \[string\] | Use a custom VCC region domain. Well known options are: <ul><li>nam.newvoicemedia.com (default)</li><li>emea.newvoicemedia.com</li><li>apac.newvoicemedia.com</li></ul> |
+| ccAccount (optional) | \[string\] | Use a custom VCC account name.  |
 
 ### placeCall
 
@@ -76,6 +77,7 @@ load (see [Loading Open ContactPad SDK](loading-contactpad))
 | --- | ----- | ----------- |
 | provider | "cc" / "uc" | <ul><li>CC loads Vonage Call Center ContactPad as a dialer interface /VCC/.</li><li>UC loads Vonage Business Communicatons ContactPad as a dialer interface /VBC, VBE/.</li></ul> |
 | ccDomain (optional) | \[string\] | Use a custom VCC region domain. Well known options are: <ul><li>nam.newvoicemedia.com (default)</li><li>emea.newvoicemedia.com</li><li>apac.newvoicemedia.com</li></ul> |
+| ccAccount (optional) | \[string\] | Use a custom VCC account name. |
 
 ### enableClickToDial
 Enable/Disable SDK build in phone number annotation 
@@ -201,6 +203,7 @@ Configuration options for SDK init method.
 | debug | \[boolean\] <br> default: false | Print extra debug information in the browser JS console. |
 | provider "cc" / "uc" <br> default: "uc" | <ul><li>CC loads Vonage Call Center ContactPad as a dialer interface /VCC/.</li><li>UC loads Vonage Integration Platform (VGIP) as a dialer interface /VBC, VBE/.</li> |
 | ccDomain (CC only) | \[string\] | Use a custom VCC region domain. Well known options are: <ul><li>nam.newvoicemedia.com (default)</li><li>emea.newvoicemedia.com</li><li>apac.newvoicemedia.com</li> |
+| ccAccount (optional) | \[string\] | Use a custom VCC account name. |  
 | features (UC only) | \[dialerFeatures\] | Customize UC dialer interface (show/hide extra UI controls). |
 
 ### dialerFeatures
