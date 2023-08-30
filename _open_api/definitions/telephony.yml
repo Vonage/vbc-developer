@@ -448,7 +448,7 @@ paths:
                       type: string
                       example: "*123#"
                 - title: Play Sound
-                  x-tab-id: Play Sound 
+                  x-tab-id: Play Sound
                   type: object
                   properties:
                     stream:
@@ -458,14 +458,14 @@ paths:
                       type: string
                       example: "https://nexmo-community.github.io/ncco-examples/assets/voice_api_audio_streaming.mp3"
                 - title: Stop Sound
-                  x-tab-id: Stop Sound 
+                  x-tab-id: Stop Sound
                   type: object
                   properties:
                     stream:
                       type: boolean
-                      example: false
+                      example: true
                 - title: Blind XFER
-                  x-tab-id: Blind XFER 
+                  x-tab-id: Blind XFER
                   type: object
                   properties:
                     state:
@@ -475,7 +475,7 @@ paths:
                       type: object
                       example: "{'destination': Contact, 'type': ttype}"
                 - title: ATT XFER
-                  x-tab-id: ATT XFER 
+                  x-tab-id: ATT XFER
                   type: object
                   properties:
                     state:
@@ -485,13 +485,13 @@ paths:
                       type: object
                       example: "{'destination': leg_id,'type': 'leg'}"
                 - title: Active
-                  x-tab-id: Active 
+                  x-tab-id: Active
                   type: object
                   properties:
                     state:
                       type: string
                       example: "active"
-                    
+
         required: true
       responses:
         "200":
@@ -874,7 +874,7 @@ components:
           enum:
             - active
             - parked
-          
+
         to:
           $ref: "#/components/schemas/Contact"
     CallsPaginated:
@@ -952,7 +952,7 @@ components:
         to:
           type: string
           format: uuid
-          example: 3fa85f64-5717-4562-b3fc-2c963f66afa6    
+          example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
     LegBlindTransferRequestBody:
       type: object
       properties:
