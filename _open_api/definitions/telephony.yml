@@ -509,7 +509,6 @@ paths:
                         service:
                           type: string
                           example: ccr
-
                     - title: OCR Start
                       x-tab-id: ocr-start
                       type: object
