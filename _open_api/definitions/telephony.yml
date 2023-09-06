@@ -2,8 +2,7 @@ openapi: 3.0.0
 info:
   title: Telephony
   description:
-    The Vonage Business Telephony API enables you to manage calls and retrieve
-    device registration information.
+    The Vonage Business Telephony API enables you to manage calls and retrieve device registration information.
   version: 1.0.1
 servers:
   - url: https://api.vonage.com/t/vbc.prod/telephony/v3
@@ -31,24 +30,21 @@ paths:
         - name: order
           in: query
           description:
-            Either ascending or descending order.<br/>Must be one of `asc`
-            or `desc`.
+            Either ascending or descending order.<br/>Must be one of `asc` or `desc`.
           schema:
             type: string
             example: asc
         - name: start_time
           in: query
           description:
-            Return the calls that occurred after this point in time.<br/>Should
-            be of type `epoch` with seconds precision.
+            Return the calls that occurred after this point in time.<br/>Should be of type `epoch` with seconds precision.
           schema:
             type: string
             example: 1595955770
         - name: end_time
           in: query
           description:
-            Return the calls that occurred before this point in time.<br/>Should
-            be of type `epoch` with seconds precision.
+            Return the calls that occurred before this point in time.<br/>Should be of type `epoch` with seconds precision.
           schema:
             type: integer
             example: 1595955770
@@ -417,8 +413,7 @@ paths:
             example: 3fa85f64-5717-4562-b3fc-2c963f66afa6
       requestBody:
         description:
-          "Perform hold or unhold or send dtmf or transfer on the call
-          leg."
+          "Perform hold or unhold or send dtmf or transfer on the call leg."
         content:
           application/json:
             schema:
@@ -491,7 +486,49 @@ paths:
                     state:
                       type: string
                       example: "active"
-
+                - title: Record
+                  x-tab-id: Record
+                  oneOf:
+                    - title: CCR Start
+                      x-tab-id: CCR Start
+                      type: object
+                      properties:
+                        recording:
+                          type: string
+                          example: start
+                        service:
+                          type: string
+                          example: ccr
+                    - title: CCR Stop
+                      x-tab-id: CCR Stop
+                      type: object
+                      properties:
+                        recording:
+                          type: string
+                          example: stop
+                        service:
+                          type: string
+                          example: ccr
+                    - title: OCR Start
+                      x-tab-id: OCR Start
+                      type: object
+                      properties:
+                        recording:
+                          type: string
+                          example: start
+                        service:
+                          type: string
+                          example: ocr
+                    - title: OCR Stop
+                      x-tab-id: OCR Stop
+                      type: object
+                      properties:
+                        recording:
+                          type: string
+                          example: stop
+                        service:
+                          type: string
+                          example: ocr
         required: true
       responses:
         "200":
@@ -603,24 +640,21 @@ paths:
         - name: order
           in: query
           description:
-            Either ascending or descending order.<br/>Must be one of `asc`
-            or `desc`.
+            Either ascending or descending order.<br/>Must be one of `asc` or `desc`.
           schema:
             type: string
             example: "asc"
         - name: start_time
           in: query
           description:
-            Return the devices that were registered after this point in time.<br/>Should
-            be of type `epoch` with seconds precision.
+            Return the devices that were registered after this point in time.<br/>Should be of type `epoch` with seconds precision.
           schema:
             type: string
             example: 1595955770
         - name: end_time
           in: query
           description:
-            Return the devices that were registered before this point in
-            time.<br/>Should be of type `epoch` with seconds precision.
+            Return the devices that were registered before this point in time.<br/>Should be of type `epoch` with seconds precision.
           schema:
             type: integer
             example: 1595955770
