@@ -5,7 +5,6 @@ meta_title: Introducing the Vonage Business Communications APIs
 
 #  Vonage Business Communications APIs
 
-```{=html}
 <div class="Vlt-callout Vlt-callout--banner Vlt-callout--shoutout">
 <i></i>
 <div class="Vlt-callout__content">
@@ -16,7 +15,6 @@ meta_title: Introducing the Vonage Business Communications APIs
   </p>
 </div>
 </div>
-```
 
 Vonage Business Communications (VBC) APIs are a set of APIs that enable you to programatically access data and manage features on your account.
 
