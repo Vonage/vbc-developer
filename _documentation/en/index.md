@@ -5,7 +5,7 @@ meta_title: Introducing the Vonage Business Communications APIs
 
 #  Vonage Business Communications APIs
 
-<div class="Vlt-callout Vlt-callout--banner Vlt-callout--shoutout">
+<div class="Vlt-callout Vlt-callout--banner Vlt-callout--shoutout Vlt-margin--A-bottom4">
 <i></i>
 <div class="Vlt-callout__content">
   <p>
