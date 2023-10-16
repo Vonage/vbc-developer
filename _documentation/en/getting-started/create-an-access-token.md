@@ -55,8 +55,8 @@ The following example shows how to exchange an authorization code for a token vi
 
 ```bash
 curl -k -d "grant_type=authorization_code&code=$AUTHORIZATION_CODE&redirect_uri=$REDIRECT_URI" \  
-	-H "Authorization: Basic $AUTHORIZATION" \
-	https://api.vonage.com/token`
+-H "Authorization: Basic $AUTHORIZATION" \
+https://api.vonage.com/token
 ```
 
 * `AUTHORIZATION_CODE` - The code received by the `redirect_uri` after successful login.
