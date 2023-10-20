@@ -451,14 +451,14 @@ paths:
                       example: true
                     stream_url:
                       type: string
-                      example: "https://nexmo-community.github.io/ncco-examples/assets/voice_api_audio_streaming.mp3"
+                      example: "https://example.com/recorded_message.wav"
                 - title: Stop Sound
                   x-tab-id: Stop Sound
                   type: object
                   properties:
                     stream:
                       type: boolean
-                      example: false
+                      example: "false"
                 - title: Blind XFER
                   x-tab-id: Blind XFER
                   type: object
