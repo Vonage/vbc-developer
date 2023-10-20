@@ -458,7 +458,7 @@ paths:
                   properties:
                     stream:
                       type: boolean
-                      example: "false"
+                      example: false
                 - title: Blind XFER
                   x-tab-id: Blind XFER
                   type: object
