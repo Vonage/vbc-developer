@@ -16,8 +16,6 @@ header:
       path: https://apimanager.uc.vonage.com
       text:
         - sign-in
-        - get_an_api_key
-        - start_building
   hiring:
     display: false
 footer:
