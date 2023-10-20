@@ -1109,3 +1109,4 @@ components:
       scheme: bearer
       bearerFormat: OAuth
 x-components: {}
+
