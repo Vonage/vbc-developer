@@ -817,7 +817,7 @@ components:
             - failed
             - unanswered
             - ringing
-            - on-call
+            - active
           example: busy
         to:
           type: string
@@ -868,7 +868,7 @@ components:
             - failed
             - unanswered
             - ringing
-            - on-call
+            - active
           example: busy
         to:
           type: string
