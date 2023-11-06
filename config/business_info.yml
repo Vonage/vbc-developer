@@ -15,9 +15,7 @@ header:
     sign-up:
       path: https://apimanager.uc.vonage.com
       text:
-        - try-it
-        - get_an_api_key
-        - start_building
+        - sign-in
   hiring:
     display: false
 footer:
@@ -42,7 +40,8 @@ footer:
         - press: 'https://www.vonage.com/corporate'
     support:
       business-support: 'https://businesssupport.vonage.com/'
-      developer-support: 'devsupport@vonage.com'
+      developer-support: 'https://businesssupport.vonage.com/articles/answer/Vonage-Business-Communications-APIs'
+      contact-us: 'https://businesssupport.vonage.com/contactus'
     social:
       linkedin: 'https://www.linkedin.com/company/vonage/'
       twitter: 'https://twitter.com/vonage'
