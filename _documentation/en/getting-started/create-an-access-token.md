@@ -55,8 +55,8 @@ The following example shows how to exchange an authorization code for a token vi
 
 ```bash
 curl -k -d "grant_type=authorization_code&code=$AUTHORIZATION_CODE&redirect_uri=$REDIRECT_URI" \  
-	-H "Authorization: Basic $AUTHORIZATION" \
-	https://api.vonage.com/token`
+-H "Authorization: Basic $AUTHORIZATION" \
+https://api.vonage.com/token
 ```
 
 * `AUTHORIZATION_CODE` - The code received by the `redirect_uri` after successful login.
@@ -90,8 +90,8 @@ Replace the following placeholders in the example with your own values:
 
 ```bash
 curl -k -d "grant_type=password&username=$VBC_USERNAME@vbc.prod&password=$VBC_PASSWORD" \
-        -d "&client_id=$VBC_CLIENT_ID&client_secret=$VBC_CLIENT_SECRET&scope=openid" \
-        https://api.vonage.com/token
+-d "&client_id=$VBC_CLIENT_ID&client_secret=$VBC_CLIENT_SECRET&scope=openid" \
+https://api.vonage.com/token
 ```
 
 When you run it, you will receive a JSON response with the `access_token` embedded in it. You need this token to use the Account, Extension and User APIs:
