@@ -9,7 +9,7 @@ meta_title: Introducing the Vonage Business Communications APIs
 <i></i>
 <div class="Vlt-callout__content">
   <p>
-  Scheduled - On 14-November-2023 5PM - 10PM EST, we will be upgrading our VBC API platform.
+  Scheduled - On 16-January-2024 8PM - 10PM EST, we will be upgrading our VBC API platform.
   <br>
   During this maintenance period, there may be difficulties in accessing VBC API Manager and VBC APIs.
   </p>
