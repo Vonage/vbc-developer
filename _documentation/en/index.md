@@ -22,6 +22,7 @@ meta_title: Introducing the Vonage Business Communications APIs
 
 
 
+
 Vonage Business Communications (VBC) APIs are a set of APIs that enable you to programmatically access data and manage features on your account.
 
 If you are interested in becoming a Vonage Partner to share your integration with all Unified Communications customers, please send an email to [bdpartner@vonage.com](mailto:bdpartner@vonage.com) including a description of your application.
