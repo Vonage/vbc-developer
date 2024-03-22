@@ -1,34 +1,34 @@
 ---
-title: Create a Nexmo Voice application
+title: Create a Vonage API Platform Voice application
 description: The application stores security and configuration information for your interaction with the Voice API.
 navigation_weight: 2
 ---
 
-# Create a Nexmo Application
+# Create a Vonage API Platform Application
 
-Every Smart Numbers application that you build must be associated with a Nexmo Voice Application.
+Every Smart Numbers application that you build must be associated with a Vonage API Platform Voice Application.
 
-> **Note**: To avoid confusion, `Application` here refers to the Nexmo Application. The application you are building will be referred to as "application".
+> **Note**: To avoid confusion, `Application` here refers to the Vonage API Platform Application. The application you are building will be referred to as "application".
 
-A Nexmo Application stores configuration information such as details of the Smart Numbers and webhook callback URLs that your application uses. To make your VBC Smart Number calls zero-rated in Nexmo, you must create an Application with the `vbc` and `voice` capabilities, using the [Nexmo Application API](https://developer.nexmo.com/api/application.v2).
+A Vonage API Platform Application stores configuration information such as details of the Smart Numbers and webhook callback URLs that your application uses. To make your VBC Smart Number calls zero-rated in Vonage API Platform, you must create an Application with the `vbc` and `voice` capabilities, using the [Vonage API Platform Application API](https://developer.vonage.com/en/api/application.v2).
 
 ## Using the Application API
 
-To create a Nexmo Application for working with Smart Numbers, issue the `curl` command shown below, replacing `NEXMO_API_KEY` and `NEXMO_API_SECRET` with your Nexmo API key and secret respectively. You can find this information in the [Nexmo Developer dashboard](https://dashboard.nexmo.com/getting-started-guide).
+To create a Vonage API Platform Application for working with Smart Numbers, issue the `curl` command shown below, replacing `VONAGE_API_KEY` and `VONAGE_API_SECRET` with your Vonage API Platform API key and secret respectively. You can find this information in the [Vonage API Platform Developer dashboard](https://dashboard.nexmo.com/getting-started-guide).
 
-The two URLs you provide refer to the webhook endpoints that your application will expose to Nexmo's servers:
+The two URLs you provide refer to the webhook endpoints that your application will expose to Vonage API Platform's servers:
 
-* The first is the webhook to which Nexmo's APIs will make a request when a call is received on your Smart Number.
-* The second is where Nexmo's APIs will post details about events that your application might be interested in - such as a call being answered or terminated.
+* The first is the webhook to which Vonage API Platform's APIs will make a request when a call is received on your Smart Number.
+* The second is where Vonage API Platform's APIs will post details about events that your application might be interested in - such as a call being answered or terminated.
 
 
 ```sh
 curl -X POST \
   https://api.nexmo.com/v2/applications \
-  -H 'Authorization: Basic Base64($NEXMO_API_KEY:$NEXMO_API_SECRET)' \
+  -H 'Authorization: Basic Base64($VONAGE_API_KEY:$VONAGE_API_SECRET)' \
   -H 'Content-Type: application/json' \
   -d '{
-    "name": "My Nexmo VBC Application",
+    "name": "My VAPI VBC Application",
     "capabilities": {
       "vbc": {},
       "voice": {
@@ -47,12 +47,12 @@ curl -X POST \
   }'
 ```
 
-The response is a JSON object containing the Nexmo Application `id` that you will use to interact with the Nexmo Voice API.
+The response is a JSON object containing the Vonage API Platform Application `id` that you will use to interact with the Vonage API Platform Voice API.
 
 ```json
 {
   "id": "27aa0583-7246-4822-aabb-17b03c25d52e",
-  "name": "My Nexmo VBC Application",
+  "name": "My VAPI VBC Application",
   "keys": {
     "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkq...
     -----END PRIVATE KEY-----\n",
@@ -82,4 +82,4 @@ The response is a JSON object containing the Nexmo Application `id` that you wil
 }
 ```
 
-> The next step is to [provision Smart Numbers](/smart-numbers/guides/provision-smart-numbers) using the Nexmo Application `id`.
+> The next step is to [provision Smart Numbers](/smart-numbers/guides/provision-smart-numbers) using the Vonage API Platform Application `id`.
