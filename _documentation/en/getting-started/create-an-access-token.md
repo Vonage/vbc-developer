@@ -68,7 +68,7 @@ After exchanging the token you will receive a JSON response with the `access_tok
 
 ```json
 {
-   "access_token":"1c31afac-175c-3e3a-9d4b-8ecee3980cfa",
+   "access_token":"xyz123eyJ4NQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFemhrWmciLCJraWQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFNemhrWmciLCJhbGciOiJSUzI1NiJ9..gs7JO2RLPFIld7NXM9gnOy9CYaLs_EYXJJilxX76MFBiidoiG9sIW4RkeHLvDVLyFP1eVd_Pt7000wAr13mcXn-6x6D9oJeAH_Iz8nbzd3vmWDZ8VMHf1SueiAaChfvH0yLvwu02sp-QU-tljGYBTJ8Pr1jWQIG-o39XRrBSMis",
    "refresh_token":"dde2a67f-d99f-3f03-810b-1fcae59245de",
    "scope":"default",
    "token_type":"Bearer",
