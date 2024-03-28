@@ -30,7 +30,7 @@ Once you have [created your application](/getting-started/create-an-application)
 Vonage Business Communications supports the following grant types for generating access tokens.
 
 * [Authorization Code](https://oauth.net/2/grant-types/authorization-code/) - The Authorization Code grant type is used by confidential and public clients to exchange an authorization code for an access token. After the user returns to the client via the redirect URL, the application will get the authorization code from the URL and use it to request an access token.
-* [Password Grant](https://oauth.net/2/grant-types/password) - The Password grant type is a way to exchange a user's credentials for an access token. 
+* [Password Grant](https://oauth.net/2/grant-types/password) - The Password grant type is a way to exchange a user's credentials for an access token.
 
 ### When to Use the Password Grant Type?
 
@@ -43,7 +43,7 @@ The Password grant type requires that the application collect the user's passwor
 ## Authenticating with Authorization Code Grant
 
 The following example shows how to obtain an authorization_code via the authorize end point.
-				
+
 ```bash
 https://api.vonage.com/authorize?scope=openid&response_type=code&redirect_uri=$REDIRECT_URI&client_id=$CONSUMER_KEY
 ```
@@ -54,7 +54,8 @@ https://api.vonage.com/authorize?scope=openid&response_type=code&redirect_uri=$R
 The following example shows how to exchange an authorization code for a token via the token end point
 
 ```bash
-curl -k -d "grant_type=authorization_code&code=$AUTHORIZATION_CODE&redirect_uri=$REDIRECT_URI" \  
+curl -d "grant_type=authorization_code&code=$AUTHORIZATION_CODE&redirect_uri=$REDIRECT_URI" \
+-H "Content-Type: application/x-www-form-urlencoded" \
 -H "Authorization: Basic $AUTHORIZATION" \
 https://api.vonage.com/token
 ```
@@ -86,10 +87,11 @@ Replace the following placeholders in the example with your own values:
 * `CONSUMER_KEY` - The Consumer Key that you generated in step 5 above
 * `CONSUMER_SECRET` - The Consumer Secret that you generated in step 5 above
 
-> Note: When using password grant, you will need to append `@vbc.prod` to your username. 
+> Note: When using password grant, you will need to append `@vbc.prod` to your username.
 
 ```bash
-curl -k -d "grant_type=password&username=$VBC_USERNAME@vbc.prod&password=$VBC_PASSWORD" \
+curl -d "grant_type=password&username=$VBC_USERNAME@vbc.prod&password=$VBC_PASSWORD" \
+-H "Content-Type: application/x-www-form-urlencoded" \
 -d "&client_id=$VBC_CLIENT_ID&client_secret=$VBC_CLIENT_SECRET&scope=openid" \
 https://api.vonage.com/token
 ```
@@ -98,7 +100,7 @@ When you run it, you will receive a JSON response with the `access_token` embedd
 
 ```json
 {
-    "access_token": "abc123-580f-3ace-9a55-9584aaa60842",
+    "access_token": "xyz123eyJ4NQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFemhrWmciLCJraWQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFNemhrWmciLCJhbGciOiJSUzI1NiJ9..gs7JO2RLPFIld7NXM9gnOy9CYaLs_EYXJJilxX76MFBiidoiG9sIW4RkeHLvDVLyFP1eVd_Pt7000wAr13mcXn-6x6D9oJeAH_Iz8nbzd3vmWDZ8VMHf1SueiAaChfvH0yLvwu02sp-QU-tljGYBTJ8Pr1jWQIG-o39XRrBSMis",
     "refresh_token": "abc123-5903-3513-8d27-333daf581837",
     "scope": "openid",
     "id_token": "abc123eyJ4NQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFemhrWmciLCJraWQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFNemhrWmciLCJhbGciOiJSUzI1NiJ9..gs7JO2RLPFIld7NXM9gnOy9CYaLs_EYXJJilxX76MFBiidoiG9sIW4RkeHLvDVLyFP1eVd_Pt7000wAr13mcXn-6x6D9oJeAH_Iz8nbzd3vmWDZ8VMHf1SueiAaChfvH0yLvwu02sp-QU-tljGYBTJ8Pr1jWQIG-o39XRrBSMis",
@@ -132,13 +134,13 @@ Replace the following placeholders in the example with your own values:
 
 * `VBC_CLIENT_ID` - The Client ID from your developer application
 * `VBC_CLIENT_SECRET` - The Secret from your developer application
-* `REFRESH_TOKEN` - The refresh token from your initial request to retrieve an access token. 
+* `REFRESH_TOKEN` - The refresh token from your initial request to retrieve an access token.
 
 This will return a new access token and refresh token
 
 ```json
 {
-   "access_token": "abc123-580f-3ace-9a55-9584aaa60842",
+   "access_token": "xyz123eyJ4NQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFemhrWmciLCJraWQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFNemhrWmciLCJhbGciOiJSUzI1NiJ9..gs7JO2RLPFIld7NXM9gnOy9CYaLs_EYXJJilxX76MFBiidoiG9sIW4RkeHLvDVLyFP1eVd_Pt7000wAr13mcXn-6x6D9oJeAH_Iz8nbzd3vmWDZ8VMHf1SueiAaChfvH0yLvwu02sp-QU-tljGYBTJ8Pr1jWQIG-o39XRrBSMis",
     "refresh_token": "abc123-5903-3513-8d27-333daf581837",
     "scope": "openid",
     "id_token": "abc123eyJ4NXQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFNemhrWmciLCJraWQiOiJNemcxTnpZeU5UTXhPR1kxTlRNMU1HUTBPR1ZsTVRnM05XRXlZamRpWVdRNE1XSTFNemhrWmciLCJhbGciOiJSUzI1NiJ9..kpFXRg4qSW9sntliysg-3EGO8KwZ8Vk5jGvOwqq0gJEyPQHL5BQKKrF799VL6Z9OJfCne564N42UWnrQqUmNyU0q8l0td1E3zPA0L5iQQEbaVsbxRf5NCZUwYY9Pb7bXjINCiGF4Xy7wCw2SRpv9iQvg3G68qI5Z8f_25QmxSTY",
