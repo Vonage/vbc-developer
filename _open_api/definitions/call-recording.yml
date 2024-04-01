@@ -352,7 +352,7 @@ components:
     StartLte:
       name: start:lte
       in: query
-      description: Filter recordings by start date (less than or equal to)
+      description: "Filter recordings by start date (less than or equal to) [yyyy-MM-ddTHH:mm:ssZ in ISO 8601]"
       example: "2019-01-01T00:00:00+0000"
       required: false
       schema:
@@ -360,7 +360,7 @@ components:
     StartGte:
       name: start:gte
       in: query
-      description: Filter recordings by start date (greater than or equal to)
+      description: "Filter recordings by start date (greater than or equal to) [yyyy-MM-ddTHH:mm:ssZ in ISO 8601]"
       example: "2019-01-01T00:00:00+0000"
       required: false
       schema:
