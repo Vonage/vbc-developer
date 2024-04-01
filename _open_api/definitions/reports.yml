@@ -25,26 +25,26 @@ paths:
         - in: query
           name: start:gte
           required: true
-          description: "Filter records by start date (greater equal or equal to)"
+          description: "Filter records by start date (greater equal or equal to) [yyyy-MM-dd HH:mm:ss in UTC]"
           schema:
             type: string
           example: "2019-01-01 00:00:00"
         - in: query
           name: start:lte
           required: true
-          description: "Filter records by start date (less equal or equal to)"
+          description: "Filter records by start date (less equal or equal to) [yyyy-MM-dd HH:mm:ss in UTC]"
           schema:
             type: string
           example: "2019-01-01 00:00:00"
         - in: query
           name: end:gte
-          description: "Filter records by end date (greater equal or equal to)"
+          description: "Filter records by end date (greater equal or equal to) [yyyy-MM-dd HH:mm:ss in UTC]"
           schema:
             type: string
           example: "2019-01-01 00:00:00"
         - in: query
           name: end:lte
-          description: "Filter records by end date (less equal or equal to)"
+          description: "Filter records by end date (less equal or equal to) [yyyy-MM-dd HH:mm:ss in UTC]"
           schema:
             type: string
           example: "2019-01-01 00:00:00"
