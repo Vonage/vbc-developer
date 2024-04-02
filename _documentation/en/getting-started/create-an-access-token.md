@@ -99,7 +99,7 @@ curl --request POST 'https://api.vonage.com/token' \
 --data-urlencode 'username=$VBC_USERNAME@vbc.prod' \
 --data-urlencode 'password=$VBC_PASSWORD' \
 --data-urlencode 'client_id=$VBC_CLIENT_ID' \
---data-urlencode 'client_secret=VBC_CLIENT_SECRET'
+--data-urlencode 'client_secret=$VBC_CLIENT_SECRET'
 ```
 
 When you run it, you will receive a JSON response with the `access_token` embedded in it. You need this token to use the Account, Extension and User APIs:
