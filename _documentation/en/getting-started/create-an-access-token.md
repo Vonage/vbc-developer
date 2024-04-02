@@ -54,10 +54,12 @@ https://api.vonage.com/authorize?scope=openid&response_type=code&redirect_uri=$R
 The following example shows how to exchange an authorization code for a token via the token end point
 
 ```bash
-curl -d "grant_type=authorization_code&code=$AUTHORIZATION_CODE&redirect_uri=$REDIRECT_URI" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Authorization: Basic $AUTHORIZATION" \
-https://api.vonage.com/token
+curl --request POST 'https://api.vonage.com/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--header 'Authorization: Basic $AUTHORIZATION' \
+--data-urlencode 'grant_type=authorization_code' \
+--data-urlencode 'code=$AUTHORIZATION_CODE' \
+--data-urlencode 'redirect_uri=$REDIRECT_URI'
 ```
 
 * `AUTHORIZATION_CODE` - The code received by the `redirect_uri` after successful login.
@@ -90,10 +92,14 @@ Replace the following placeholders in the example with your own values:
 > Note: When using password grant, you will need to append `@vbc.prod` to your username.
 
 ```bash
-curl -d "grant_type=password&username=$VBC_USERNAME@vbc.prod&password=$VBC_PASSWORD" \
--H "Content-Type: application/x-www-form-urlencoded" \
--d "&client_id=$VBC_CLIENT_ID&client_secret=$VBC_CLIENT_SECRET&scope=openid" \
-https://api.vonage.com/token
+curl --request POST 'https://api.vonage.com/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=password' \
+--data-urlencode 'scope=openid' \
+--data-urlencode 'username=$VBC_USERNAME@vbc.prod' \
+--data-urlencode 'password=$VBC_PASSWORD' \
+--data-urlencode 'client_id=$VBC_CLIENT_ID' \
+--data-urlencode 'client_secret=VBC_CLIENT_SECRET'
 ```
 
 When you run it, you will receive a JSON response with the `access_token` embedded in it. You need this token to use the Account, Extension and User APIs:
