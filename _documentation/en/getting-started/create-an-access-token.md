@@ -42,7 +42,7 @@ The Password grant type requires that the application collect the user's passwor
 
 ## Authenticating with Authorization Code Grant
 
-   > Warning: SSO is not supported at this time
+   > **Warning:** SSO is not supported at this time
 
 The following example shows how to obtain an authorization_code via the authorize end point.
 
@@ -92,7 +92,8 @@ Replace the following placeholders in the example with your own values:
 * `CONSUMER_SECRET` - The Consumer Secret that you generated in step 5 above
 
 > Note: When using password grant, you will need to append `@vbc.prod` to your username.
-> Warning: Do not use your VBC Developer account credentials (*.api) for the token request. You must use your VBC User credentials for `VBC_USERNAME` and `VBC_PASSWORD`.
+
+> **Warning:** Do not use your VBC Developer account credentials (*.api) for the token request. You must use your VBC User credentials for `VBC_USERNAME` and `VBC_PASSWORD`.
 
 ```bash
 curl --request POST 'https://api.vonage.com/token' \
