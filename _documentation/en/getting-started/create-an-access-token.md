@@ -6,22 +6,22 @@ navigation_weight: 5
 
 #  Authenticating to the Vonage Business Communications APIs
 
-Once you have [created your application](/getting-started/create-an-application), and [subscribed to the Provisioning API](/getting-started/subscribe-to-apis) you are ready to create an access token. Vonage Business Communications APIs APIs use [OAuth](https://oauth.net/2/) for authentication.
+Once you have [created your application](/getting-started/create-an-application), and [subscribed to the Provisioning API](/getting-started/subscribe-to-apis) you are ready to create an access token. Vonage Business Communications APIs use [OAuth](https://oauth.net/2/) for authentication.
 
 ## Creating authentication keys
 
-1. Log in to the [Business Communications Developer Portal](https://apimanager.uc.vonage.com/) using your developer credentials and select **Vonage Business Communications** from the platform drop down list.
-2. Select **My Applications** in the left-hand navigation menu.
-3. On the **My Application** page, locate your application in the table and click the **View** link in the **Actions** column.
-4. Select the **Production Keys** tab:
+1. Log in to the [Business Communications Developer Portal](https://apimanager.uc.vonage.com/) using your developer credentials.
+2. Select **Applications** in the top navigation menu.
+3. On the **Application** page, locate your application in the table and click the application **name** link.
+4. Select the **Production Keys** on the left navigation menu:
 
     ![Screenshot showing the Production Keys tab of the My Applications page](/images/vbc/getting-started/production-keys.png)
 
-    > Note: The default grant type is `Code`. The [grant type](https://oauth.net/2/grant-types/) is the method OAuth uses to generate an access token. When you create a production application you will typically want to use this method to authenticate requests. The `Refresh Token` option will create a new token when the current one expires.
+    > Note: The default grant type is `Password`. The [grant type](https://oauth.net/2/grant-types/) is the method OAuth uses to generate an access token. When you create a production application, you will typically want to use `Code` method to authenticate requests. The `Refresh Token` option will create a new token when the current one expires.
 
-5. In the **Callback URL** field, enter a valid callback URL that your application will use to receive the generated token. If you haven't created your application yet, enter `http://localhost` for now and remember to enter the correct URL when you are ready to test it.
+5. If `Code` selected, in the **Callback URL** field, enter a valid callback URL that your application will use to receive the generated code. If you haven't created your application yet, enter `http://localhost` for now and remember to enter the correct URL when you are ready to test it.
 
-    > Note: If you are planning on using password grant type for your application you will not need to use a callback URL to retrieve the token like you would using the authorization code flow. In you are using password grant you can enter `http://localhost`.
+    > Note: If you are planning on using password grant type for your application you will not need to use a callback URL to retrieve the token like you would using the authorization code flow. In you are using password grant you can leave it blank.
 
 6. Click the **Generate Keys** button. This generates the **Consumer Key** and **Consumer Secret** your application will use to request a token.
 
@@ -41,6 +41,8 @@ The Password grant type requires that the application collect the user's passwor
 > In production, you should use the [authorization_code](https://oauth.net/2/grant-types/authorization-code/) grant type (`Code`) and this is the only option shown in the My Applications tab at [apimanager.uc.vonage.com](https://apimanager.uc.vonage.com). The `Code` grant type requires your application to implement a valid callback URL to retrieve the authorization code from the Vonage servers and exchange it for a token. See the Endpoint examples in the My Applications tab to learn how to create the authorization and token requests.
 
 ## Authenticating with Authorization Code Grant
+
+   > Warning: SSO is not supported at this time
 
 The following example shows how to obtain an authorization_code via the authorize end point.
 
@@ -90,6 +92,7 @@ Replace the following placeholders in the example with your own values:
 * `CONSUMER_SECRET` - The Consumer Secret that you generated in step 5 above
 
 > Note: When using password grant, you will need to append `@vbc.prod` to your username.
+> Warning: Do not use your VBC Developer account credentials (*.api) for the token request. You must use your VBC User credentials for `VBC_USERNAME` and `VBC_PASSWORD`.
 
 ```bash
 curl --request POST 'https://api.vonage.com/token' \
