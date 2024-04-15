@@ -8,11 +8,12 @@ navigation_weight: 4
 
 Now that you have created your Application and configured authentication, you can subscribe to the Provisioning API. This API will give you access to the account, extension and user data.
 
-1. Log in to the [Business Communications Developer Portal](https://apimanager.uc.vonage.com/) using your developer credentials and select **Vonage Business Communications** from the platform drop down list.
-2. Click the **API Directory** link in the left-hand navigation menu.
-3. Locate the **Provisioning API** and click **Go**.
-4. Select your application from the **My Applications** drop-down located on the right-hand corner of the page. 
-5. Click **Subscribe**:
+1. Log in to the [Business Communications Developer Portal](https://apimanager.uc.vonage.com/) using your developer credentials.
+2. Click the **APIs** link in the top navigation menu.
+3. Locate the **Provisioning** API and click on the tile.
+4. Click on **My Applications** link in the left navigation menu.
+5. Select your application from the **Application** drop-down located in **Subscribe** section. 
+6. Click **Subscribe**:
 
 ![Screenshot showing how to subscribe your Application to the Provisioning API](/images/vbc/getting-started/subscribe-api.png)
 
