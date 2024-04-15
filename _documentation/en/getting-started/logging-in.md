@@ -14,7 +14,6 @@ To log in to the Business Communications Developer Portal:
 
 1. Visit the [Business Communications Developer Portal](https://apimanager.uc.vonage.com) login page.
 2. Enter your developer credentials on the **Sign in to your account** form.
-3. Select **Vonage Business Communications** on the **Select Platform** drop-down menu.
-4. Click **Sign In**.
+3. Click **Sign In**.
 
 > Now that you're logged in, learn how to [create an API application](/getting-started/create-an-application) to start using the Vonage Business Communications APIs.
