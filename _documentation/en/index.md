@@ -20,6 +20,19 @@ meta_title: Introducing the Vonage Business Communications APIs
 
 <br>
 
+<div class="Vlt-callout Vlt-callout--banner Vlt-callout--shoutout">
+
+    <i></i>
+
+    <div class="Vlt-callout__content">
+        <p>
+          We are investigating issues with the call reports API. We will provide an update when available
+        </p>
+    </div>
+</div>
+
+<br>
+
 
 
 
