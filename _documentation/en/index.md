@@ -5,7 +5,7 @@ meta_title: Introducing the Vonage Business Communications APIs
 
 #  Vonage Business Communications APIs
 
-<div class="Vlt-callout Vlt-callout--banner Vlt-callout--shoutout">
+<div class="Vlt-callout Vlt-callout--banner Vlt-callout--tip">
 
     <i></i>
 
@@ -20,13 +20,13 @@ meta_title: Introducing the Vonage Business Communications APIs
 
 <br>
 
-<div class="Vlt-callout Vlt-callout--banner Vlt-callout--shoutout">
+<div class="Vlt-callout Vlt-callout--banner Vlt-callout--warning">
 
     <i></i>
 
     <div class="Vlt-callout__content">
         <p>
-          We are investigating issues with the call reports API. We will provide an update when available.
+          VBC Reports API endpoint service has been restored as of 5:15 PM EST Apr 18, 2024.
         </p>
     </div>
 </div>
