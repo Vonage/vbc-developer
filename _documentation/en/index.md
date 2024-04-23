@@ -5,35 +5,8 @@ meta_title: Introducing the Vonage Business Communications APIs
 
 #  Vonage Business Communications APIs
 
-<div class="Vlt-callout Vlt-callout--banner Vlt-callout--shoutout">
-
-    <i></i>
-
-    <div class="Vlt-callout__content">
-        <p>
-          VBC API platform upgrade was completed on 25-March-2024.
-          <br>
-          For additional information please click <a href="https://businesssupport.vonage.com/app/articles/Answer/VBC-API-Upgrade-Notice" target="_blank">here</a>.
-        </p>
-    </div>
-</div>
 
 <br>
-
-<div class="Vlt-callout Vlt-callout--banner Vlt-callout--shoutout">
-
-    <i></i>
-
-    <div class="Vlt-callout__content">
-        <p>
-          VBC Reports API endpoint service has been restored as of 5:15 PM EST Apr 18, 2024.
-        </p>
-    </div>
-</div>
-
-<br>
-
-
 
 
 Vonage Business Communications (VBC) APIs are a set of APIs that enable you to programmatically access data and manage features on your account.
