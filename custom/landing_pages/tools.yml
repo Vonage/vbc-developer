@@ -16,15 +16,3 @@ page:
           text:
             content: Build your own VBC dialer to control your Vonage devices from anywhere on the Internet. No developer account required to get started!
           documentation_url:  /open-contactpad/introduction
-  - row:
-    - column:
-      - type: client_sdk_card
-        client_sdk_card:
-          name:
-            content: Node-Red
-            color: blue-dark
-          icon:
-            name: Brand-icon-node-color
-          text:
-            content: Build low code applications using Node Red. Supports creating calls to VBC extensions, account retrieval and more. 
-          documentation_url: https://flows.nodered.org/node/vonage-vbc-nodered
