@@ -7,7 +7,7 @@
     "RAILS_ENV": "production",
     "DOCS_BASE_PATH": "."
   },
-  "stack": "heroku-18",
+  "stack": "heroku-24",
   "formation": {
     "web": {
       "quantity": 1,
