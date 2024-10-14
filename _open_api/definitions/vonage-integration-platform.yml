@@ -1369,19 +1369,19 @@ components:
             - BODY
         expireAt:
           type: string
-          example: 2019-01-01T00:00:00.000Z
+          example: "2019-01-01T00:00:00.000Z"
           description: Expiration time for the webhook
         createdAt:
           type: string
-          example: 2019-01-01T00:00:00.000Z
+          example: "2019-01-01T00:00:00.000Z"
           description: Created time for the webhook
         renewedAt:
           type: string
-          example: 2019-01-01T00:00:00.000Z
+          example: "2019-01-01T00:00:00.000Z"
           description: Last renewed time for the webhook
         purgeAt:
           type: string
-          example: 2019-01-01T00:00:00.000Z
+          example: "2019-01-01T00:00:00.000Z"
           description: Scheduled purge time for the webhook
         signingKey:
           type: string
