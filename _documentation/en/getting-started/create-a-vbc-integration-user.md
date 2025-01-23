@@ -1,12 +1,12 @@
 ---
 title: Create a VBC integration user
 description: Learn how to create a VBC integration user
-navigation_weight: 6
+navigation_weight: 5
 ---
 
 #  Authenticating to the Vonage Business Communications APIs
 
-To autheticate with VBC APIs you will need a VBC integration user to create an access token.
+To authenticate with VBC APIs you will need a VBC integration user. You will use this user account to create an access token.
 
 ## Create a VBC integration user
 
@@ -26,5 +26,5 @@ To autheticate with VBC APIs you will need a VBC integration user to create an a
     - Enter a strong password with a minimum 20 characters, irregular capitalization, special characters, and at least one numeral.
     - Click **update**
 - If using SSO on your VBC account
-- Uncheck **Enable single sign-on for this user**
-- Click **save**
+  - Uncheck **Enable single sign-on for this user**
+  - Click **save**

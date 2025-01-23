@@ -1,7 +1,7 @@
 ---
 title: Create an Access Token
 description: Learn how to create authenticate to the Vonage Business Communications APIs
-navigation_weight: 5
+navigation_weight: 6
 ---
 
 #  Authenticating to the Vonage Business Communications APIs
