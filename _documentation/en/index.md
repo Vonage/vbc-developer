@@ -19,6 +19,7 @@ If you are interested in becoming a Vonage Partner to share your integration wit
 * [Logging In](/getting-started/logging-in) - Learn how to access the APIs for Vonage Business Communications Developer Portal
 * [Create an Application](/getting-started/create-an-application) - Learn how to create an API application
 * [Subscribe to APIs](/getting-started/subscribe-to-apis) - Learn how to add API subscriptions to your application
+* [Create a VBC Integration User](/getting-started/create-a-vbc-integration-user) - Learn how to create a VBC integration user
 * [Create an Access Token](/getting-started/create-an-access-token) - Learn how to authenticate to APIs
 * [Making an API request](/getting-started/make-an-api-request) - Learn how to make an API request with your access token
 
