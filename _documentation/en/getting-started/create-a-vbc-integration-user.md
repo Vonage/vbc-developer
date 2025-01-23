@@ -15,7 +15,7 @@ To authenticate with VBC APIs you will need a VBC integration user. You will use
 - Go to **Phone System > Users**
   - Click **Add New**
     - Enter a first name **API**
-    - Enter a first name **USER**
+    - Enter a last name **USER**
     - Enter a username with your VBC account number, for example: **api_user_999999**
     - Enter an email address
     - Select User Type **Account Administrator**
