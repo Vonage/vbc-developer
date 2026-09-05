@@ -8,7 +8,7 @@ languages:
 
 # Save call logs to external datasource
 
-In this tutorial, we will go over how to save your call logs into an external datasource in order to gain understanding of your data. There are many places in which call logs can be saved(google sheets, excel and so on). For this example, we'll save our call logs into a JSON list, which can be used as a datasource for Tableau.
+In this tutorial, we will go over how to save your call logs into an external datasource in order to gain understanding of your data. There are many places in which call logs can be saved (Google sheets, excel and so on). For this example, we'll save our call logs into a JSON list, which can be used as a datasource for Tableau.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Before you can get started, you will need to have a Vonage Developer account. If
 After you have an account, you will need to do the following using these guides:
 
 * [Create an application](/getting-started/create-an-application).
-* [Subscribe to the API's](/getting-started/subscribe-to-apis).
+* [Subscribe to the APIs](/getting-started/subscribe-to-apis).
 
 For this example, you will need to Subscribe to the [Reports API](/reports/overview).
 
@@ -59,7 +59,7 @@ After running this function, you should see the following response:
  ```
 
 ## Call Logs API
- The next step is to pull the list of calls from the call logs api. We can use this function to return a list of calls by a start date and end date. If there are more results than the number of items we have requested using the page_size parameter, this function will retrieve those other pages as well.
+ The next step is to pull the list of calls from the call logs API. We can use this function to return a list of calls by a start date and end date. If there are more results than the number of items we have requested using the page_size parameter, this function will retrieve those other pages as well.
 
  ```python
 results = []
@@ -81,7 +81,7 @@ def get_reports(token, account_id, start_date, end_date, order="asc", page_size=
   return results
 ```
 
-Next, we'll need to create a start and end date to pass into the function. The state date will be 1 day in the past and the end date will be 1 minute before midnight on the current day.
+Next, we'll need to create a start and end date to pass into the function. The start date will be 1 day in the past and the end date will be 1 minute before midnight on the current day.
 
 ```python
 import datetime
@@ -117,10 +117,10 @@ data.extend(reports)
 write_json(data)
 ```
 
-Here, we create 2 functions to read and write to a JSON file. We then read our JSON file. If the file does not exist, we return a empty list(`[]`). Next, we need to add our calls logs into the JSON file using the `extend()` function. Finally, we need to load this list back into the JSON file. For every day that we run this function, we will append the latest call logs in the JSON file.
+Here, we create 2 functions to read and write to a JSON file. We then read our JSON file. If the file does not exist, we return an empty list(`[]`). Next, we need to add our call logs into the JSON file using the `extend()` function. Finally, we need to load this list back into the JSON file. For every day that we run this function, we will append the latest call logs in the JSON file.
 
 ## CRON Job
-The final step is to run our [script](https://gist.github.com/tbass134/86965b64e69b05720d932d4e708e3c01) every day using a CRON job. This way, we will not have to run these functions manually. A CRON is way to run scripts periodically at fixed times, dates, or intervals.
+The final step is to run our [script](https://gist.github.com/tbass134/86965b64e69b05720d932d4e708e3c01) every day using a CRON job. This way, we will not have to run these functions manually. A CRON is a way to run scripts periodically at fixed times, dates, or intervals.
 You can create a CRON job locally by first running `crontab -e` on a OSX/Linux based system.
 
 For a Windows machine:
@@ -135,7 +135,7 @@ Our CRON job will look like this:
 * 0 * * * get_call_logs.py >/dev/null 2>&1
 ```
 
-This will run everyday at midnight. To create your own CRON job, check out https://crontab-generator.org/
+This will run every day at midnight. To create your own CRON job, check out https://crontab-generator.org/
 
 ## Import into Tableau
 For this example, we will be using Tableau to generate a dashboard from our call log data. It will look something like this:
@@ -143,7 +143,7 @@ For this example, we will be using Tableau to generate a dashboard from our call
 
 First, in Tableau, click `Connect To Data` and under `To a file`, click `JSON file`
 ![](/images/use_cases/call-logs-to-external-datasource/tableau_connect_to_json.png)
-Next, locate the JSON file that contains the calls logs. You can optionally select a few columns. Then navigate to `Sheet 1` to view your data.
+Next, locate the JSON file that contains the call logs. You can optionally select a few columns. Then navigate to `Sheet 1` to view your data.
 
 Next, go to `Sheet 1` and in the `Folders` section, right click on the `End` parameter and set `Change Data Type` to `Date`.
 ![](/images/use_cases/call-logs-to-external-datasource/tableau_change_end_parmeter.png)
@@ -151,7 +151,7 @@ Next, go to `Sheet 1` and in the `Folders` section, right click on the `End` par
 Then, drag the `End` parameter to the Columns section. Next, right click on the `End` parameter and change to `Day`.
 Then, drag the `Count` parameter under the `Measured Names` section to the row section. You should then see a line chart for the number of calls by day.
 
-As our CRON job runs everyday, our Tableau dashboard will update itself with the new call logs. Dont forget to save the JSON in the same location as where you originally added the datasource for Tableau
+As our CRON job runs every day, our Tableau dashboard will update itself with the new call logs. Don't forget to save the JSON in the same location as where you originally added the datasource for Tableau
 
 ## Conclusion
-In this example, we have seen how to create a function that returns a list of calls logs for a given day. Pushing this data is a dashboard like Tableu will be able to help your team analyze your call traffic. Our dashboard only shows the number of calls every day, but you can customize it to shown number of inbound / outbound calls, average cost per day, average length of calls, and much more.
+In this example, we have seen how to create a function that returns a list of call logs for a given day. Pushing this data into a dashboard like Tableau will be able to help your team analyze your call traffic. Our dashboard only shows the number of calls every day, but you can customize it to shown number of inbound / outbound calls, average cost per day, average length of calls, and much more.
