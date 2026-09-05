@@ -28,7 +28,7 @@ The `get_company_call_recordings()` function returns a list of recordings from t
 
     This function takes the recording from the `call_id` parameter and deletes the call recording. For this example, you are setting `account_id` to `self`.
 
-2. Loop though the call recordings from the `get_company_call_recordings()` function you wrote and get the recordings `call_id` and `duration`. You will pass in `call_id` into your `delete_call_recording()` function to delete the recording.
+2. Loop through the call recordings from the `get_company_call_recordings()` function you wrote and get the recordings `call_id` and `duration`. You will pass in `call_id` into your `delete_call_recording()` function to delete the recording.
 
     ```python
     for recording in recordings:

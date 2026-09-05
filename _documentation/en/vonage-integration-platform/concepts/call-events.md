@@ -31,7 +31,7 @@ The only initial state is `Initializing`. The only allowable ending states are `
 | State | Initial | Final | Direction | Allowable Transitions | Description |
 | ----- | ------- | ------| --------- | --------------------- | ----------- |
 | Initializing | Yes | No  | Inbound           | Ringing, Answered                              | A call has been placed but the remote party has not yet been alerted | 
-| Ringing      | No  | No  | Inbound, Outbound | Active, Answered, Cancelled, Rejected, Missing | The remote party is being alerted (outbound) or an inbound call is occurring |
+| Ringing      | No  | No  | Inbound, Outbound | Active, Answered, Cancelled, Rejected, Missed | The remote party is being alerted (outbound) or an inbound call is occurring |
 | Active       | No  | No  | Inbound, Outbound | Answered, Held, Remote Held                    | A call is active and the participants are speaking |
 | Held         | No  | No  | Inbound, Outbound | Active                                         | An active call is currently on hold |
 | Remote Held  | No  | No  | Inbound, Outbound | Active                                         | A remote party of an active call is currently on hold |
@@ -40,7 +40,7 @@ The only initial state is `Initializing`. The only allowable ending states are `
 | Missed       | No  | Yes | Inbound           |                                                | An incoming call was not answered |
 | Rejected     | No  | Yes | Inbound           |                                                | An incoming call was rejected or sent to voicemail without being answered |
 
-For every state, the values for `startTime`, `answerTime`, `endTime`, and `duration` will follow certain rules. All call states will have a valid `startTime`. Only `Active`, `Held`, `Remote Held`, and `Answered` will have a valid `answerTime`. The `endTime` property will stay null until the call reaches a final state (`Answered`, `Cancelled`, `Missed`, `Rejected`). Only calls that have reach the final `Answered` state will have a non-zero duration.
+For every state, the values for `startTime`, `answerTime`, `endTime`, and `duration` will follow certain rules. All call states will have a valid `startTime`. Only `Active`, `Held`, `Remote Held`, and `Answered` will have a valid `answerTime`. The `endTime` property will stay null until the call reaches a final state (`Answered`, `Cancelled`, `Missed`, `Rejected`). Only calls that have reached the final `Answered` state will have a non-zero duration.
 
 ## Getting Call Events
 
